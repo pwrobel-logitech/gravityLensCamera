@@ -31,7 +31,7 @@ public class CamActivity extends ActionBarActivity {
     @Override
     public void onPause(){
         super.onPause();
-        mRenderer.onDestroy();
+        //mRenderer.onDestroy();
 
     }
 

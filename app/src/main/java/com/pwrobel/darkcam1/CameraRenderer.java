@@ -34,6 +34,8 @@ public class CameraRenderer extends GLSurfaceView implements
      */
     private Camera mCamera;
     private SurfaceTexture mSurfaceTexture;
+    private int camera_width;
+    private int camera_height;
 
     //private final FBORenderTarget mRenderTarget = new FBORenderTarget();
     private final OESTexture mCameraTexture = new OESTexture();
@@ -112,8 +114,8 @@ public class CameraRenderer extends GLSurfaceView implements
 
 
         //set camera para-----------------------------------
-        int camera_width =0;
-        int camera_height =0;
+        camera_width =0;
+        camera_height =0;
 
         if(mCamera != null){
             mCamera.stopPreview();

@@ -7,4 +7,7 @@ varying vec2 vTextureCoord;
 
 void main(){
 	gl_FragColor = 0.5*vec4(0.0, 0.0, 1.0, 1.0) + 0.5*texture2D(sTexture, vTextureCoord);
+	if((vTextureCoord.x-0.5)*(vTextureCoord.x-0.5)+(vTextureCoord.y-0.5)*(vTextureCoord.y-0.5) > 0.25){
+	gl_FragColor = 0.5*vec4(0.0, 0.0, 0.0, 1.0);
+	}
 }
