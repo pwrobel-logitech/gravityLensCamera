@@ -133,11 +133,12 @@ public class CameraRenderer extends GLSurfaceView implements
         if(psize.size() > 0 ){
             int i;
             for (i = 0; i < psize.size(); i++){
-                if(psize.get(i).width < width || psize.get(i).height < height)
+                if(psize.get(i).height == 1280 || psize.get(i).width == 1280)
                     break;
             }
-            if(i>0)
-                i--;
+            if(i==psize.size())
+                i = psize.size() - 2;
+
             param.setPreviewSize(psize.get(i).width, psize.get(i).height);
 
             camera_width = psize.get(i).width;
@@ -147,8 +148,8 @@ public class CameraRenderer extends GLSurfaceView implements
 
 
         Matrix.setRotateM(mOrientationM, 0, 90.0f, 0f, 0f, 1f);
-        mRatio[1] = camera_width*1.0f/height;
-        mRatio[0] = camera_height*1.0f/width;
+        mRatio[1] = (camera_width*1.0f/height) / (camera_height*1.0f/width);//camera_width*1.0f/height;
+        mRatio[0] = 1.0f;//camera_height*1.0f/width;
 
 
         //start camera-----------------------------------------
