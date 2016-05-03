@@ -145,18 +145,11 @@ public class CameraRenderer extends GLSurfaceView implements
 
         }
 
-        //get the camera orientation and display dimension------------
-        if(mContext.getResources().getConfiguration().orientation ==
-                Configuration.ORIENTATION_PORTRAIT){
-            Matrix.setRotateM(mOrientationM, 0, 90.0f, 0f, 0f, 1f);
-            mRatio[1] = camera_width*1.0f/height;
-            mRatio[0] = camera_height*1.0f/width;
-        }
-        else{
-            Matrix.setRotateM(mOrientationM, 0, 0.0f, 0f, 0f, 1f);
-            mRatio[1] = camera_height*1.0f/height;
-            mRatio[0] = camera_width*1.0f/width;
-        }
+
+        Matrix.setRotateM(mOrientationM, 0, 90.0f, 0f, 0f, 1f);
+        mRatio[1] = camera_width*1.0f/height;
+        mRatio[0] = camera_height*1.0f/width;
+
 
         //start camera-----------------------------------------
         mCamera.setParameters(param);
