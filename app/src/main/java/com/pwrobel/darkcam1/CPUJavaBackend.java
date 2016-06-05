@@ -10,6 +10,11 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
     private int bpp;
     private int[] buf;
 
+    //physical parameters
+    double mass;//multiple of the mass of earth
+    double distance; //in meters from the observer
+    double fovX; //in degrees along the horizontal axis
+
     //initialize CPU renderer backend
     public void Init(){
 
@@ -42,6 +47,13 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
     //save the processed buffer on the disk
     public int saveBufferToDisk(){
         return 1;
+    };
+
+    //set info about the object, mass, distance and field of viev in x-direction - horizontal
+    public void setBlackHoleInfo(double mass, double distance, double fovXdeg){
+        this.mass = mass;
+        this.distance = distance;
+        this.fovX = fovXdeg;
     };
 
 }
