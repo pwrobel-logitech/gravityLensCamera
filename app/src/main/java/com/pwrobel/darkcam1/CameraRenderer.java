@@ -141,7 +141,16 @@ public class CameraRenderer extends GLSurfaceView implements
                     break;
             }
             if(i==psize.size())
+                for (i = 0; i < psize.size(); i++){
+                    if((psize.get(i).height > 800 && psize.get(i).height < 1300)
+                            || (psize.get(i).width > 800 && psize.get(i).width < 1300))
+                        break;
+                }
+            if(i==psize.size())
                 i = psize.size() - 2;
+
+            if(i<0)
+                i=0;
 
             param.setPreviewSize(psize.get(i).width, psize.get(i).height);
 
