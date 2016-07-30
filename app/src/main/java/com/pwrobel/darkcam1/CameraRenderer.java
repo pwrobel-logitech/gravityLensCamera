@@ -148,11 +148,30 @@ public class CameraRenderer extends GLSurfaceView implements
 
         }
 
+        float angle = 0.0f;
+        if(camera_width > camera_height) {
+            angle = 90.0f;
+            if( ((float)camera_width)/((float)camera_height) < ((float)height)/((float)width) ){
+                //camera preview more square than surface to present
+                mRatio[0] = ((((float)camera_height)*((float)height))/(((float)camera_width)*((float)width)));
+                mRatio[1] = 1.0f;
+            }else{
+                mRatio[0] = 1.0f;
+                mRatio[1] = (((float)camera_width)/((float)camera_height))/(((float)height)/((float)width));
+            }
+        }else{
+            angle = 0.0f;
+            if( ((float)camera_height)/((float)camera_width) < ((float)height)/((float)width) ){
+                //camera preview more square than surface to present
+                mRatio[0] = ((((float)camera_width)*((float)height))/(((float)camera_height)*((float)width)));
+                mRatio[1] = 1.0f;
+            }else{
+                mRatio[0] = 1.0f;
+                mRatio[1] = (((float)camera_height)/((float)camera_width))/(((float)height)/((float)width));
+            }
+        }
 
-        Matrix.setRotateM(mOrientationM, 0, 90.0f, 0f, 0f, 1f);
-        mRatio[1] = (camera_width*1.0f/height) / (camera_height*1.0f/width);//camera_width*1.0f/height;
-        mRatio[0] = 1.0f;//camera_height*1.0f/width;
-
+        Matrix.setRotateM(mOrientationM, 0, angle, 0f, 0f, 1f);
 
         //start camera-----------------------------------------
         mCamera.setParameters(param);
