@@ -7,10 +7,14 @@ varying vec2 vTextureCoord;
 
 float x, y, xn, yn, fi,  ratio, fovx, fovy, fovyxratio;
 float pi, tx, ty, coeff;
+
+uniform float fov_yx_ratio;
+uniform float fov_x_deg;
+
 void main(){
-    pi = 3.1415;
-    fovyxratio = 720.0 / 1280.0;
-      fovx = 30.0 * (pi/180.0);
+    pi = 3.141593;
+    fovyxratio = fov_yx_ratio;
+      fovx = fov_x_deg * (pi/180.0);
       fovy = fovyxratio * fovx;
 
 

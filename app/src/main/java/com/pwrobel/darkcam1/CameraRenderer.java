@@ -50,6 +50,8 @@ public class CameraRenderer extends GLSurfaceView implements
     private float[] mTransformM = new float[16];
     private float[] mOrientationM = new float[16];
     private float[] mRatio = new float[2];
+    private float[] fov_yx_ratio = new float[1];
+    private float[] fov_x_deg = new float[1];
 
     public CameraRenderer(Context context) {
         super(context);
@@ -148,9 +150,9 @@ public class CameraRenderer extends GLSurfaceView implements
 
         }
 
-        float angle = 0.0f;
+        float rot_angle = 0.0f;
         if(camera_width > camera_height) {
-            angle = 90.0f;
+            rot_angle = 90.0f;
             if( ((float)camera_width)/((float)camera_height) < ((float)height)/((float)width) ){
                 //camera preview more square than surface to present
                 mRatio[0] = ((((float)camera_height)*((float)height))/(((float)camera_width)*((float)width)));
@@ -159,8 +161,9 @@ public class CameraRenderer extends GLSurfaceView implements
                 mRatio[0] = 1.0f;
                 mRatio[1] = (((float)camera_width)/((float)camera_height))/(((float)height)/((float)width));
             }
+            fov_yx_ratio[0] = ((float)camera_height)/((float)camera_width);
         }else{
-            angle = 0.0f;
+            rot_angle = 0.0f;
             if( ((float)camera_height)/((float)camera_width) < ((float)height)/((float)width) ){
                 //camera preview more square than surface to present
                 mRatio[0] = ((((float)camera_width)*((float)height))/(((float)camera_height)*((float)width)));
@@ -169,9 +172,13 @@ public class CameraRenderer extends GLSurfaceView implements
                 mRatio[0] = 1.0f;
                 mRatio[1] = (((float)camera_height)/((float)camera_width))/(((float)height)/((float)width));
             }
+            fov_yx_ratio[0] = ((float)camera_width)/((float)camera_height);
         }
 
-        Matrix.setRotateM(mOrientationM, 0, angle, 0f, 0f, 1f);
+        Matrix.setRotateM(mOrientationM, 0, rot_angle, 0f, 0f, 1f);
+
+        //setup the fovX (the smaller one) angle in degrees
+        this.fov_x_deg[0] = 30.0f;
 
         //start camera-----------------------------------------
         mCamera.setParameters(param);
@@ -200,10 +207,14 @@ public class CameraRenderer extends GLSurfaceView implements
             int uTransformM = mOffscreenShader.getHandle("uTransformM");
             int uOrientationM = mOffscreenShader.getHandle("uOrientationM");
             int uRatioV = mOffscreenShader.getHandle("ratios");
+            int uFovRatio = mOffscreenShader.getHandle("fov_yx_ratio");
+            int uFovDeg = mOffscreenShader.getHandle("fov_x_deg");
 
             GLES20.glUniformMatrix4fv(uTransformM, 1, false, mTransformM, 0);
             GLES20.glUniformMatrix4fv(uOrientationM, 1, false, mOrientationM, 0);
             GLES20.glUniform2fv(uRatioV, 1, mRatio, 0);
+            GLES20.glUniform1fv(uFovRatio, 1, fov_yx_ratio, 0);
+            GLES20.glUniform1fv(uFovDeg, 1, fov_x_deg, 0);
 
             GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
             GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, mCameraTexture.getTextureId());
