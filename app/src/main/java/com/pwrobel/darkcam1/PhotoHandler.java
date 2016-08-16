@@ -58,6 +58,10 @@ public class PhotoHandler implements Camera.PictureCallback {
             Toast.makeText(context, "Image could not be saved.",
                     Toast.LENGTH_LONG).show();
         }
+
+        camera.stopPreview();
+        camera.startPreview();
+
     }
 
     private File getDir() {
