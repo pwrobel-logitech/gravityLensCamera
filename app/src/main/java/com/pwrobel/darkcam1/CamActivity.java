@@ -58,6 +58,7 @@ public class CamActivity extends ActionBarActivity {
 
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
+                CamActivity.this.mRenderer.request_bigpic = true;
             }
         });
 

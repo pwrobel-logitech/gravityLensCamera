@@ -53,6 +53,8 @@ public class CameraRenderer extends GLSurfaceView implements
     private float[] fov_yx_ratio = new float[1];
     private float[] fov_x_deg = new float[1];
 
+    public boolean request_bigpic;
+
     public CameraRenderer(Context context) {
         super(context);
         mContext = context;
@@ -62,6 +64,7 @@ public class CameraRenderer extends GLSurfaceView implements
     public CameraRenderer(Context context, AttributeSet attrs){
         super(context, attrs);
         mContext = context;
+        request_bigpic = false;
         init();
     }
 
@@ -195,6 +198,9 @@ public class CameraRenderer extends GLSurfaceView implements
 
         //start render---------------------
         requestRender();
+
+
+
     }
 
     @Override
@@ -229,6 +235,12 @@ public class CameraRenderer extends GLSurfaceView implements
             GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, mCameraTexture.getTextureId());
 
             renderQuad(mOffscreenShader.getHandle("aPosition"));
+        }
+
+        if(this.request_bigpic == true){
+            this.request_bigpic = false;
+            mCamera.takePicture(null, null, new PhotoHandler(mContext));
+            requestRender();
         }
 
     }
