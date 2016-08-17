@@ -19,17 +19,30 @@ public class PhotoHandler implements Camera.PictureCallback {
 
     private final Context context;
 
-    private StaticPhotoRenderBackend image_processor;
+    private StaticPhotoRenderBackend image_processor_;
 
     static String log_prefix = "darkcam debug log";
-    public PhotoHandler(Context context) {
+    public PhotoHandler(Context context, StaticPhotoRenderBackend image_processor) {
         this.context = context;
+        this.image_processor_ = image_processor;
     }
 
     @Override
     public void onPictureTaken(byte[] data, Camera camera) {
 
-        File pictureFileDir = getDir();
+        this.image_processor_.setImgBuffer(data,0,0,0,StaticPhotoRenderBackend.ImgDataType.JPG);
+
+        int error_code = this.image_processor_.saveBufferToDisk();
+
+        if(error_code == -1){
+            Toast.makeText(context, "Image could not be saved.",
+                    Toast.LENGTH_LONG).show();
+        }else if(error_code == 1){
+            Toast.makeText(context, "New Image saved:",
+                    Toast.LENGTH_LONG).show();
+        };
+
+        /*File pictureFileDir = getDir();
 
         if (!pictureFileDir.exists() && !pictureFileDir.mkdirs()) {
 
@@ -60,7 +73,7 @@ public class PhotoHandler implements Camera.PictureCallback {
             Toast.makeText(context, "Image could not be saved.",
                     Toast.LENGTH_LONG).show();
         }
-
+        */
         camera.stopPreview();
         camera.startPreview();
 

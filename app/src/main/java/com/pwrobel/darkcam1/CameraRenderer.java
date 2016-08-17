@@ -55,6 +55,17 @@ public class CameraRenderer extends GLSurfaceView implements
     private float[] fov_yx_ratio = new float[1];
     private float[] fov_x_deg = new float[1];
 
+    private StaticPhotoRenderBackend image_processor_;
+
+    /**
+     * Choose and init the backend for processing the big image to the final effect
+     */
+    private boolean init_image_processing_backend(){
+        image_processor_ = new CPUJavaBackend();
+        image_processor_.Init();
+        return true;
+    }
+
     public CameraRenderer(Context context) {
         super(context);
         mContext = context;
@@ -68,6 +79,11 @@ public class CameraRenderer extends GLSurfaceView implements
     }
 
     private void init(){
+
+        if(!init_image_processing_backend()){
+            Log.i("Darkcam_processor", "failed to init CPU backend ");
+        };
+
         //Create full scene quad buffer
         final byte FULL_QUAD_COORDS[] = {-1, 1, -1, -1, 1, 1, 1, -1};
         mFullQuadVertices = ByteBuffer.allocateDirect(4 * 2);
@@ -266,7 +282,7 @@ public class CameraRenderer extends GLSurfaceView implements
         param.setRotation(90);
         param.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
         mCamera.setParameters(param);
-        mCamera.takePicture(null, null, new PhotoHandler(mContext));
+        mCamera.takePicture(null, null, new PhotoHandler(mContext, this.image_processor_));
     }
 
     private void renderQuad(int aPosition){
