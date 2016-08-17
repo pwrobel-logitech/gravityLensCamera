@@ -2,6 +2,7 @@ package com.pwrobel.darkcam1;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.microedition.khronos.egl.EGLConfig;
@@ -11,6 +12,7 @@ import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.Configuration;
+import android.graphics.ImageFormat;
 import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.hardware.Camera.Size;
@@ -236,7 +238,35 @@ public class CameraRenderer extends GLSurfaceView implements
     }
 
     public void requestBigPic(){
-            mCamera.takePicture(null, null, new PhotoHandler(mContext));
+        Camera.Parameters param;
+        param = mCamera.getParameters();
+
+        /* choose the maximum aera size for the preview - currently unused
+        Camera.Size bestSize = null;
+        List<Camera.Size> sizeList = mCamera.getParameters().getSupportedPreviewSizes();
+        bestSize = sizeList.get(0);
+        for(int i = 1; i < sizeList.size(); i++){
+            if((sizeList.get(i).width * sizeList.get(i).height) > (bestSize.width * bestSize.height)){
+                bestSize = sizeList.get(i);
+            }
+        }
+
+        List<Integer> supportedPreviewFormats = param.getSupportedPreviewFormats();
+        Iterator<Integer> supportedPreviewFormatsIterator = supportedPreviewFormats.iterator();
+        while(supportedPreviewFormatsIterator.hasNext()){
+            Integer previewFormat =supportedPreviewFormatsIterator.next();
+            if (previewFormat == ImageFormat.YV12) {
+                param.setPreviewFormat(previewFormat);
+            }
+        }
+
+        param.setPreviewSize(bestSize.width, bestSize.height);
+        param.setPictureSize(bestSize.width, bestSize.height);
+        */
+        param.setRotation(90);
+        param.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
+        mCamera.setParameters(param);
+        mCamera.takePicture(null, null, new PhotoHandler(mContext));
     }
 
     private void renderQuad(int aPosition){

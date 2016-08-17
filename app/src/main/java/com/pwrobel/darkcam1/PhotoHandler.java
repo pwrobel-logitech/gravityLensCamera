@@ -19,6 +19,8 @@ public class PhotoHandler implements Camera.PictureCallback {
 
     private final Context context;
 
+    private StaticPhotoRenderBackend image_processor;
+
     static String log_prefix = "darkcam debug log";
     public PhotoHandler(Context context) {
         this.context = context;
