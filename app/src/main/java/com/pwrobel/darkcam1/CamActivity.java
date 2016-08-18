@@ -3,6 +3,7 @@ package com.pwrobel.darkcam1;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -28,22 +29,26 @@ public class CamActivity extends ActionBarActivity {
 
     @Override
     public void onStart(){
+        Log.i("darkcam activity", "Activity onStart");
         super.onStart();
-
+        Log.i("darkcam activity", "Activity onStart finished");
     }
 
 
     @Override
     public void onPause(){
+        Log.i("darkcam activity", "Activity onPause");
         super.onPause();
-        //mRenderer.onDestroy();
-
+        mRenderer.onDestroy();
+        Log.i("darkcam activity", "Activity onPause finished");
     }
 
     @Override
     public void onResume(){
+        Log.i("darkcam activity", "Activity onResume");
         super.onResume();
         mRenderer.onResume();
+        Log.i("darkcam activity", "Activity onResume finished");
     }
 
     private void addListeners(){
