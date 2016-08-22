@@ -205,7 +205,15 @@ public class CameraRenderer extends GLSurfaceView implements
         Matrix.setRotateM(mOrientationM, 0, rot_angle, 0f, 0f, 1f);
 
         //setup the fovX (the smaller one) angle in degrees
-        this.fov_x_deg[0] = 30.0f;
+        double thetaV = (param.getVerticalViewAngle());
+        double thetaH = (param.getHorizontalViewAngle());
+
+        Log.i("DcamFOV", "Vangle: " + String.valueOf(thetaV) + ", Hangle: " + String.valueOf(thetaH));
+        if(thetaV < 10.0)
+            thetaV = 10.0;
+        if(thetaV > 150.0)
+            thetaV = 150.0;
+        this.fov_x_deg[0] = (float)thetaV;
 
         //start camera-----------------------------------------
         mCamera.setParameters(param);
@@ -253,9 +261,15 @@ public class CameraRenderer extends GLSurfaceView implements
 
     }
 
-    public void requestBigPic(){
+    public void
+    requestBigPic(){
         Camera.Parameters param;
         param = mCamera.getParameters();
+
+        double thetaV = (param.getVerticalViewAngle());
+        double thetaH = (param.getHorizontalViewAngle());
+
+        Log.i("DcamFOVBig", "Vangle: "+String.valueOf(thetaV)+", Hangle: "+String.valueOf(thetaH));
 
         /* choose the maximum aera size for the preview - currently unused
         Camera.Size bestSize = null;
