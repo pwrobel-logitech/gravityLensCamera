@@ -10,6 +10,7 @@ float pi, tx, ty, coeff;
 
 uniform float fov_yx_ratio;
 uniform float fov_x_deg;
+uniform float phys_ratio;
 
 void main(){
     pi = 3.141593;
@@ -26,7 +27,7 @@ void main(){
 
     fi  = atan(sqrt(tx*tx+ty*ty));
 
-    ratio = 0.005;
+    ratio = phys_ratio;
 
     if(fi < ratio){
        gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);

@@ -54,6 +54,7 @@ public class CameraRenderer extends GLSurfaceView implements
     private float[] mRatio = new float[2];
     private float[] fov_yx_ratio = new float[1];
     private float[] fov_x_deg = new float[1];
+    private float[] phys_ratio = new float[1];
 
     private StaticPhotoRenderBackend image_processor_;
 
@@ -215,6 +216,9 @@ public class CameraRenderer extends GLSurfaceView implements
             thetaV = 150.0;
         this.fov_x_deg[0] = (float)thetaV;
 
+        //set physical ratio parameters containing the "normalized" black hole mass
+        this.phys_ratio[0] = 0.01f;
+
         //start camera-----------------------------------------
         mCamera.setParameters(param);
         mCamera.startPreview();
@@ -244,12 +248,14 @@ public class CameraRenderer extends GLSurfaceView implements
             int uRatioV = mOffscreenShader.getHandle("ratios");
             int uFovRatio = mOffscreenShader.getHandle("fov_yx_ratio");
             int uFovDeg = mOffscreenShader.getHandle("fov_x_deg");
+            int uPhysRatio = mOffscreenShader.getHandle("phys_ratio");
 
             GLES20.glUniformMatrix4fv(uTransformM, 1, false, mTransformM, 0);
             GLES20.glUniformMatrix4fv(uOrientationM, 1, false, mOrientationM, 0);
             GLES20.glUniform2fv(uRatioV, 1, mRatio, 0);
             GLES20.glUniform1fv(uFovRatio, 1, fov_yx_ratio, 0);
             GLES20.glUniform1fv(uFovDeg, 1, fov_x_deg, 0);
+            GLES20.glUniform1fv(uPhysRatio, 1, phys_ratio, 0);
 
             GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
             GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, mCameraTexture.getTextureId());
