@@ -217,7 +217,7 @@ public class CameraRenderer extends GLSurfaceView implements
         this.fov_x_deg[0] = (float)thetaV;
 
         //set physical ratio parameters containing the "normalized" black hole mass
-        this.phys_ratio[0] = 0.01f;
+        this.phys_ratio[0] = 0.007f;
 
         //start camera-----------------------------------------
         mCamera.setParameters(param);

@@ -1,6 +1,7 @@
 package com.pwrobel.darkcam1;
 
 import android.content.Context;
+import android.graphics.ImageFormat;
 import android.hardware.Camera;
 import android.os.Environment;
 import android.util.Log;
@@ -30,7 +31,10 @@ public class PhotoHandler implements Camera.PictureCallback {
     @Override
     public void onPictureTaken(byte[] data, Camera camera) {
 
-        this.image_processor_.setImgBuffer(data,0,0,0,StaticPhotoRenderBackend.ImgDataType.JPG);
+        Camera.Parameters parameters = camera.getParameters();
+        int format = parameters.getPreviewFormat();
+
+        this.image_processor_.setImgBuffer(data,0,0,0,ImageFormat.JPEG);
 
         int error_code = this.image_processor_.saveBufferToDisk();
 

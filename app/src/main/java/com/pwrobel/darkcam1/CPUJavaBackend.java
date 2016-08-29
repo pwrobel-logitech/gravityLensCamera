@@ -1,9 +1,14 @@
 package com.pwrobel.darkcam1;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.ImageFormat;
 import android.os.Environment;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
@@ -18,6 +23,9 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
     private int height;
     private int bpp;
     private byte[] buf;
+    private int imgtype; /*ex. ImageType.JPEG*/
+
+    private Bitmap preprocessed_bigimage;
 
     String log_prefix = "darkcam";
 
@@ -37,21 +45,13 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
     };
 
     //set camera full resolution data
-    public void setImgBuffer(byte[] buff, int width, int height, int bpp, ImgDataType type){
-        if(type != ImgDataType.JPG) {
-            if (width * height * bpp != this.width * this.height * this.bpp)
-                this.buf = new byte[width * height * bpp];
-            this.width = width;
-            this.height = height;
-            this.bpp = bpp;
-            for (int j = 0; j < height; j++)
-                for (int i = 0; i < width; i++) {
-                    for (int k = 0; k < bpp; k++)
-                        this.buf[bpp * (j * width + i) + k] = buff[bpp * (j * width + i) + k];
-                }
-        }else{
+    public void setImgBuffer(byte[] buff, int width, int height, int bpp, int type){
+        this.imgtype = type;
+            BitmapFactory.Options opt = new BitmapFactory.Options();
+            Bitmap bitmap = BitmapFactory.decodeByteArray(buff, 0, buff.length, opt);
+            Log.i("decode bmp info: ", "decW: "+bitmap.getWidth()+" decH: "+bitmap.getHeight());
             this.buf = buff;
-        }
+            this.preprocessed_bigimage = bitmap;
     };
 
     //apply shader effect in CPU on the buffer
@@ -81,8 +81,13 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
 
         try {
             FileOutputStream fos = new FileOutputStream(pictureFile);
-            fos.write(this.buf);
+            final BufferedOutputStream bs = new BufferedOutputStream(fos, 1024 * 1024 * 16);
+            this.preprocessed_bigimage.compress(Bitmap.CompressFormat.JPEG, 3, bs);
+            bs.flush();
+            bs.close();
             fos.close();
+            //fos.write(this.buf);
+            //fos.close();
             //Toast.makeText(context, "New Image saved:" + photoFile,
             //        Toast.LENGTH_LONG).show();
         } catch (Exception error) {

@@ -1,5 +1,7 @@
 package com.pwrobel.darkcam1;
 
+import android.graphics.ImageFormat;
+
 /**
  * Created by pwrobel on 05.06.16.
  */
@@ -7,10 +9,6 @@ package com.pwrobel.darkcam1;
 //when the user chooses to take the picture, this backend manages the processing and
 //saving of the frame to the disk
 public interface StaticPhotoRenderBackend {
-
-    public enum ImgDataType {
-        RGBA, RGB, JPG, YUV
-    }
 
     //initialize CPU renderer backend
     public void Init();
@@ -22,7 +20,7 @@ public interface StaticPhotoRenderBackend {
      *set camera full resolution data
      * if data_type is JPG, then width, height , bpp are not necessary
      */
-    public void setImgBuffer(byte[] buff, int width, int height, int bpp, ImgDataType data_type);
+    public void setImgBuffer(byte[] buff, int width, int height, int bpp, /*ImageFormat constants*/int data_type);
 
     //apply shader effect in CPU on the buffer
     public int processBuffer();
