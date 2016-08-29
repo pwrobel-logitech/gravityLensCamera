@@ -20,7 +20,7 @@ public interface StaticPhotoRenderBackend {
      *set camera full resolution data
      * if data_type is JPG, then width, height , bpp are not necessary
      */
-    public void setImgBuffer(byte[] buff, int width, int height, int bpp, /*ImageFormat constants*/int data_type);
+    public void setImgBuffer(byte[] buff, /*ImageFormat constants*/int data_type);
 
     //apply shader effect in CPU on the buffer
     public int processBuffer();

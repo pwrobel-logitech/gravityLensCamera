@@ -34,7 +34,8 @@ public class PhotoHandler implements Camera.PictureCallback {
         Camera.Parameters parameters = camera.getParameters();
         int format = parameters.getPreviewFormat();
 
-        this.image_processor_.setImgBuffer(data,0,0,0,ImageFormat.JPEG);
+        this.image_processor_.setImgBuffer(data, ImageFormat.JPEG);
+        this.image_processor_.processBuffer();
 
         int error_code = this.image_processor_.saveBufferToDisk();
 

@@ -45,9 +45,10 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
     };
 
     //set camera full resolution data
-    public void setImgBuffer(byte[] buff, int width, int height, int bpp, int type){
+    public void setImgBuffer(byte[] buff, int type){
         this.imgtype = type;
             BitmapFactory.Options opt = new BitmapFactory.Options();
+            opt.inMutable = true; //set bitmap to mutable - able to operate on its pixels
             Bitmap bitmap = BitmapFactory.decodeByteArray(buff, 0, buff.length, opt);
             Log.i("decode bmp info: ", "decW: "+bitmap.getWidth()+" decH: "+bitmap.getHeight());
             this.buf = buff;
@@ -56,6 +57,11 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
 
     //apply shader effect in CPU on the buffer
     public int processBuffer(){
+        for (int j = 0; j<this.preprocessed_bigimage.getHeight(); j++)
+            for (int i = 0; i < this.preprocessed_bigimage.getWidth(); i++){
+                int pix = this.preprocessed_bigimage.getPixel(i, j);
+                this.preprocessed_bigimage.setPixel(i, j, pix & 0xff00ffff);
+            }
         return 1;
     };
 
@@ -82,7 +88,7 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
         try {
             FileOutputStream fos = new FileOutputStream(pictureFile);
             final BufferedOutputStream bs = new BufferedOutputStream(fos, 1024 * 1024 * 16);
-            this.preprocessed_bigimage.compress(Bitmap.CompressFormat.JPEG, 3, bs);
+            this.preprocessed_bigimage.compress(Bitmap.CompressFormat.JPEG, 15, bs);
             bs.flush();
             bs.close();
             fos.close();
