@@ -56,7 +56,7 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
         int w = this.preprocessed_bigimage.getWidth();
         int h = this.preprocessed_bigimage.getHeight();
         this.RGB_buf = new int[w * h];
-//        this.postprocessed_RGB_buf = new int[w * h];
+        this.postprocessed_RGB_buf = new int[w * h];
     };
 
     //apply shader effect in CPU on the buffer
