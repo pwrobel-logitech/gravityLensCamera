@@ -22,7 +22,8 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
     private int width;
     private int height;
     private int bpp;
-    private byte[] buf;
+    private int[] RGB_buf;
+    private int[] postprocessed_RGB_buf;
     private int imgtype; /*ex. ImageType.JPEG*/
 
     private Bitmap preprocessed_bigimage;
@@ -47,21 +48,31 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
     //set camera full resolution data
     public void setImgBuffer(byte[] buff, int type){
         this.imgtype = type;
-            BitmapFactory.Options opt = new BitmapFactory.Options();
-            opt.inMutable = true; //set bitmap to mutable - able to operate on its pixels
-            Bitmap bitmap = BitmapFactory.decodeByteArray(buff, 0, buff.length, opt);
-            Log.i("decode bmp info: ", "decW: "+bitmap.getWidth()+" decH: "+bitmap.getHeight());
-            this.buf = buff;
-            this.preprocessed_bigimage = bitmap;
+        BitmapFactory.Options opt = new BitmapFactory.Options();
+        opt.inMutable = true; //set bitmap to mutable - able to operate on its pixels
+        Bitmap bitmap = BitmapFactory.decodeByteArray(buff, 0, buff.length, opt);
+        this.preprocessed_bigimage = bitmap;
+        Log.i("decode bmp info: ", "decW: "+bitmap.getWidth()+" decH: "+bitmap.getHeight());
+        int w = this.preprocessed_bigimage.getWidth();
+        int h = this.preprocessed_bigimage.getHeight();
+        this.RGB_buf = new int[w * h];
+//        this.postprocessed_RGB_buf = new int[w * h];
     };
 
     //apply shader effect in CPU on the buffer
     public int processBuffer(){
-        for (int j = 0; j<this.preprocessed_bigimage.getHeight(); j++)
-            for (int i = 0; i < this.preprocessed_bigimage.getWidth(); i++){
-                int pix = this.preprocessed_bigimage.getPixel(i, j);
-                this.preprocessed_bigimage.setPixel(i, j, pix & 0xff00ffff);
+        int pix_buf[] = this.RGB_buf;
+        int w = this.preprocessed_bigimage.getWidth();
+        int h = this.preprocessed_bigimage.getHeight();
+        this.preprocessed_bigimage.getPixels(pix_buf, 0, w, 0, 0, w, h);
+
+        for (int j = 0; j < h; j++)
+            for (int i = 0; i < w; i++){
+                int p = pix_buf[i + w * j];
+                p = p & 0xff00ffff;
+                pix_buf[i + w * j] = p;
             }
+        this.preprocessed_bigimage.setPixels(pix_buf, 0, w, 0, 0, w, h);
         return 1;
     };
 
