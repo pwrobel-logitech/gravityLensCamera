@@ -35,6 +35,8 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
     double distance; //in meters from the observer
     double fovX; //in degrees along the horizontal axis
 
+
+
     //initialize CPU renderer backend
     public void Init(){
 
@@ -61,20 +63,94 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
 
     //apply shader effect in CPU on the buffer
     public int processBuffer(){
-        int pix_buf[] = this.RGB_buf;
         int w = this.preprocessed_bigimage.getWidth();
         int h = this.preprocessed_bigimage.getHeight();
-        this.preprocessed_bigimage.getPixels(pix_buf, 0, w, 0, 0, w, h);
+        this.preprocessed_bigimage.getPixels(this.RGB_buf, 0, w, 0, 0, w, h);
+        this.private_process_buff();
+        this.preprocessed_bigimage.setPixels(this.postprocessed_RGB_buf, 0, w, 0, 0, w, h);
+        return 1;
+    };
+
+    private void private_process_buff(){ //from the RGB_buf to postprocessed_RGB_buf
+        int w = this.preprocessed_bigimage.getWidth();
+        int h = this.preprocessed_bigimage.getHeight();
+        for (int j = 0; j < h; j++)
+            for (int i = 0; i < w; i++){
+                int p = this.RGB_buf[i + w * j];
+                p = p & 0xff00ffff;
+                this.postprocessed_RGB_buf[i + w * j] = p;
+            }
 
         for (int j = 0; j < h; j++)
             for (int i = 0; i < w; i++){
-                int p = pix_buf[i + w * j];
-                p = p & 0xff00ffff;
-                pix_buf[i + w * j] = p;
+                this.process_pixel(i, j, w, h);
             }
-        this.preprocessed_bigimage.setPixels(pix_buf, 0, w, 0, 0, w, h);
-        return 1;
-    };
+    }
+
+    private void process_pixel(int x, int y, int w, int h){
+        double phys_ratio = this.mass;
+        double fov_yx_ratio = ((double)h)/((double)w);
+        double fovX = this.fovX * (Math.PI/180.0) ;
+        double fovY = fov_yx_ratio * fovX;
+
+        double xnorm = ((double)x)/((double)w);
+        double ynorm = ((double)y)/((double)h);
+
+        double tx = Math.tan((xnorm - 0.5) * fovX);
+        double ty = Math.tan((ynorm - 0.5) * fovY);
+        double fi = Math.atan(Math.sqrt(tx*tx+ty*ty));
+
+        int final_col;
+
+        if(fi < phys_ratio){
+            final_col = 0x00000000;
+        }else{
+            double coeff = 1.0 - phys_ratio * (1.0 / (fi * fi));
+            double xn = clamp(0.5 + coeff*(xnorm-0.5),0.0,1.0);
+            double yn = clamp(0.5 + coeff*(ynorm-0.5),0.0,1.0);
+            int readcoord = ((int)(xn*w)) + w * ((int)(yn*h));
+            if(readcoord < 0)
+                readcoord = 0;
+            if(readcoord >= w*h)
+                readcoord = w*h - 1;
+            final_col = this.RGB_buf[readcoord];
+        }
+        this.postprocessed_RGB_buf[x + y * w] = final_col;
+                /*
+        pi = 3.141593;
+        fovyxratio = fov_yx_ratio;
+        fovx = fov_x_deg * (pi/180.0);
+        fovy = fovyxratio * fovx;
+
+
+        x = vTextureCoord.x;
+        y = vTextureCoord.y;
+
+        tx = tan((x-0.5)*fovx);
+        ty = tan((y-0.5)*fovy);
+
+        fi  = atan(sqrt(tx*tx+ty*ty));
+
+        ratio = phys_ratio;
+
+        if(fi < ratio){
+            gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
+        }else{
+            coeff = 1.0 - ratio * (1.0/(fi*fi));
+            xn = clamp(0.5 + (x-0.5)*coeff,0.0,1.0);
+            yn = clamp(0.5 + (y-0.5)*coeff,0.0,1.0);
+
+            gl_FragColor =texture2D(sTexture, vec2(xn,yn));
+        }*/
+    }
+
+    public static double clamp(double a, double low, double high){
+        if(a < low)
+            return low;
+        if(a > high)
+            return high;
+        return a;
+    }
 
     //save the processed buffer on the disk
     public int saveBufferToDisk(){
@@ -99,7 +175,7 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
         try {
             FileOutputStream fos = new FileOutputStream(pictureFile);
             final BufferedOutputStream bs = new BufferedOutputStream(fos, 1024 * 1024 * 16);
-            this.preprocessed_bigimage.compress(Bitmap.CompressFormat.JPEG, 15, bs);
+            this.preprocessed_bigimage.compress(Bitmap.CompressFormat.JPEG, 75, bs);
             bs.flush();
             bs.close();
             fos.close();
