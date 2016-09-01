@@ -175,7 +175,7 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
         try {
             FileOutputStream fos = new FileOutputStream(pictureFile);
             final BufferedOutputStream bs = new BufferedOutputStream(fos, 1024 * 1024 * 16);
-            this.preprocessed_bigimage.compress(Bitmap.CompressFormat.JPEG, 75, bs);
+            this.preprocessed_bigimage.compress(Bitmap.CompressFormat.JPEG, 100, bs);
             bs.flush();
             bs.close();
             fos.close();

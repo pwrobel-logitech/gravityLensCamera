@@ -39,7 +39,8 @@ public class CamActivity extends ActionBarActivity {
     public void onPause(){
         Log.i("darkcam activity", "Activity onPause");
         super.onPause();
-        mRenderer.onDestroy();
+        if(mRenderer != null)
+            mRenderer.onDestroy();
         Log.i("darkcam activity", "Activity onPause finished");
     }
 
