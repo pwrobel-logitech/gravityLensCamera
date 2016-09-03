@@ -45,11 +45,6 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
 
     };
 
-    //0 = backend is processing the frame, >0 - denotes some reason of why it's busy
-    public int getBackendBusy(){
-        return 0;
-    };
-
     //set camera full resolution data
     public void setImgBuffer(byte[] buff, int type){
         this.imgtype = type;

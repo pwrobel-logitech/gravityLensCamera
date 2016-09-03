@@ -13,9 +13,6 @@ public interface StaticPhotoRenderBackend {
     //initialize CPU renderer backend
     public void Init();
 
-    //0 = backend is processing the frame, >0 - denotes some reason of why it's busy
-    public int getBackendBusy();
-
     /*
      *set camera full resolution data
      * if data_type is JPG, then width, height , bpp are not necessary
