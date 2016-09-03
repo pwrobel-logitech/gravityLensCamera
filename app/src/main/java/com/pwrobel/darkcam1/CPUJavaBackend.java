@@ -45,6 +45,11 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
 
     };
 
+    //Java backend is always capable of processing
+    public boolean testMe(){
+        return true;
+    }
+
     //set camera full resolution data
     public void setImgBuffer(byte[] buff, int type){
         this.imgtype = type;

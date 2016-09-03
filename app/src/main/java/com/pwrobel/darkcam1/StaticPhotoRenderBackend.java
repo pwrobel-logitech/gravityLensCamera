@@ -28,4 +28,6 @@ public interface StaticPhotoRenderBackend {
     //set info about the object, mass, distance and field of viev in x-direction - horizontal
     public void setBlackHoleInfo(double mass, double distance, double fovXdeg);
 
+    //test backend, tell whether it is functional on a sample process
+    public boolean testMe();
 }
