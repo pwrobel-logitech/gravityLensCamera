@@ -65,6 +65,9 @@ public class CameraRenderer extends GLSurfaceView implements
         image_processor_ = new NativeCPUBackend();
         if(!image_processor_.testMe()){
             image_processor_ = new CPUJavaBackend();
+            Log.i("darkcam:", "Fall back to java backend renderer.");
+        }else{
+            Log.i("darkcam:", "Using native renderer for big pictures.");
         }
         image_processor_.Init();
         return true;

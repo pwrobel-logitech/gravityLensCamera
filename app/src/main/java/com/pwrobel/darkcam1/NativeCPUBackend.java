@@ -10,6 +10,7 @@ public class NativeCPUBackend extends CPUJavaBackend {
     static {
         try {
             System.loadLibrary("backend_native");
+            System.loadLibrary("log");
         } catch (UnsatisfiedLinkError e) {
             Log.i("darkcam", "Unable to load native backend library");
         }
@@ -33,13 +34,13 @@ public class NativeCPUBackend extends CPUJavaBackend {
         int w = this.preprocessed_bigimage.getWidth();
         int h = this.preprocessed_bigimage.getHeight();
         this.preprocessed_bigimage.getPixels(this.RGB_buf, 0, w, 0, 0, w, h);
-        this.private_process_buff();
+        this.private_process_buff_native();
         this.preprocessed_bigimage.setPixels(this.postprocessed_RGB_buf, 0, w, 0, 0, w, h);
         return 1;
     };
 
 
-    private void private_process_buff() { //from the RGB_buf to postprocessed_RGB_buf
+    private void private_process_buff_native() { //from the RGB_buf to postprocessed_RGB_buf
         int numCPUs = this.getNumberOfCores();
         int numThreads = numCPUs;
         if(numThreads <= 0) //support 1, 2 or 4 threads
@@ -49,6 +50,7 @@ public class NativeCPUBackend extends CPUJavaBackend {
         if(numThreads > 4)
             numThreads = 4;
         double phys_ratio = this.phys_ratio;
+        //numThreads = 1;
         this.process_buffer(this.RGB_buf, this.postprocessed_RGB_buf, this.preprocessed_bigimage.getWidth(),
                 this.preprocessed_bigimage.getHeight(), phys_ratio, this.fovX, numThreads);
     }
