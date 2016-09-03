@@ -3,6 +3,7 @@ package com.pwrobel.darkcam1;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.ImageFormat;
+import android.os.Build;
 import android.os.Environment;
 import android.util.Log;
 import android.widget.ImageView;
@@ -10,9 +11,11 @@ import android.widget.Toast;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileFilter;
 import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.regex.Pattern;
 
 /**
  * Created by pwrobel on 05.06.16.
@@ -71,23 +74,143 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
         return 1;
     };
 
-    private void private_process_buff(){ //from the RGB_buf to postprocessed_RGB_buf
-        int w = this.preprocessed_bigimage.getWidth();
-        int h = this.preprocessed_bigimage.getHeight();
-        for (int j = 0; j < h; j++)
-            for (int i = 0; i < w; i++){
-                int p = this.RGB_buf[i + w * j];
-                p = p & 0xff00ffff;
-                this.postprocessed_RGB_buf[i + w * j] = p;
-            }
+    private void private_process_buff() { //from the RGB_buf to postprocessed_RGB_buf
+        int numCPUs = this.getNumberOfCores();
+        int numThreads = numCPUs;
+        if(numThreads <= 0) //support 1, 2 or 4 threads
+            numThreads = 1;
+        if(numThreads == 3)
+            numThreads = 2;
+        if(numThreads > 4)
+            numThreads = 4;
 
-        for (int j = 0; j < h; j++)
-            for (int i = 0; i < w; i++){
-                this.process_pixel(i, j, w, h);
-            }
+        if(numThreads == 1){
+            this.process_on_1_thread();
+        }else if(numThreads == 2){
+            this.process_on_2_threads();
+        }else if(numThreads == 4){
+            this.process_on_4_threads();
+        }else{
+            this.process_on_1_thread();
+        }
     }
 
-    private void process_pixel(int x, int y, int w, int h){
+    private void process_on_1_thread(){
+        Thread t1 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                int w = CPUJavaBackend.this.preprocessed_bigimage.getWidth();
+                int h = CPUJavaBackend.this.preprocessed_bigimage.getHeight();
+                for (int j = 0; j < h; j++)
+                    for (int i = 0; i < w; i++){
+                        process_pixel(i, j, w, h);
+                    }
+            }
+        });
+        t1.run();
+        try {
+            t1.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+            Log.i("darkcam: ", "Failed to join the Big image processor thread.");
+        }
+    }
+
+    private void process_on_2_threads(){
+        Thread t1 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                int w = CPUJavaBackend.this.preprocessed_bigimage.getWidth();
+                int h = CPUJavaBackend.this.preprocessed_bigimage.getHeight();
+                for (int j = 0; j < h/2; j++)
+                    for (int i = 0; i < w; i++){
+                        process_pixel(i, j, w, h);
+                    }
+            }
+        });
+        Thread t2 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                int w = CPUJavaBackend.this.preprocessed_bigimage.getWidth();
+                int h = CPUJavaBackend.this.preprocessed_bigimage.getHeight();
+                for (int j = h/2; j < h; j++)
+                    for (int i = 0; i < w; i++){
+                        process_pixel(i, j, w, h);
+                    }
+            }
+        });
+        t1.start();
+        t2.start();
+        try {
+            t1.join();
+            t2.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+            Log.i("darkcam: ", "Failed to join the Big image processor 2 threads.");
+        }
+    }
+
+    private void process_on_4_threads(){
+        Thread t1 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                int w = CPUJavaBackend.this.preprocessed_bigimage.getWidth();
+                int h = CPUJavaBackend.this.preprocessed_bigimage.getHeight();
+                for (int j = 0; j < h/2; j++)
+                    for (int i = 0; i < w/2; i++){
+                        process_pixel(i, j, w, h);
+                    }
+            }
+        });
+        Thread t2 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                int w = CPUJavaBackend.this.preprocessed_bigimage.getWidth();
+                int h = CPUJavaBackend.this.preprocessed_bigimage.getHeight();
+                for (int j = h/2; j < h; j++)
+                    for (int i = 0; i < w/2; i++){
+                        process_pixel(i, j, w, h);
+                    }
+            }
+        });
+        Thread t3 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                int w = CPUJavaBackend.this.preprocessed_bigimage.getWidth();
+                int h = CPUJavaBackend.this.preprocessed_bigimage.getHeight();
+                for (int j = 0; j < h/2; j++)
+                    for (int i = w/2; i < w; i++){
+                        process_pixel(i, j, w, h);
+                    }
+            }
+        });
+        Thread t4 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                int w = CPUJavaBackend.this.preprocessed_bigimage.getWidth();
+                int h = CPUJavaBackend.this.preprocessed_bigimage.getHeight();
+                for (int j = h/2; j < h; j++)
+                    for (int i = w/2; i < w; i++){
+                        process_pixel(i, j, w, h);
+                    }
+            }
+        });
+        t1.start();
+        t2.start();
+        t3.start();
+        t4.start();
+        try {
+            t1.join();
+            t2.join();
+            t3.join();
+            t4.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+            Log.i("darkcam: ", "Failed to join the Big image processor 4 threads.");
+        }
+    }
+
+    private void process_pixel(int x, int y, int w, int h){ //imitate pixel shader in software
         double phys_ratio = this.mass;
         double fov_yx_ratio = ((double)h)/((double)w);
         double fovX = this.fovX * (Math.PI/180.0) ;
@@ -116,32 +239,6 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
             final_col = this.RGB_buf[readcoord];
         }
         this.postprocessed_RGB_buf[x + y * w] = final_col;
-                /*
-        pi = 3.141593;
-        fovyxratio = fov_yx_ratio;
-        fovx = fov_x_deg * (pi/180.0);
-        fovy = fovyxratio * fovx;
-
-
-        x = vTextureCoord.x;
-        y = vTextureCoord.y;
-
-        tx = tan((x-0.5)*fovx);
-        ty = tan((y-0.5)*fovy);
-
-        fi  = atan(sqrt(tx*tx+ty*ty));
-
-        ratio = phys_ratio;
-
-        if(fi < ratio){
-            gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
-        }else{
-            coeff = 1.0 - ratio * (1.0/(fi*fi));
-            xn = clamp(0.5 + (x-0.5)*coeff,0.0,1.0);
-            yn = clamp(0.5 + (y-0.5)*coeff,0.0,1.0);
-
-            gl_FragColor =texture2D(sTexture, vec2(xn,yn));
-        }*/
     }
 
     public static double clamp(double a, double low, double high){
@@ -207,4 +304,47 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
                 .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
         return new File(sdDir, "YYY");
     }
+
+
+    private int getNumberOfCores() {
+        if(Build.VERSION.SDK_INT >= 17) {
+            return Runtime.getRuntime().availableProcessors();
+        }
+        else {
+            // Use saurabh64's answer
+            return getNumCoresOldPhones();
+        }
+    }
+
+    /**
+     * Gets the number of cores available in this device, across all processors.
+     * Requires: Ability to peruse the filesystem at "/sys/devices/system/cpu"
+     * @return The number of cores, or 1 if failed to get result
+     */
+    private int getNumCoresOldPhones() {
+        //Private Class to display only CPU devices in the directory listing
+        class CpuFilter implements FileFilter {
+            @Override
+            public boolean accept(File pathname) {
+                //Check if filename is "cpu", followed by a single digit number
+                if(Pattern.matches("cpu[0-9]+", pathname.getName())) {
+                    return true;
+                }
+                return false;
+            }
+        }
+
+        try {
+            //Get directory containing CPU info
+            File dir = new File("/sys/devices/system/cpu/");
+            //Filter to only list the devices we care about
+            File[] files = dir.listFiles(new CpuFilter());
+            //Return the number of cores (virtual CPU devices)
+            return files.length;
+        } catch(Exception e) {
+            //Default to return 1 core
+            return 1;
+        }
+    }
+
 }
