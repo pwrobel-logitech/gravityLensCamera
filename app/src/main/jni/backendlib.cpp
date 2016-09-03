@@ -3,9 +3,31 @@
 
 #include <pthread.h>
 
+
+struct test_args{
+  double in;
+};
+
+double test_result;
+
+void *do_test(void *args) {
+  test_args *myargs = (test_args*)args;
+  double input = myargs->in;
+  test_result = sin(input) + M_PI;
+  return (void*) 0;
+}
+
+
+
 JNIEXPORT jdouble JNICALL Java_com_pwrobel_darkcam1_NativeCPUBackend_internal_1numerical_1test
   (JNIEnv *, jobject, jdouble in){
-    return M_PI + sin(in);
+   pthread_t tid;
+    void *status;
+    test_args tst;
+    tst.in = in;
+    pthread_create(&tid, NULL, do_test, (void*)&tst);
+    pthread_join(tid, &status);
+    return test_result;
   };
 
 
