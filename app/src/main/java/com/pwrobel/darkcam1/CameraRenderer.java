@@ -62,7 +62,10 @@ public class CameraRenderer extends GLSurfaceView implements
      * Choose and init the backend for processing the big image to the final effect
      */
     private boolean init_image_processing_backend(){
-        image_processor_ = new CPUJavaBackend();
+        image_processor_ = new NativeCPUBackend();
+        if(!image_processor_.testMe()){
+            image_processor_ = new CPUJavaBackend();
+        }
         image_processor_.Init();
         return true;
     }

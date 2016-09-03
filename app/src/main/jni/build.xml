@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<project name="darkcam_backend">
+   
+<target name="release">
+    <exec executable="${ndk.dir}/ndk-build" failonerror="true"/>
+</target>
+
+
+
+</project>
