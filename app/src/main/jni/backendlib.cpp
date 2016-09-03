@@ -164,8 +164,8 @@ JNIEXPORT void JNICALL Java_com_pwrobel_darkcam1_NativeCPUBackend_process_1buffe
         pthread_t tid1;
         void *status1;
         subimage_info nfo1;
-        nfo1.div_x = 2;//how many divisions on x direction
-        nfo1.div_y = 2;
+        nfo1.div_x = 1;//how many divisions on x direction
+        nfo1.div_y = 4;
         nfo1.num_x = 0;//which xy subrectange does this thread process
         nfo1.num_y = 0;
         nfo1.w = w;
@@ -178,8 +178,8 @@ JNIEXPORT void JNICALL Java_com_pwrobel_darkcam1_NativeCPUBackend_process_1buffe
         pthread_t tid2;
         void *status2;
         subimage_info nfo2;
-        nfo2.div_x = 2;//how many divisions on x direction
-        nfo2.div_y = 2;
+        nfo2.div_x = 1;//how many divisions on x direction
+        nfo2.div_y = 4;
         nfo2.num_x = 0;//which xy subrectange does this thread process
         nfo2.num_y = 1;
         nfo2.w = w;
@@ -192,10 +192,10 @@ JNIEXPORT void JNICALL Java_com_pwrobel_darkcam1_NativeCPUBackend_process_1buffe
         pthread_t tid3;
         void *status3;
         subimage_info nfo3;
-        nfo3.div_x = 2;//how many divisions on x direction
-        nfo3.div_y = 2;
-        nfo3.num_x = 1;//which xy subrectange does this thread process
-        nfo3.num_y = 0;
+        nfo3.div_x = 1;//how many divisions on x direction
+        nfo3.div_y = 4;
+        nfo3.num_x = 0;//which xy subrectange does this thread process
+        nfo3.num_y = 2;
         nfo3.w = w;
         nfo3.h = h;
         nfo3.phys_ratio = phys_ratio;
@@ -206,10 +206,10 @@ JNIEXPORT void JNICALL Java_com_pwrobel_darkcam1_NativeCPUBackend_process_1buffe
         pthread_t tid4;
         void *status4;
         subimage_info nfo4;
-        nfo4.div_x = 2;//how many divisions on x direction
-        nfo4.div_y = 2;
-        nfo4.num_x = 1;//which xy subrectange does this thread process
-        nfo4.num_y = 1;
+        nfo4.div_x = 1;//how many divisions on x direction
+        nfo4.div_y = 4;
+        nfo4.num_x = 0;//which xy subrectange does this thread process
+        nfo4.num_y = 3;
         nfo4.w = w;
         nfo4.h = h;
         nfo4.phys_ratio = phys_ratio;
