@@ -25,11 +25,11 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
     private int width;
     private int height;
     private int bpp;
-    private int[] RGB_buf;
-    private int[] postprocessed_RGB_buf;
+    protected int[] RGB_buf;
+    protected int[] postprocessed_RGB_buf;
     private int imgtype; /*ex. ImageType.JPEG*/
 
-    private Bitmap preprocessed_bigimage;
+    protected Bitmap preprocessed_bigimage;
 
     String log_prefix = "darkcam";
 
@@ -37,7 +37,7 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
     double mass;//multiple of the mass of earth
     double distance; //in meters from the observer
     double fovX; //in degrees along the horizontal axis
-
+    protected double phys_ratio;
 
 
     //initialize CPU renderer backend
@@ -211,7 +211,7 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
     }
 
     private void process_pixel(int x, int y, int w, int h){ //imitate pixel shader in software
-        double phys_ratio = this.mass;
+        double phys_ratio = this.phys_ratio;
         double fov_yx_ratio = ((double)h)/((double)w);
         double fovX = this.fovX * (Math.PI/180.0) ;
         double fovY = fov_yx_ratio * fovX;
@@ -295,6 +295,7 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
         this.mass = mass;
         this.distance = distance;
         this.fovX = fovXdeg;
+        this.phys_ratio = mass;
     };
 
 
@@ -306,7 +307,7 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
     }
 
 
-    private int getNumberOfCores() {
+    protected int getNumberOfCores() {
         if(Build.VERSION.SDK_INT >= 17) {
             return Runtime.getRuntime().availableProcessors();
         }

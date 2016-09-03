@@ -37,7 +37,10 @@ JNIEXPORT void JNICALL Java_com_pwrobel_darkcam1_NativeCPUBackend_process_1buffe
     const jint *in_buff = env->GetIntArrayElements(jinput , 0);
     jint *out_buff = env->GetIntArrayElements(joutput , 0);
 
-
+    for (int j = 0; j < h; j++)
+      for (int i = 0; i < w; i++){
+        out_buff[i + j * w] = in_buff[i + j * w] & 0xff00ffff;
+      }
 
     env->ReleaseIntArrayElements(jinput, (jint*)in_buff, 0);
     env->ReleaseIntArrayElements(joutput, out_buff, 0);
