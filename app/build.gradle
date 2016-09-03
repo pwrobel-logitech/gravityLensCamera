@@ -13,6 +13,7 @@ android {
         ndk {
             moduleName "backend_native"
             ldLibs "log"
+            cFlags "-O3 -fPIC"
         }
     }
     buildTypes {
