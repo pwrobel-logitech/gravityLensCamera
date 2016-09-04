@@ -19,6 +19,14 @@ void *do_test(void *args) {
   return (void*) 0;
 }
 
+void lowest_priority(){
+    int policy;
+    struct sched_param param;
+
+    pthread_getschedparam(pthread_self(), &policy, &param);
+    param.sched_priority = sched_get_priority_min(policy);
+    pthread_setschedparam(pthread_self(), policy, &param);
+}
 
 inline double clamp(double a, double low, double high){
     if(a < low)
@@ -74,6 +82,7 @@ struct subimage_info{
 };
 
 void *perform_subimage_transform(void *args) {
+    lowest_priority();
     subimage_info* info = (subimage_info*)args;
     int loop_x_start = (int)(((double)info->num_x/(double)info->div_x)*info->w);
     int loop_x_end = (int)(((double)(info->num_x+1)/(double)info->div_x)*info->w);
@@ -109,6 +118,7 @@ JNIEXPORT void JNICALL Java_com_pwrobel_darkcam1_NativeCPUBackend_process_1buffe
     const jint *in_buff = env->GetIntArrayElements(jinput , 0);
     jint *out_buff = env->GetIntArrayElements(joutput , 0);
 
+    lowest_priority();
 
     if(nThr == 1){
         pthread_t tid;
