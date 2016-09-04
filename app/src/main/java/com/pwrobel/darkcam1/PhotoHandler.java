@@ -50,7 +50,7 @@ public class PhotoHandler implements Camera.PictureCallback {
         };
 
         act.getProgressDialog().dismiss();
-        
+
         camera.stopPreview();
         camera.startPreview();
 
