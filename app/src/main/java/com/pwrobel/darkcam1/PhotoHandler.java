@@ -30,7 +30,7 @@ public class PhotoHandler implements Camera.PictureCallback {
 
     @Override
     public void onPictureTaken(byte[] data, Camera camera) {
-
+        CamActivity act = (CamActivity) this.context;
         Camera.Parameters parameters = camera.getParameters();
         int format = parameters.getPreviewFormat();
 
@@ -40,14 +40,13 @@ public class PhotoHandler implements Camera.PictureCallback {
         int error_code = this.image_processor_.saveBufferToDisk();
 
         if(error_code == -1){
-            Toast.makeText(context, "Image could not be saved.",
+            Toast.makeText(context, act.getTextInCurrentLang("could_not_save_img1"),
                     Toast.LENGTH_LONG).show();
         }else if(error_code == 1){
-            Toast.makeText(context, "New Image saved:",
+            Toast.makeText(context, act.getTextInCurrentLang("saved_img1"),
                     Toast.LENGTH_LONG).show();
         };
 
-        CamActivity act = (CamActivity) this.context;
         act.getProgressDialog().dismiss();
 
         /*File pictureFileDir = getDir();

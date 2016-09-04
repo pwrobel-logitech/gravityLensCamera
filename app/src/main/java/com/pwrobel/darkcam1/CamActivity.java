@@ -1,6 +1,7 @@
 package com.pwrobel.darkcam1;
 
 import android.app.ProgressDialog;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.widget.Toast;
 import android.content.Context;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -21,9 +23,20 @@ public class CamActivity extends ActionBarActivity {
 
     private ProgressDialog progress;
     private Set<String> languages;
+    private String current_lang;
 
     public ProgressDialog getProgressDialog(){
         return this.progress;
+    }
+
+    public String getCurrentLang(){
+        return current_lang;
+    }
+
+    public void setCurrentLang(String lang){
+        if(this.languages.contains(lang)){
+            this.current_lang = lang;
+        }
     }
 
     public Set<String> getLanguages(){
@@ -36,10 +49,24 @@ public class CamActivity extends ActionBarActivity {
         }
     }
 
+    private String getStringResourceByName(String aString) {
+        String packageName = getPackageName();
+        int resId = getResources().getIdentifier(aString, "string", packageName);
+        return getString(resId);
+    }
+
+    public String getTextInCurrentLang(String text){
+        return (this.getStringResourceByName(this.current_lang + "_" + text));
+    }
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //this.addLanguage("en");
+        this.languages = new HashSet<String>();
+
+        this.addLanguage("en");
+        this.addLanguage("pl");
+        this.setCurrentLang("pl");
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -89,8 +116,8 @@ public class CamActivity extends ActionBarActivity {
 
                 final ProgressDialog progress = new ProgressDialog(CamActivity.this);
                 CamActivity.this.progress = progress;
-                progress.setTitle("Loading");
-                progress.setMessage("Wait while loading...");
+                progress.setTitle(CamActivity.this.getTextInCurrentLang("progress_title"));
+                progress.setMessage(CamActivity.this.getTextInCurrentLang("progress_msg"));
                 progress.show();
 
                 new Thread(new Runnable() {
