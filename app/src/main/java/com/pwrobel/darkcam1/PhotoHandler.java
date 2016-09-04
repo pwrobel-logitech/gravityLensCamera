@@ -47,6 +47,9 @@ public class PhotoHandler implements Camera.PictureCallback {
                     Toast.LENGTH_LONG).show();
         };
 
+        CamActivity act = (CamActivity) this.context;
+        act.getProgressDialog().dismiss();
+
         /*File pictureFileDir = getDir();
 
         if (!pictureFileDir.exists() && !pictureFileDir.mkdirs()) {
