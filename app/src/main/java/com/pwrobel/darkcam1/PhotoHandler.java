@@ -37,6 +37,8 @@ public class PhotoHandler implements Camera.PictureCallback {
         this.image_processor_.setImgBuffer(data, ImageFormat.JPEG);
         this.image_processor_.processBuffer();
 
+        act.getProgressDialog().setMessage(act.getTextInCurrentLang("saving_img_to_sd")); //will not show..
+
         int error_code = this.image_processor_.saveBufferToDisk();
 
         if(error_code == -1){
@@ -48,39 +50,7 @@ public class PhotoHandler implements Camera.PictureCallback {
         };
 
         act.getProgressDialog().dismiss();
-
-        /*File pictureFileDir = getDir();
-
-        if (!pictureFileDir.exists() && !pictureFileDir.mkdirs()) {
-
-            Log.d(log_prefix, "Can't create directory to save image.");
-            Toast.makeText(context, "Can't create directory to save image.",
-                    Toast.LENGTH_LONG).show();
-            return;
-
-        }
-
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyymmddhhmmss");
-        String date = dateFormat.format(new Date());
-        String photoFile = "PQQQQ_" + date + ".jpg";
-
-        String filename = pictureFileDir.getPath() + File.separator + photoFile;
-
-        File pictureFile = new File(filename);
-
-        try {
-            FileOutputStream fos = new FileOutputStream(pictureFile);
-            fos.write(data);
-            fos.close();
-            Toast.makeText(context, "New Image saved:" + photoFile,
-                    Toast.LENGTH_LONG).show();
-        } catch (Exception error) {
-            Log.d(log_prefix, "File" + filename + "not saved: "
-                    + error.getMessage());
-            Toast.makeText(context, "Image could not be saved.",
-                    Toast.LENGTH_LONG).show();
-        }
-        */
+        
         camera.stopPreview();
         camera.startPreview();
 
