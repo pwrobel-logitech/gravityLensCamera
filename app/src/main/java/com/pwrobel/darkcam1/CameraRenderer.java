@@ -87,6 +87,7 @@ public class CameraRenderer extends GLSurfaceView implements
 
     private void init(){
 
+        this.phys_ratio[0] = (float)default_phys_ratio;
         if(!init_image_processing_backend()){
             Log.i("Darkcam_processor", "failed to init CPU backend ");
         };
@@ -100,6 +101,18 @@ public class CameraRenderer extends GLSurfaceView implements
         setEGLContextClientVersion(2);
         setRenderer(this);
         setRenderMode(GLSurfaceView.RENDERMODE_WHEN_DIRTY);
+    }
+
+    private static double default_phys_ratio = 0.007f;
+    private double scale_factor;
+
+    public void updateBlackHoleScale(double scale_factor){
+        this.phys_ratio[0] = (float)(scale_factor * default_phys_ratio);
+        this.scale_factor = scale_factor;
+        this.updateTexture = true;
+        if(this.image_processor_ != null){
+            this.image_processor_.setBlackHoleInfo(this.phys_ratio[0], 1.0, this.fov_x_deg[0]);
+        }
     }
 
     @Override
@@ -223,7 +236,7 @@ public class CameraRenderer extends GLSurfaceView implements
         this.fov_x_deg[0] = (float)thetaV;
 
         //set physical ratio parameters containing the "normalized" black hole mass
-        this.phys_ratio[0] = 0.007f;
+        //this.phys_ratio[0] = (float)default_phys_ratio;
         this.image_processor_.setBlackHoleInfo(this.phys_ratio[0], 1.0, this.fov_x_deg[0]);
         //start camera-----------------------------------------
         mCamera.setParameters(param);
@@ -239,7 +252,7 @@ public class CameraRenderer extends GLSurfaceView implements
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
 
         //render the texture to FBO if new frame is available
-        if(updateTexture){
+        if(updateTexture && (mCamera != null)){
             mSurfaceTexture.updateTexImage();
             mSurfaceTexture.getTransformMatrix(mTransformM);
 

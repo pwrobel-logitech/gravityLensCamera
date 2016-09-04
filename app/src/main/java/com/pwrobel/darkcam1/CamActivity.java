@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
+import android.view.ScaleGestureDetector;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -130,5 +132,45 @@ public class CamActivity extends ActionBarActivity {
             }
         });
 
+        this.mScaleDetector = new ScaleGestureDetector(this, new ScaleListener());
+
+        this.mRenderer.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                mScaleDetector.onTouchEvent(event);
+                return true;
+            }
+        });
+
+    }
+
+    ScaleGestureDetector mScaleDetector = null;
+    private double mScaleFactor = 1.0f;
+
+    private class ScaleListener
+            extends ScaleGestureDetector.SimpleOnScaleGestureListener {
+
+        @Override
+        public boolean onScaleBegin(ScaleGestureDetector detector) {
+            return true;
+        }
+
+        @Override
+        public void onScaleEnd(ScaleGestureDetector detector) {
+            // Intentionally empty
+        }
+
+        @Override
+        public boolean onScale(ScaleGestureDetector detector) {
+            mScaleFactor *= detector.getScaleFactor();
+
+            // Don't let the object get too small or too large.
+            mScaleFactor = Math.max(0.5f, Math.min(mScaleFactor, 2.0f));
+
+            mRenderer.invalidate();
+            Log.i("darkcam ", "Scale changed : " + String.valueOf(mScaleFactor));
+            mRenderer.updateBlackHoleScale(mScaleFactor);
+            return true;
+        }
     }
 }
