@@ -277,7 +277,7 @@ public class CameraRenderer extends GLSurfaceView implements
             GLES20.glUniform1fv(uPhysRatio, 1, phys_ratio, 0);
 
             GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
-            GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, mCameraTexture.getTextureId());
+            GLES20.glBindTexture(GLES11Ext.GL_TEXTURE_EXTERNAL_OES, mCameraTexture.getTextureId());
 
             renderQuad(mOffscreenShader.getHandle("aPosition"));
         }
