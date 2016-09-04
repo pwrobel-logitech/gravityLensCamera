@@ -263,7 +263,7 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyymmddhhmmss");
         String date = dateFormat.format(new Date());
-        String photoFile = "PQQQQ_" + date + ".jpg";
+        String photoFile = "BlackHole_" + date + ".jpg";
 
         String filename = pictureFileDir.getPath() + File.separator + photoFile;
 
@@ -271,8 +271,9 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
 
         try {
             FileOutputStream fos = new FileOutputStream(pictureFile);
-            final BufferedOutputStream bs = new BufferedOutputStream(fos, 1024 * 1024 * 16);
-            this.preprocessed_bigimage.compress(Bitmap.CompressFormat.JPEG, 100, bs);
+            int size = 256 + this.preprocessed_bigimage.getWidth() * this.preprocessed_bigimage.getHeight();
+            final BufferedOutputStream bs = new BufferedOutputStream(fos, size);
+            this.preprocessed_bigimage.compress(Bitmap.CompressFormat.JPEG, 90, bs);
             bs.flush();
             bs.close();
             fos.close();
@@ -303,7 +304,7 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
     private File getDir() {
         File sdDir = Environment
                 .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-        return new File(sdDir, "YYY");
+        return new File(sdDir, "BlackHoles");
     }
 
 
