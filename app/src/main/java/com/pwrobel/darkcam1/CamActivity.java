@@ -84,7 +84,7 @@ public class CamActivity extends ActionBarActivity {
         setContentView(R.layout.activity_cam);
         mRenderer = (CameraRenderer)findViewById(R.id.renderer_view);
         this.addListeners();
-        
+
         Log.i("darkcam activity", "Activity onStart");
         super.onStart();
         this.enableButtons();
