@@ -35,21 +35,47 @@ public class PhotoHandler implements Camera.PictureCallback {
         int format = parameters.getPreviewFormat();
 
         this.image_processor_.setImgBuffer(data, ImageFormat.JPEG);
-        this.image_processor_.processBuffer();
 
-        act.getProgressDialog().setMessage(act.getTextInCurrentLang("saving_img_to_sd")); //will not show..
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                final CamActivity act = (CamActivity) PhotoHandler.this.context;
 
-        int error_code = this.image_processor_.saveBufferToDisk();
+                image_processor_.processBuffer();
 
-        if(error_code == -1){
-            Toast.makeText(context, act.getTextInCurrentLang("could_not_save_img1"),
-                    Toast.LENGTH_LONG).show();
-        }else if(error_code == 1){
-            Toast.makeText(context, act.getTextInCurrentLang("saved_img1"),
-                    Toast.LENGTH_LONG).show();
-        };
+                act.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        act.getProgressDialog().setMessage(act.getTextInCurrentLang("saving_img_to_sd")); //will not show..
+                    }
+                });
 
-        act.getProgressDialog().dismiss();
+                final int error_code = image_processor_.saveBufferToDisk();
+
+                act.getProgressDialog().dismiss();
+
+                act.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        CamActivity act = (CamActivity) PhotoHandler.this.context;
+                        if(error_code == -1){
+                            Toast.makeText(context, act.getTextInCurrentLang("could_not_save_img1"),
+                                    Toast.LENGTH_LONG).show();
+                        }else if(error_code == 1) {
+                            Toast.makeText(context, act.getTextInCurrentLang("saved_img1"),
+                                    Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+
+            };
+
+
+        }).start();
+
+
+
+
 
         camera.stopPreview();
         camera.startPreview();
