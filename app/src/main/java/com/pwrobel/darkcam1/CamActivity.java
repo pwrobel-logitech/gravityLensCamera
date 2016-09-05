@@ -65,7 +65,13 @@ public class CamActivity extends ActionBarActivity {
     }
 
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i("darkcam activity", "Activity onStart");
         super.onCreate(savedInstanceState);
+        Log.i("darkcam activity", "Activity onStart finished");
+    }
+
+    @Override
+    public void onStart(){
 
         this.languages = new HashSet<String>();
 
@@ -75,14 +81,10 @@ public class CamActivity extends ActionBarActivity {
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         setContentView(R.layout.activity_cam);
         mRenderer = (CameraRenderer)findViewById(R.id.renderer_view);
         this.addListeners();
-    }
-
-    @Override
-    public void onStart(){
+        
         Log.i("darkcam activity", "Activity onStart");
         super.onStart();
         this.enableButtons();
@@ -105,6 +107,7 @@ public class CamActivity extends ActionBarActivity {
 
     @Override
     public void onResume(){
+
         Log.i("darkcam activity", "Activity onResume");
         super.onResume();
         mRenderer.onResume();
