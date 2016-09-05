@@ -12,6 +12,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 import android.content.Context;
 
@@ -105,7 +106,7 @@ public class CamActivity extends ActionBarActivity {
 
     private void addListeners(){
 
-        Button buttonOne = (Button) findViewById(R.id.button);
+        ImageButton buttonOne = (ImageButton) findViewById(R.id.button);
         buttonOne.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
 

@@ -4,7 +4,7 @@
     <string name="app_name">Blackhole Cam</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="phototake_name">Take photo</string>
+    <string name="phototake_name">Photo</string>
 
     <string name="en_progress_title">Loading</string>
     <string name="en_progress_msg">Wait while processing</string>
