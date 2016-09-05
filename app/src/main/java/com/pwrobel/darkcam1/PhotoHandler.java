@@ -73,10 +73,6 @@ public class PhotoHandler implements Camera.PictureCallback {
 
         }).start();
 
-
-
-
-
         camera.stopPreview();
         camera.startPreview();
 
