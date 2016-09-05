@@ -54,7 +54,8 @@ public class PhotoHandler implements Camera.PictureCallback {
 
                 final int error_code = image_processor_.saveBufferToDisk();
 
-                act.getProgressDialog().dismiss();
+                if(act.getProgressDialog() != null)
+                    act.getProgressDialog().dismiss();
 
                 act.runOnUiThread(new Runnable() {
                     @Override

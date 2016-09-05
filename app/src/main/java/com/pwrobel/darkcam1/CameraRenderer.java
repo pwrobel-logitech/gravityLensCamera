@@ -159,11 +159,18 @@ public class CameraRenderer extends GLSurfaceView implements
 
         if(mCamera != null){
             mCamera.stopPreview();
+            mCamera.setPreviewCallback(null);
             mCamera.release();
             mCamera = null;
         }
 
-        mCamera = Camera.open();
+        try{
+            mCamera = Camera.open();
+        }catch(Exception e){
+            Log.i("darkcam:", "failed to open camera");
+            return;
+        }
+
         try{
             mCamera.setPreviewTexture(mSurfaceTexture);
         }catch(IOException ioe){
