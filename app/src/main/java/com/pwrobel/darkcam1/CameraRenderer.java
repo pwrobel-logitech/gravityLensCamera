@@ -289,6 +289,8 @@ public class CameraRenderer extends GLSurfaceView implements
 
     public void
     requestBigPic(){
+        if(mCamera == null)
+            return;
         Camera.Parameters param;
         param = mCamera.getParameters();
 

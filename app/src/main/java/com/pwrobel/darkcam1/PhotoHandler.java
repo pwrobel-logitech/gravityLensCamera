@@ -60,6 +60,7 @@ public class PhotoHandler implements Camera.PictureCallback {
                     @Override
                     public void run() {
                         CamActivity act = (CamActivity) PhotoHandler.this.context;
+                        act.enableButtons();
                         if(error_code == -1){
                             Toast.makeText(context, act.getTextInCurrentLang("could_not_save_img1"),
                                     Toast.LENGTH_LONG).show();

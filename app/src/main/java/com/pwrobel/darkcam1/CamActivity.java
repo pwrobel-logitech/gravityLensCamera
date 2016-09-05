@@ -85,6 +85,7 @@ public class CamActivity extends ActionBarActivity {
     public void onStart(){
         Log.i("darkcam activity", "Activity onStart");
         super.onStart();
+        this.enableButtons();
         Log.i("darkcam activity", "Activity onStart finished");
     }
 
@@ -93,6 +94,8 @@ public class CamActivity extends ActionBarActivity {
     public void onPause(){
         Log.i("darkcam activity", "Activity onPause");
         super.onPause();
+        this.progress.dismiss();
+        this.enableButtons();
         if(mRenderer != null)
             mRenderer.onDestroy();
         Log.i("darkcam activity", "Activity onPause finished");
@@ -103,12 +106,27 @@ public class CamActivity extends ActionBarActivity {
         Log.i("darkcam activity", "Activity onResume");
         super.onResume();
         mRenderer.onResume();
+        this.enableButtons();
         Log.i("darkcam activity", "Activity onResume finished");
     }
 
+
+    public void disableButtons(){
+        this.buttonOne.setEnabled(false);
+        this.gearButton.setEnabled(false);
+    }
+
+    public void enableButtons(){
+        this.buttonOne.setEnabled(true);
+        this.gearButton.setEnabled(true);
+    }
+
+    ImageButton buttonOne = null;
+    ImageButton gearButton = null;
     private void addListeners(){
 
-        ImageButton buttonOne = (ImageButton) findViewById(R.id.button);
+        this.buttonOne = (ImageButton) findViewById(R.id.button);
+        this.gearButton = (ImageButton) findViewById(R.id.gearbutton);
         buttonOne.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
 
@@ -119,10 +137,12 @@ public class CamActivity extends ActionBarActivity {
                 //Toast toast = Toast.makeText(context, text, duration);
                 //toast.show();
 
+                CamActivity.this.disableButtons();
                 final ProgressDialog progress = new ProgressDialog(CamActivity.this);
                 CamActivity.this.progress = progress;
                 progress.setTitle(CamActivity.this.getTextInCurrentLang("progress_title"));
                 progress.setMessage(CamActivity.this.getTextInCurrentLang("progress_msg"));
+                progress.setCancelable(false);
                 progress.show();
 
                 new Thread(new Runnable() {
