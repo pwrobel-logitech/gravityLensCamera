@@ -1,5 +1,7 @@
 package com.pwrobel.darkcam1;
 
+//http://simpleicon.com/wp-content/uploads/gear-1.png - gear icon - probably free licence
+
 import android.app.ProgressDialog;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;

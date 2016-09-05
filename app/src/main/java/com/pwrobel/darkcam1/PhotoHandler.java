@@ -32,6 +32,8 @@ public class PhotoHandler implements Camera.PictureCallback {
     public void onPictureTaken(byte[] data, Camera camera) {
         CamActivity act = (CamActivity) this.context;
         Camera.Parameters parameters = camera.getParameters();
+        parameters.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE);
+        camera.setParameters(parameters);
         int format = parameters.getPreviewFormat();
 
         this.image_processor_.setImgBuffer(data, ImageFormat.JPEG);
@@ -65,8 +67,8 @@ public class PhotoHandler implements Camera.PictureCallback {
                             Toast.makeText(context, act.getTextInCurrentLang("saved_img1"),
                                     Toast.LENGTH_LONG).show();
                             }
-                        }
-                    });
+                    }
+                });
 
             };
 

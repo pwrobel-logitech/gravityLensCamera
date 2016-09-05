@@ -239,6 +239,7 @@ public class CameraRenderer extends GLSurfaceView implements
         //this.phys_ratio[0] = (float)default_phys_ratio;
         this.image_processor_.setBlackHoleInfo(this.phys_ratio[0], 1.0, this.fov_x_deg[0]);
         //start camera-----------------------------------------
+        param.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE);
         mCamera.setParameters(param);
         mCamera.startPreview();
 
@@ -291,6 +292,8 @@ public class CameraRenderer extends GLSurfaceView implements
         Camera.Parameters param;
         param = mCamera.getParameters();
 
+        param.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE);
+        mCamera.setParameters(param);
         double thetaV = (param.getVerticalViewAngle());
         double thetaH = (param.getHorizontalViewAngle());
 
