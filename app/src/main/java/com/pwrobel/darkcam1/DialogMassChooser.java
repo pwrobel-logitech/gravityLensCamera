@@ -33,13 +33,16 @@ public class DialogMassChooser extends DialogFragment {
         this.mSeek = (SeekBar)view.findViewById(R.id.seekBarMass);
         if(this.mSeek != null){
             this.mSeek.setMax(1000);
-            this.mSeek.setProgress(this.getProgress());
+            int prg = this.getProgress();
+            this.mSeek.setProgress(prg);
             this.mSeek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
                 @Override
                 public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                    int prg = DialogMassChooser.this.getProgress();
+                    seekBar.setProgress(prg);
                     if(!fromUser)
                         return;
-                    double val = ((double) progress) / 1000.0 + DialogMassChooser.this.mScaleFactor_min;
+                    double val = (((double) progress) / 1000.0)*(DialogMassChooser.this.mScaleFactor_max - DialogMassChooser.this.mScaleFactor_min ) + DialogMassChooser.this.mScaleFactor_min;
                     MassSelectedListener act = (MassSelectedListener) DialogMassChooser.this.motherActivity;
                     DialogMassChooser.this.mScaleFactor = val;
                     if (act != null)
@@ -88,7 +91,7 @@ public class DialogMassChooser extends DialogFragment {
     }
 
     private int getProgress(){
-        return (int)(1000*(this.mScaleFactor - this.mScaleFactor_min)/(this.mScaleFactor_max-this.mScaleFactor_min));
+        return (int)(1000.0*((this.mScaleFactor - this.mScaleFactor_min)/(this.mScaleFactor_max-this.mScaleFactor_min)));
     }
 
     private String getStringResourceByName(String aString) {
