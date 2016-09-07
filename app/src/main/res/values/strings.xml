@@ -11,11 +11,13 @@
     <string name="en_could_not_save_img1">Image could not be saved</string>
     <string name="en_saved_img1">Image saved</string>
     <string name="en_saving_img_to_sd">Saving processed image to the card</string>
+    <string name="en_choose_mass">Black hole mass</string>
 
     <string name="pl_progress_title">Zapisywanie obrazu</string>
     <string name="pl_progress_msg">Czekaj, przetwarzam</string>
     <string name="pl_could_not_save_img1">Nie udało się zapisać obrazu</string>
     <string name="pl_saved_img1">Obraz zapisano</string>
     <string name="pl_saving_img_to_sd">Zapisywanie przetworzonego obrazka na kartę</string>
+    <string name="pl_choose_mass">Wybierz masę czarnej dziury</string>
 
 </resources>

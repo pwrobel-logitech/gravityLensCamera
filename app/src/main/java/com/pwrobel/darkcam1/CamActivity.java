@@ -26,7 +26,14 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class CamActivity extends ActionBarActivity {
+public class CamActivity extends ActionBarActivity implements MassSelectedListener {
+
+    @Override
+    public void onMassSelected(double selector) {
+
+    }
+
+
 
     private CameraRenderer mRenderer;
 
@@ -89,6 +96,9 @@ public class CamActivity extends ActionBarActivity {
 
         this.mfm = getFragmentManager();
         this.mMassChooser = new DialogMassChooser();
+        this.mMassChooser.setLanguagesInfo(this.languages, this.current_lang);
+        this.mMassChooser.setFactorScaleRange(this.mScaleFactor_min, this.mScaleFactor_max);
+        this.mMassChooser.setFactorScale(this.mScaleFactor);
 
         mRenderer = (CameraRenderer)findViewById(R.id.renderer_view);
         massInfoTextArea = (TextView)findViewById(R.id.mass_info);
@@ -202,8 +212,11 @@ public class CamActivity extends ActionBarActivity {
     FragmentManager mfm;
     DialogMassChooser mMassChooser;
     private void showMassChooserDialog() {
-        if(this.mMassChooser != null)
+        if(this.mMassChooser != null) {
+            this.mMassChooser.setFactorScale(this.mScaleFactor);
+            this.mMassChooser.setFactorScaleRange(this.mScaleFactor_min, this.mScaleFactor_max);
             this.mMassChooser.show(mfm, "fragment_edit_name");
+        }
     }
 
     private void hideMassChooserDialog() {
@@ -214,6 +227,9 @@ public class CamActivity extends ActionBarActivity {
 
     ScaleGestureDetector mScaleDetector = null;
     private double mScaleFactor = 1.0f;
+
+    private double mScaleFactor_min = 0.5f;
+    private double mScaleFactor_max = 2.0f;
 
     private class ScaleListener
             extends ScaleGestureDetector.SimpleOnScaleGestureListener {
@@ -233,7 +249,7 @@ public class CamActivity extends ActionBarActivity {
             mScaleFactor *= detector.getScaleFactor();
 
             // Don't let the object get too small or too large.
-            mScaleFactor = Math.max(0.5f, Math.min(mScaleFactor, 2.0f));
+            mScaleFactor = Math.max(CamActivity.this.mScaleFactor_min, Math.min(mScaleFactor, CamActivity.this.mScaleFactor_max));
 
             mRenderer.invalidate();
             Log.i("darkcam ", "Scale changed : " + String.valueOf(mScaleFactor));
