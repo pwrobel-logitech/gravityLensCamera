@@ -8,10 +8,13 @@
         android:id="@+id/lbl_blackhole_mass_text" android:text="Black hole mass"
         android:layout_width="wrap_content" android:layout_height="wrap_content" />
 
-    <EditText
-        android:id="@+id/txt_your_name"
-        android:layout_width="match_parent"  android:layout_height="wrap_content"
-        android:inputType="text"
-        android:imeOptions="actionDone"
-        android:clickable="true" />
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBarMass" />
+
+    <TextView
+        android:id="@+id/lbl_blackhole_mass" android:text="Black hole mass value"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
 </LinearLayout>

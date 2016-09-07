@@ -30,7 +30,10 @@ public class CamActivity extends ActionBarActivity implements MassSelectedListen
 
     @Override
     public void onMassSelected(double selector) {
-
+        this.mScaleFactor = selector;
+        mRenderer.invalidate();
+        Log.i("darkcam ", "Scale changed from dialog: " + String.valueOf(mScaleFactor));
+        mRenderer.updateBlackHoleScale(mScaleFactor);
     }
 
 
@@ -83,6 +86,7 @@ public class CamActivity extends ActionBarActivity implements MassSelectedListen
 
     @Override
     public void onStart(){
+        this.mScaleFactor = 1.0f;
 
         this.languages = new HashSet<String>();
 
@@ -213,9 +217,9 @@ public class CamActivity extends ActionBarActivity implements MassSelectedListen
     DialogMassChooser mMassChooser;
     private void showMassChooserDialog() {
         if(this.mMassChooser != null) {
-            this.mMassChooser.setFactorScale(this.mScaleFactor);
-            this.mMassChooser.setFactorScaleRange(this.mScaleFactor_min, this.mScaleFactor_max);
             this.mMassChooser.show(mfm, "fragment_edit_name");
+            this.mMassChooser.setFactorScaleRange(this.mScaleFactor_min, this.mScaleFactor_max);
+            this.mMassChooser.setFactorScale(this.mScaleFactor);
         }
     }
 
@@ -226,7 +230,7 @@ public class CamActivity extends ActionBarActivity implements MassSelectedListen
     }
 
     ScaleGestureDetector mScaleDetector = null;
-    private double mScaleFactor = 1.0f;
+    private double mScaleFactor;
 
     private double mScaleFactor_min = 0.5f;
     private double mScaleFactor_max = 2.0f;
@@ -250,7 +254,9 @@ public class CamActivity extends ActionBarActivity implements MassSelectedListen
 
             // Don't let the object get too small or too large.
             mScaleFactor = Math.max(CamActivity.this.mScaleFactor_min, Math.min(mScaleFactor, CamActivity.this.mScaleFactor_max));
-
+            if(CamActivity.this.mMassChooser != null){
+                CamActivity.this.mMassChooser.setFactorScale(CamActivity.this.mScaleFactor);
+            }
             mRenderer.invalidate();
             Log.i("darkcam ", "Scale changed : " + String.valueOf(mScaleFactor));
             mRenderer.updateBlackHoleScale(mScaleFactor);
