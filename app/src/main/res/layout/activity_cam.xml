@@ -35,7 +35,7 @@
                 android:layout_height="fill_parent"
                 android:src="@drawable/gear"
                 android:id="@+id/gearbutton"
-                android:layout_weight="1"
+                android:layout_weight="100"
                 android:background="?android:selectableItemBackground"
                 android:scaleType="fitCenter"
                 android:layout_margin="3dp"
@@ -48,7 +48,7 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"></LinearLayout>
+                android:layout_weight="100"></LinearLayout>
 
             <ImageButton
                 android:layout_width="fill_parent"
@@ -58,7 +58,7 @@
                 android:id="@+id/button"
                 android:scaleType="fitCenter"
                 android:background="?android:selectableItemBackground"
-                android:layout_weight="1"
+                android:layout_weight="100"
                 android:layout_margin="2dp"
                 android:layout_marginLeft="2dp"
                 android:layout_marginTop="2dp"
@@ -69,13 +69,17 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"></LinearLayout>
+                android:layout_weight="75"
+                android:gravity="center">
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"></LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mass = 0.004M"
+                    android:id="@+id/mass_info"
+                    android:clickable="true" />
+            </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>

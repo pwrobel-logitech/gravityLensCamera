@@ -2,7 +2,10 @@ package com.pwrobel.darkcam1;
 
 //http://simpleicon.com/wp-content/uploads/gear-1.png - gear icon - probably free licence
 
+import android.app.AlertDialog;
+import android.app.FragmentManager;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBarActivity;
@@ -15,6 +18,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Context;
 
@@ -82,7 +86,12 @@ public class CamActivity extends ActionBarActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_cam);
+
+        this.mfm = getFragmentManager();
+        this.mMassChooser = new DialogMassChooser();
+
         mRenderer = (CameraRenderer)findViewById(R.id.renderer_view);
+        massInfoTextArea = (TextView)findViewById(R.id.mass_info);
         this.addListeners();
 
         Log.i("darkcam activity", "Activity onStart");
@@ -96,6 +105,7 @@ public class CamActivity extends ActionBarActivity {
     public void onPause(){
         Log.i("darkcam activity", "Activity onPause");
         super.onPause();
+        this.hideMassChooserDialog();
         if(this.progress != null)
             if(this.progress.isShowing())
                 this.progress.dismiss();
@@ -119,15 +129,20 @@ public class CamActivity extends ActionBarActivity {
     public void disableButtons(){
         this.buttonOne.setEnabled(false);
         this.gearButton.setEnabled(false);
+        this.massInfoTextArea.setEnabled(false);
+        this.hideMassChooserDialog();
     }
 
     public void enableButtons(){
         this.buttonOne.setEnabled(true);
         this.gearButton.setEnabled(true);
+        this.massInfoTextArea.setEnabled(true);
     }
 
     ImageButton buttonOne = null;
     ImageButton gearButton = null;
+    TextView massInfoTextArea = null;
+
     private void addListeners(){
 
         this.buttonOne = (ImageButton) findViewById(R.id.button);
@@ -160,6 +175,18 @@ public class CamActivity extends ActionBarActivity {
             }
         });
 
+        this.massInfoTextArea.setOnClickListener(new TextView.OnClickListener(){
+            public void onClick(View v) {
+                CamActivity.this.showMassChooserDialog();
+            }
+        });
+
+        gearButton.setOnClickListener(new Button.OnClickListener(){
+            public void onClick(View v) {
+                //CamActivity.this.showMassChooserDialog();
+            }
+        });
+
         this.mScaleDetector = new ScaleGestureDetector(this, new ScaleListener());
 
         this.mRenderer.setOnTouchListener(new View.OnTouchListener() {
@@ -170,6 +197,19 @@ public class CamActivity extends ActionBarActivity {
             }
         });
 
+    }
+
+    FragmentManager mfm;
+    DialogMassChooser mMassChooser;
+    private void showMassChooserDialog() {
+        if(this.mMassChooser != null)
+            this.mMassChooser.show(mfm, "fragment_edit_name");
+    }
+
+    private void hideMassChooserDialog() {
+        if(this.mMassChooser != null)
+            if(this.mMassChooser.isVisible())
+                this.mMassChooser.dismiss();
     }
 
     ScaleGestureDetector mScaleDetector = null;
