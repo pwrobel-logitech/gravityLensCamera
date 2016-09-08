@@ -211,7 +211,7 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
     }
 
     private void process_pixel(int x, int y, int w, int h){ //imitate pixel shader in software
-        double phys_ratio = this.phys_ratio;
+        double phys_ratio = this.phys_ratio; // (4*G*M)/(l*c^2) - l:blackhole-observer distance
         double fov_yx_ratio = ((double)h)/((double)w);
         double fovX = this.fovX * (Math.PI/180.0) ;
         double fovY = fov_yx_ratio * fovX;

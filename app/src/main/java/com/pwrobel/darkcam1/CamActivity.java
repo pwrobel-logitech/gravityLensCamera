@@ -105,6 +105,9 @@ public class CamActivity extends ActionBarActivity implements MassSelectedListen
         this.mMassChooser.setFactorScale(this.mScaleFactor);
 
         mRenderer = (CameraRenderer)findViewById(R.id.renderer_view);
+        this.mMassChooser.setDefault_phys_ratio(mRenderer.getDefault_phys_ratio());
+
+
         massInfoTextArea = (TextView)findViewById(R.id.mass_info);
         this.addListeners();
 

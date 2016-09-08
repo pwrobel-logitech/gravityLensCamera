@@ -103,8 +103,12 @@ public class CameraRenderer extends GLSurfaceView implements
         setRenderMode(GLSurfaceView.RENDERMODE_WHEN_DIRTY);
     }
 
-    private static double default_phys_ratio = 0.007f;
+    private static double default_phys_ratio = 0.007f;  // (4*G*M)/(l*c^2) - l:blackhole-observer distance=1m, M= 2.36e24kg
     private double scale_factor;
+
+    public double getDefault_phys_ratio(){
+        return default_phys_ratio;
+    }
 
     public void updateBlackHoleScale(double scale_factor){
         this.phys_ratio[0] = (float)(scale_factor * default_phys_ratio);
