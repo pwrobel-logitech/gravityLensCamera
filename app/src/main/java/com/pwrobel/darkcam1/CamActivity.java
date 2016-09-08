@@ -107,6 +107,8 @@ public class CamActivity extends ActionBarActivity implements MassSelectedListen
         mRenderer = (CameraRenderer)findViewById(R.id.renderer_view);
         this.mMassChooser.setDefault_phys_ratio(mRenderer.getDefault_phys_ratio());
 
+        this.zoomInfoWin = new ZoomWindowInfo();
+        this.zoomInfoWin.setLanguagesInfo(this.languages, this.current_lang);
 
         massInfoTextArea = (TextView)findViewById(R.id.mass_info);
         this.addListeners();
@@ -123,6 +125,7 @@ public class CamActivity extends ActionBarActivity implements MassSelectedListen
         Log.i("darkcam activity", "Activity onPause");
         super.onPause();
         this.hideMassChooserDialog();
+        this.hideZoomInfoDialog();
         if(this.progress != null)
             if(this.progress.isShowing())
                 this.progress.dismiss();
@@ -148,6 +151,7 @@ public class CamActivity extends ActionBarActivity implements MassSelectedListen
         this.gearButton.setEnabled(false);
         this.massInfoTextArea.setEnabled(false);
         this.hideMassChooserDialog();
+        this.hideZoomInfoDialog();
     }
 
     public void enableButtons(){
@@ -195,6 +199,7 @@ public class CamActivity extends ActionBarActivity implements MassSelectedListen
         this.massInfoTextArea.setOnClickListener(new TextView.OnClickListener(){
             public void onClick(View v) {
                 CamActivity.this.showMassChooserDialog();
+                CamActivity.this.showZoomInfoDialog();
             }
         });
 
@@ -218,11 +223,24 @@ public class CamActivity extends ActionBarActivity implements MassSelectedListen
 
     FragmentManager mfm;
     DialogMassChooser mMassChooser;
+    ZoomWindowInfo zoomInfoWin;
     private void showMassChooserDialog() {
         if(this.mMassChooser != null) {
             this.mMassChooser.show(mfm, "fragment_edit_name");
             this.mMassChooser.setFactorScaleRange(this.mScaleFactor_min, this.mScaleFactor_max);
             this.mMassChooser.setFactorScale(this.mScaleFactor);
+        }
+    }
+
+    private void hideZoomInfoDialog() {
+        if(this.zoomInfoWin != null)
+            if(this.zoomInfoWin.isVisible())
+                this.zoomInfoWin.dismiss();
+    }
+
+    private void showZoomInfoDialog() {
+        if(this.zoomInfoWin != null) {
+            this.zoomInfoWin.show(mfm, "fragment_edit_name2");
         }
     }
 
