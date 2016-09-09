@@ -69,16 +69,26 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="75"
+                android:layout_weight="100"
                 android:gravity="center">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Mass = 0.004M"
-                    android:id="@+id/mass_info"
-                    android:clickable="true" />
             </LinearLayout>
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Select Mass"
+                android:scaleType="fitCenter"
+                android:background="?android:selectableItemBackground"
+                android:id="@+id/mass_info"
+                android:clickable="true"
+                android:src="@drawable/pinch1"
+                android:layout_weight="100"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_margin="3dp" />
 
         </LinearLayout>
 

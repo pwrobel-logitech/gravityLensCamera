@@ -1,5 +1,7 @@
 package com.pwrobel.darkcam1;
 
+//MobileTuxedo.com - give credit for the pinch icon
+
 //http://simpleicon.com/wp-content/uploads/gear-1.png - gear icon - probably free licence
 
 import android.app.AlertDialog;
@@ -110,7 +112,7 @@ public class CamActivity extends ActionBarActivity implements MassSelectedListen
         this.zoomInfoWin = new ZoomWindowInfo();
         this.zoomInfoWin.setLanguagesInfo(this.languages, this.current_lang);
 
-        massInfoTextArea = (TextView)findViewById(R.id.mass_info);
+        massInfoTextArea = (ImageButton)findViewById(R.id.mass_info);
         this.addListeners();
 
         Log.i("darkcam activity", "Activity onStart");
@@ -162,7 +164,7 @@ public class CamActivity extends ActionBarActivity implements MassSelectedListen
 
     ImageButton buttonOne = null;
     ImageButton gearButton = null;
-    TextView massInfoTextArea = null;
+    ImageButton massInfoTextArea = null;
 
     private void addListeners(){
 
@@ -199,7 +201,7 @@ public class CamActivity extends ActionBarActivity implements MassSelectedListen
         this.massInfoTextArea.setOnClickListener(new TextView.OnClickListener(){
             public void onClick(View v) {
                 CamActivity.this.showMassChooserDialog();
-                CamActivity.this.showZoomInfoDialog();
+                //CamActivity.this.showZoomInfoDialog();
             }
         });
 
