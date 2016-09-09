@@ -249,6 +249,13 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
         return a;
     }
 
+
+    public String getLast_file_saved(){
+        return last_file_saved;
+    }
+
+    private String last_file_saved;
+
     //save the processed buffer on the disk
     public int saveBufferToDisk(){
 
@@ -277,6 +284,7 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
             bs.flush();
             bs.close();
             fos.close();
+            this.last_file_saved = filename;
             //fos.write(this.buf);
             //fos.close();
             //Toast.makeText(context, "New Image saved:" + photoFile,
@@ -284,6 +292,7 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
         } catch (Exception error) {
             Log.d(log_prefix, "File" + filename + "not saved: "
                     + error.getMessage());
+            this.last_file_saved = "ERROR Saving!!!";
             return -1;
             //Toast.makeText(context, "Image could not be saved.",
             //        Toast.LENGTH_LONG).show();
@@ -304,7 +313,7 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
     private File getDir() {
         File sdDir = Environment
                 .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-        return new File(sdDir, "BlackHoles");
+        return new File(sdDir, "MyBlackHoles");
     }
 
 

@@ -25,6 +25,9 @@ public interface StaticPhotoRenderBackend {
     //save the processed buffer on the disk
     public int saveBufferToDisk();
 
+    //inform about the last picture name with path saved to the disk.
+    public String getLast_file_saved();
+
     //set info about the object, mass, distance and field of viev in x-direction - horizontal
     public void setBlackHoleInfo(double mass, double distance, double fovXdeg);
 

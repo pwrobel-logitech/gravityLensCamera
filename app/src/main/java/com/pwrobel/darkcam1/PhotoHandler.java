@@ -53,6 +53,7 @@ public class PhotoHandler implements Camera.PictureCallback {
                 });
 
                 final int error_code = image_processor_.saveBufferToDisk();
+                final String last_file_saved = image_processor_.getLast_file_saved();
 
                 if(act.getProgressDialog() != null)
                     act.getProgressDialog().dismiss();
@@ -63,10 +64,10 @@ public class PhotoHandler implements Camera.PictureCallback {
                         CamActivity act = (CamActivity) PhotoHandler.this.context;
                         act.enableButtons();
                         if(error_code == -1){
-                            Toast.makeText(context, act.getTextInCurrentLang("could_not_save_img1"),
+                            Toast.makeText(context, act.getTextInCurrentLang("could_not_save_img1")+" : "+last_file_saved,
                                     Toast.LENGTH_LONG).show();
                         }else if(error_code == 1) {
-                            Toast.makeText(context, act.getTextInCurrentLang("saved_img1"),
+                            Toast.makeText(context, act.getTextInCurrentLang("saved_img1")+" : "+last_file_saved,
                                     Toast.LENGTH_LONG).show();
                             }
                     }
