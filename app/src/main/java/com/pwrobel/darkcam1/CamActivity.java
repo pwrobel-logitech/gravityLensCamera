@@ -266,6 +266,15 @@ public class CamActivity extends Activity implements MassSelectedListener {
         this.mySettingsMenu = menu;
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.layout.menu_settings, menu);
+
+        MenuItem menu_preferences = menu.findItem(R.id.menu_preferences);
+        MenuItem menu_aboutapp = menu.findItem(R.id.menu_aboutapp);
+
+        if(menu_preferences != null)
+            menu_preferences.setTitle(this.getTextInCurrentLang("menu_preferences"));
+        if(menu_aboutapp != null)
+            menu_aboutapp.setTitle(this.getTextInCurrentLang("menu_aboutapp"));
+
         return true;
     }
 
