@@ -24,6 +24,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Context;
@@ -202,7 +203,7 @@ public class CamActivity extends Activity implements MassSelectedListener {
             }
         });
 
-        this.massInfoTextArea.setOnClickListener(new TextView.OnClickListener(){
+        this.massInfoTextArea.setOnClickListener(new TextView.OnClickListener() {
             public void onClick(View v) {
                 CamActivity.this.showMassChooserDialog();
                 //CamActivity.this.showZoomInfoDialog();
@@ -211,7 +212,8 @@ public class CamActivity extends Activity implements MassSelectedListener {
 
         gearButton.setOnClickListener(new Button.OnClickListener(){
             public void onClick(View v) {
-                CamActivity.this.openOptionsMenu();
+                //CamActivity.this.openOptionsMenu();
+                CamActivity.this.showPopUpMenu();
                 //CamActivity.this.mySettingsMenu.performIdentifierAction(R.id.me)
             }
         });
@@ -227,6 +229,7 @@ public class CamActivity extends Activity implements MassSelectedListener {
         });
 
     }
+
 
     FragmentManager mfm;
     DialogMassChooser mMassChooser;
@@ -258,49 +261,52 @@ public class CamActivity extends Activity implements MassSelectedListener {
     }
 
 
-    private Menu mySettingsMenu = null;
+    private PopupMenu mySettingsMenu = null;
     // Initiating Menu xml (menu_settings.xml) - this is called by the android
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
-        this.mySettingsMenu = menu;
-        MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.layout.menu_settings, menu);
+        if(this.gearButton == null)
+            return false;
+        this.showPopUpMenu();
+        return true;
+    }
 
-        MenuItem menu_preferences = menu.findItem(R.id.menu_preferences);
-        MenuItem menu_aboutapp = menu.findItem(R.id.menu_aboutapp);
+    private void showPopUpMenu(){
+        if(this.gearButton == null)
+            return;
+        this.mySettingsMenu = new PopupMenu(CamActivity.this, this.gearButton);;
+        this.mySettingsMenu.inflate(R.layout.menu_settings);
+
+        this.mySettingsMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId())
+                {
+                    case R.id.menu_aboutapp:
+                        Toast.makeText(CamActivity.this, "AboutApp is Selected", Toast.LENGTH_SHORT).show();
+                        return true;
+
+                    case R.id.menu_preferences:
+                        Toast.makeText(CamActivity.this, "Preferences is Selected", Toast.LENGTH_SHORT).show();
+                        return true;
+                }
+                return false;
+            }
+        });
+
+        MenuItem menu_preferences = this.mySettingsMenu.getMenu().findItem(R.id.menu_preferences);
+        MenuItem menu_aboutapp = this.mySettingsMenu.getMenu().findItem(R.id.menu_aboutapp);
 
         if(menu_preferences != null)
             menu_preferences.setTitle(this.getTextInCurrentLang("menu_preferences"));
         if(menu_aboutapp != null)
             menu_aboutapp.setTitle(this.getTextInCurrentLang("menu_aboutapp"));
 
-        return true;
+        this.mySettingsMenu.show();
     }
 
-    /**
-     * Event Handling for Individual menu item selected
-     * Identify single menu item by it's id
-     * */
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        switch (item.getItemId())
-        {
-            case R.id.menu_aboutapp:
-                Toast.makeText(this, "Delete is Selected", Toast.LENGTH_SHORT).show();
-                return true;
-
-            case R.id.menu_preferences:
-                Toast.makeText(this, "Preferences is Selected", Toast.LENGTH_SHORT).show();
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-
-
+    
     ScaleGestureDetector mScaleDetector = null;
     private double mScaleFactor;
 
