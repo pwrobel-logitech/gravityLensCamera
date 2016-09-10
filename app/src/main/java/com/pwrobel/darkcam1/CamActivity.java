@@ -276,7 +276,7 @@ public class CamActivity extends Activity implements MassSelectedListener {
         if(this.gearButton == null)
             return;
         this.mySettingsMenu = new PopupMenu(CamActivity.this, this.gearButton);;
-        this.mySettingsMenu.inflate(R.layout.menu_settings);
+        this.mySettingsMenu.inflate(R.menu.menu_settings);
 
         this.mySettingsMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
@@ -306,7 +306,7 @@ public class CamActivity extends Activity implements MassSelectedListener {
         this.mySettingsMenu.show();
     }
 
-    
+
     ScaleGestureDetector mScaleDetector = null;
     private double mScaleFactor;
 
