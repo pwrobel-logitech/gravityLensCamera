@@ -4,6 +4,7 @@ package com.pwrobel.darkcam1;
 
 //http://simpleicon.com/wp-content/uploads/gear-1.png - gear icon - probably free licence
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.FragmentManager;
 import android.app.ProgressDialog;
@@ -13,6 +14,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.Window;
@@ -28,7 +32,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class CamActivity extends ActionBarActivity implements MassSelectedListener {
+public class CamActivity extends Activity implements MassSelectedListener {
 
     @Override
     public void onMassSelected(double selector) {
@@ -207,7 +211,8 @@ public class CamActivity extends ActionBarActivity implements MassSelectedListen
 
         gearButton.setOnClickListener(new Button.OnClickListener(){
             public void onClick(View v) {
-                //CamActivity.this.showMassChooserDialog();
+                CamActivity.this.openOptionsMenu();
+                //CamActivity.this.mySettingsMenu.performIdentifierAction(R.id.me)
             }
         });
 
@@ -251,6 +256,41 @@ public class CamActivity extends ActionBarActivity implements MassSelectedListen
             if(this.mMassChooser.isVisible())
                 this.mMassChooser.dismiss();
     }
+
+
+    private Menu mySettingsMenu = null;
+    // Initiating Menu xml (menu_settings.xml) - this is called by the android
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        this.mySettingsMenu = menu;
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.layout.menu_settings, menu);
+        return true;
+    }
+
+    /**
+     * Event Handling for Individual menu item selected
+     * Identify single menu item by it's id
+     * */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch (item.getItemId())
+        {
+            case R.id.menu_aboutapp:
+                Toast.makeText(this, "Delete is Selected", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.menu_preferences:
+                Toast.makeText(this, "Preferences is Selected", Toast.LENGTH_SHORT).show();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 
     ScaleGestureDetector mScaleDetector = null;
     private double mScaleFactor;

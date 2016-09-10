@@ -13,8 +13,9 @@
     </style>
 
     <!-- Application theme. -->
-    <style name="AppTheme" parent="AppBaseTheme">
+    <style name="pwrobel_theme1" parent="@style/Theme.AppCompat.NoActionBar">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:panelBackground">@color/darkgray</item>
     </style>
 
 </resources>
