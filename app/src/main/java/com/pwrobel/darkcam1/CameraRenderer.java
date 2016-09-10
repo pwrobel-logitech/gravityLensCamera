@@ -306,9 +306,22 @@ public class CameraRenderer extends GLSurfaceView implements
         param = mCamera.getParameters();
 
         param.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE);
-        mCamera.setParameters(param);
+
+        Camera.Size bestSize = null;
+        List<Camera.Size> sizeList = mCamera.getParameters().getSupportedPictureSizes();
+        bestSize = sizeList.get(0);
+        Log.i("dark cam", "Take picture, supported size, rawwidth: "+bestSize.width+", rawheight: " + bestSize.height);
+        for(int i = 1; i < sizeList.size(); i++){
+            if((sizeList.get(i).width * sizeList.get(i).height) > (bestSize.width * bestSize.height)){
+                bestSize = sizeList.get(i);
+                Log.i("dark cam", "Take picture, supported size, rawwidth: "+bestSize.width+", rawheight: " + bestSize.height);
+            }
+        }
+        param.setPictureSize(bestSize.width, bestSize.height);
+
         double thetaV = (param.getVerticalViewAngle());
         double thetaH = (param.getHorizontalViewAngle());
+        //mCamera.setParameters(param);
 
         Log.i("DcamFOVBig", "Vangle: "+String.valueOf(thetaV)+", Hangle: "+String.valueOf(thetaH));
 
@@ -334,7 +347,9 @@ public class CameraRenderer extends GLSurfaceView implements
         param.setPreviewSize(bestSize.width, bestSize.height);
         param.setPictureSize(bestSize.width, bestSize.height);
         */
-        param.setRotation(90);
+
+        if(bestSize.width > bestSize.height)
+            param.setRotation(90);
         param.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
         mCamera.setParameters(param);
         mCamera.takePicture(null, null, new PhotoHandler(mContext, this.image_processor_));
