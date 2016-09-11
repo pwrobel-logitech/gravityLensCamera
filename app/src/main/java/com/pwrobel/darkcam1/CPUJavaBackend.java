@@ -40,6 +40,8 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
     double fovY;
     protected double phys_ratio;
 
+    protected double fovX_internal;
+    protected double fovY_internal;
 
     //initialize CPU renderer backend
     public void Init(){
@@ -58,10 +60,20 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
         opt.inMutable = true; //set bitmap to mutable - able to operate on its pixels
         Bitmap bitmap = BitmapFactory.decodeByteArray(buff, 0, buff.length, opt);
         this.preprocessed_bigimage = bitmap;
-        Log.i("QQQQQdecode bmp info: ", "decW: "+bitmap.getWidth()+" decH: "+bitmap.getHeight());
-        Log.i("QQQQQdecode bmp info: ", "using Xfov:" + this.fovX);
         int w = this.preprocessed_bigimage.getWidth();
         int h = this.preprocessed_bigimage.getHeight();
+
+
+        this.fovX_internal = this.fovX;
+        this.fovY_internal = this.fovY;
+        //switch view angles if does not match
+        if(((w>h) && (this.fovX < this.fovY)) || ((w<h) && (this.fovX > this.fovY))){
+            this.fovX_internal = this.fovY;
+            this.fovY_internal = this.fovX;
+        }
+
+        Log.i("QQQQQdecode bmp info: ", "decW: "+bitmap.getWidth()+" decH: "+bitmap.getHeight());
+        Log.i("QQQQQdecode bmp info: ", "using Xfov:" + this.fovX_internal);
         this.RGB_buf = new int[w * h];
         this.postprocessed_RGB_buf = new int[w * h];
     };
@@ -215,7 +227,7 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
     private void process_pixel(int x, int y, int w, int h){ //imitate pixel shader in software
         double phys_ratio = this.phys_ratio; // (4*G*M)/(l*c^2) - l:blackhole-observer distance
         double fov_yx_ratio = ((double)h)/((double)w);
-        double fovX = this.fovX * (Math.PI/180.0) ;
+        double fovX = this.fovX_internal * (Math.PI/180.0) ;
         double fovY = fov_yx_ratio * fovX;
 
         double xnorm = ((double)x)/((double)w);

@@ -52,7 +52,7 @@ public class NativeCPUBackend extends CPUJavaBackend {
         double phys_ratio = this.phys_ratio;
         //numThreads = 1;
         this.process_buffer(this.RGB_buf, this.postprocessed_RGB_buf, this.preprocessed_bigimage.getWidth(),
-                this.preprocessed_bigimage.getHeight(), phys_ratio, this.fovX, numThreads);
+                this.preprocessed_bigimage.getHeight(), phys_ratio, this.fovX_internal, numThreads);
     }
 
     private native double internal_numerical_test(double in);
