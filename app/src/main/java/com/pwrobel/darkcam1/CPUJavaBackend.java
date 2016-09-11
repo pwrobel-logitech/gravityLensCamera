@@ -3,6 +3,8 @@ package com.pwrobel.darkcam1;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.ImageFormat;
+import android.graphics.Matrix;
+import android.media.ExifInterface;
 import android.os.Build;
 import android.os.Environment;
 import android.util.Log;
@@ -59,6 +61,13 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
         BitmapFactory.Options opt = new BitmapFactory.Options();
         opt.inMutable = true; //set bitmap to mutable - able to operate on its pixels
         Bitmap bitmap = BitmapFactory.decodeByteArray(buff, 0, buff.length, opt);
+
+
+        int exif_orientation_jpeg = ExifUtils.getOrientation_raw_from_jpeg(buff);
+        Bitmap rotated = CPUJavaBackend.rotateBitmap(bitmap, exif_orientation_jpeg);
+        if(bitmap != rotated)
+            bitmap = rotated;
+
         this.preprocessed_bigimage = bitmap;
         int w = this.preprocessed_bigimage.getWidth();
         int h = this.preprocessed_bigimage.getHeight();
@@ -341,6 +350,52 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
             return getNumCoresOldPhones();
         }
     }
+
+
+    public static Bitmap rotateBitmap(Bitmap bitmap, int orientation) {
+
+        Matrix matrix = new Matrix();
+        switch (orientation) {
+            case ExifInterface.ORIENTATION_NORMAL:
+                return bitmap;
+            case ExifInterface.ORIENTATION_FLIP_HORIZONTAL:
+                matrix.setScale(-1, 1);
+                break;
+            case ExifInterface.ORIENTATION_ROTATE_180:
+                matrix.setRotate(180);
+                break;
+            case ExifInterface.ORIENTATION_FLIP_VERTICAL:
+                matrix.setRotate(180);
+                matrix.postScale(-1, 1);
+                break;
+            case ExifInterface.ORIENTATION_TRANSPOSE:
+                matrix.setRotate(90);
+                matrix.postScale(-1, 1);
+                break;
+            case ExifInterface.ORIENTATION_ROTATE_90:
+                matrix.setRotate(90);
+                break;
+            case ExifInterface.ORIENTATION_TRANSVERSE:
+                matrix.setRotate(-90);
+                matrix.postScale(-1, 1);
+                break;
+            case ExifInterface.ORIENTATION_ROTATE_270:
+                matrix.setRotate(-90);
+                break;
+            default:
+                return bitmap;
+        }
+        try {
+            Bitmap bmRotated = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+            bitmap.recycle();
+            return bmRotated;
+        }
+        catch (OutOfMemoryError e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 
     /**
      * Gets the number of cores available in this device, across all processors.

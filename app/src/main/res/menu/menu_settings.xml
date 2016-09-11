@@ -7,7 +7,7 @@
     -->
 
     <item android:id="@+id/menu_preferences2"
-        android:title="Test kamerki na LG v1" />
+        android:title="Test kamerki na LG v2" />
 
     <item android:id="@+id/menu_preferences"
        android:title="Preferences" />
