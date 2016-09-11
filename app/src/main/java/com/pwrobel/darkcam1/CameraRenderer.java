@@ -56,6 +56,8 @@ public class CameraRenderer extends GLSurfaceView implements
     private float[] fov_x_deg = new float[1];
     private float[] phys_ratio = new float[1];
 
+    double fovYdeg;
+
     private StaticPhotoRenderBackend image_processor_;
 
     /**
@@ -115,7 +117,7 @@ public class CameraRenderer extends GLSurfaceView implements
         this.scale_factor = scale_factor;
         this.updateTexture = true;
         if(this.image_processor_ != null){
-            this.image_processor_.setBlackHoleInfo(this.phys_ratio[0], 1.0, this.fov_x_deg[0]);
+            this.image_processor_.setBlackHoleInfo(this.phys_ratio[0], 1.0, this.fov_x_deg[0], this.fovYdeg);
         }
     }
 
@@ -200,13 +202,15 @@ public class CameraRenderer extends GLSurfaceView implements
 
             if(i<0)
                 i=0;
-
+//i=9;
             param.setPreviewSize(psize.get(i).width, psize.get(i).height);
 
             camera_width = psize.get(i).width;
             camera_height= psize.get(i).height;
 
         }
+
+        Log.i("Dcam_prewiev_set_size", "width: " + String.valueOf(camera_width) + ", height: " + String.valueOf(camera_height));
 
         //setup the fovX (the smaller one) angle in degrees
         double thetaV = (param.getVerticalViewAngle());
@@ -222,23 +226,32 @@ public class CameraRenderer extends GLSurfaceView implements
             thetaH = 10.0;
         if(thetaH > 150.0)
             thetaH = 150.0;
-        
+
         float rot_angle = 0.0f;
-        if(camera_width > camera_height) {
+       // if(camera_width > camera_height) {
             rot_angle = 90.0f;
-            this.fov_x_deg[0] = (float)thetaV;
+
             if( ((float)camera_width)/((float)camera_height) < ((float)height)/((float)width) ){
                 //camera preview more square than surface to present
-                mRatio[0] = ((((float)camera_height)*((float)height))/(((float)camera_width)*((float)width)));
+                mRatio[0] = ((((float)camera_height)*((float)height))/(((float)camera_width)*((float)width))); //multiply by q>1
                 mRatio[1] = 1.0f;
+
+                fovYdeg = (float) thetaH;
+                this.fov_x_deg[0] = (float)((180.0/Math.PI) * ((float) Math.atan(Math.tan(Math.PI*thetaV/180.0)/mRatio[0])));
+                Log.i("DcamFOV2.c1", "setXfov: " + this.fov_x_deg[0] );
             }else{
                 mRatio[0] = 1.0f;
-                mRatio[1] = (((float)camera_width)/((float)camera_height))/(((float)height)/((float)width));
+                mRatio[1] = (((float)camera_width)/((float)camera_height))/(((float)height)/((float)width)); //multiply by the same(inv) q < 1
+                this.fov_x_deg[0] = (float) thetaV;
+                fovYdeg = (180.0/Math.PI) * ((float) Math.atan(Math.tan(Math.PI*thetaH/180.0)/mRatio[1]));
+                Log.i("DcamFOV2.c2", "setXfov: " + this.fov_x_deg[0] );
             }
             fov_yx_ratio[0] = ((float)camera_height)/((float)camera_width);
-        }else{
+            //default_phys_ratio = 0.007 * (this.fov_x_deg[0]/36.1);
+       /* }else{
             rot_angle = 0.0f;
             this.fov_x_deg[0] = (float)thetaH;
+            fovYdeg = (float) thetaV;
             if( ((float)camera_height)/((float)camera_width) < ((float)height)/((float)width) ){
                 //camera preview more square than surface to present
                 mRatio[0] = ((((float)camera_width)*((float)height))/(((float)camera_height)*((float)width)));
@@ -248,13 +261,13 @@ public class CameraRenderer extends GLSurfaceView implements
                 mRatio[1] = (((float)camera_height)/((float)camera_width))/(((float)height)/((float)width));
             }
             fov_yx_ratio[0] = ((float)camera_width)/((float)camera_height);
-        }
+        }*/
 
         Matrix.setRotateM(mOrientationM, 0, rot_angle, 0f, 0f, 1f);
 
         //set physical ratio parameters containing the "normalized" black hole mass
         //this.phys_ratio[0] = (float)default_phys_ratio;
-        this.image_processor_.setBlackHoleInfo(this.phys_ratio[0], 1.0, this.fov_x_deg[0]);
+        this.image_processor_.setBlackHoleInfo(this.phys_ratio[0], 1.0, thetaV, thetaH);
         //start camera-----------------------------------------
         param.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE);
         mCamera.setParameters(param);
@@ -329,7 +342,7 @@ public class CameraRenderer extends GLSurfaceView implements
         double thetaH = (param.getHorizontalViewAngle());
         //mCamera.setParameters(param);
 
-        Log.i("DcamFOVBig", "Vangle: "+String.valueOf(thetaV)+", Hangle: "+String.valueOf(thetaH));
+        Log.i("QQQQQDcamFOVBig", "Vangle: "+String.valueOf(thetaV)+", Hangle: "+String.valueOf(thetaH));
 
         /* choose the maximum aera size for the preview - currently unused
         Camera.Size bestSize = null;
@@ -354,12 +367,9 @@ public class CameraRenderer extends GLSurfaceView implements
         param.setPictureSize(bestSize.width, bestSize.height);
         */
 
-        if(bestSize.width > bestSize.height){
-            param.setRotation(90);
-        }else{
-            thetaV = (param.getHorizontalViewAngle());
-            thetaH = (param.getVerticalViewAngle());
-        }
+        //if(bestSize.width > bestSize.height)
+        //    param.setRotation(90);
+
         param.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
         mCamera.setParameters(param);
         mCamera.takePicture(null, null, new PhotoHandler(mContext, this.image_processor_));

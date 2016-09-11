@@ -37,6 +37,7 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
     double mass;//multiple of the mass of earth
     double distance; //in meters from the observer
     double fovX; //in degrees along the horizontal axis
+    double fovY;
     protected double phys_ratio;
 
 
@@ -57,7 +58,8 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
         opt.inMutable = true; //set bitmap to mutable - able to operate on its pixels
         Bitmap bitmap = BitmapFactory.decodeByteArray(buff, 0, buff.length, opt);
         this.preprocessed_bigimage = bitmap;
-        Log.i("decode bmp info: ", "decW: "+bitmap.getWidth()+" decH: "+bitmap.getHeight());
+        Log.i("QQQQQdecode bmp info: ", "decW: "+bitmap.getWidth()+" decH: "+bitmap.getHeight());
+        Log.i("QQQQQdecode bmp info: ", "using Xfov:" + this.fovX);
         int w = this.preprocessed_bigimage.getWidth();
         int h = this.preprocessed_bigimage.getHeight();
         this.RGB_buf = new int[w * h];
@@ -300,11 +302,12 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
         return 1;
     };
 
-    //set info about the object, mass, distance and field of viev in x-direction - horizontal
-    public void setBlackHoleInfo(double mass, double distance, double fovXdeg){
+    //set info about the object, mass, distance and field of viev in x-direction - horizontal(width)
+    public void setBlackHoleInfo(double mass, double distance, double fovXdeg, double fovYdeg){
         this.mass = mass;
         this.distance = distance;
         this.fovX = fovXdeg;
+        this.fovY = fovYdeg;
         this.phys_ratio = mass;
     };
 

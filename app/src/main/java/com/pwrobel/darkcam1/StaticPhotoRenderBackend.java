@@ -29,7 +29,8 @@ public interface StaticPhotoRenderBackend {
     public String getLast_file_saved();
 
     //set info about the object, mass, distance and field of viev in x-direction - horizontal
-    public void setBlackHoleInfo(double mass, double distance, double fovXdeg);
+    //two angles are used as an check control - one of that would be still used finally, based on the image size
+    public void setBlackHoleInfo(double mass, double distance, double fovXdeg, double fovYdeg);
 
     //test backend, tell whether it is functional on a sample process
     public boolean testMe();
