@@ -9,6 +9,7 @@ import android.app.AlertDialog;
 import android.app.FragmentManager;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBarActivity;
@@ -184,11 +185,15 @@ public class CamActivity extends Activity implements MassSelectedListener {
 
                 //Toast toast = Toast.makeText(context, text, duration);
                 //toast.show();
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
+                int rotation = getWindowManager().getDefaultDisplay()
+                        .getRotation();
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
                 CamActivity.this.disableButtons();
                 final ProgressDialog progress = new ProgressDialog(CamActivity.this);
                 CamActivity.this.progress = progress;
-                progress.setTitle(CamActivity.this.getTextInCurrentLang("progress_title"));
+                progress.setTitle(CamActivity.this.getTextInCurrentLang("progress_title")+" R"+rotation);
                 progress.setMessage(CamActivity.this.getTextInCurrentLang("progress_msg"));
                 progress.setCancelable(false);
                 progress.show();

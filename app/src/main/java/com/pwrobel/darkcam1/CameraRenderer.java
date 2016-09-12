@@ -10,12 +10,15 @@ import javax.microedition.khronos.opengles.GL10;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.graphics.ImageFormat;
 import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.hardware.Camera.Size;
+import android.hardware.SensorManager;
 import android.opengl.GLES11Ext;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
@@ -23,7 +26,9 @@ import android.opengl.Matrix;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.util.Log;
-
+import android.view.Display;
+import android.view.Surface;
+import android.view.WindowManager;
 
 
 public class CameraRenderer extends GLSurfaceView implements
@@ -227,9 +232,13 @@ public class CameraRenderer extends GLSurfaceView implements
         if(thetaH > 150.0)
             thetaH = 150.0;
 
+        android.hardware.Camera.CameraInfo info =
+                new android.hardware.Camera.CameraInfo();
+        android.hardware.Camera.getCameraInfo(0, info);
+
         float rot_angle = 0.0f;
        // if(camera_width > camera_height) {
-            rot_angle = 90.0f;
+            rot_angle = info.orientation;
 
             if( ((float)camera_width)/((float)camera_height) < ((float)height)/((float)width) ){
                 //camera preview more square than surface to present
@@ -370,8 +379,41 @@ public class CameraRenderer extends GLSurfaceView implements
         //if(bestSize.width > bestSize.height)
         //    param.setRotation(90);
 
+        android.hardware.Camera.CameraInfo info =
+                new android.hardware.Camera.CameraInfo();
+        android.hardware.Camera.getCameraInfo(0, info);
+        ((Activity) mContext).setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
+
+
+        int rotation = ((CamActivity)this.mContext).getWindowManager().getDefaultDisplay()
+                .getRotation();
+
+        ((Activity) mContext).setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+
+        int degrees = 0;
+        switch (rotation) {
+            case Surface.ROTATION_0: degrees = 0; break;
+            case Surface.ROTATION_90: degrees = 90; break;
+            case Surface.ROTATION_180: degrees = 180; break;
+            case Surface.ROTATION_270: degrees = 270; break;
+        }
+
+        int result;
+        if (info.facing == Camera.CameraInfo.CAMERA_FACING_FRONT) {
+            result = (info.orientation + degrees) % 360;
+            result = (360 - result) % 360;  // compensate the mirror
+        } else {  // back-facing
+            result = (info.orientation - degrees + 360) % 360;
+        }
+        //mCamera.setDisplayOrientation(result);
+        param.setRotation(result);
+
         param.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
+        if(mCamera == null)
+            return;
         mCamera.setParameters(param);
+
         mCamera.takePicture(null, null, new PhotoHandler(mContext, this.image_processor_));
     }
 
