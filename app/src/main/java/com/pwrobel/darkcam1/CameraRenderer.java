@@ -240,9 +240,18 @@ public class CameraRenderer extends GLSurfaceView implements
        // if(camera_width > camera_height) {
             rot_angle = info.orientation;
 
-            if( ((float)camera_width)/((float)camera_height) < ((float)height)/((float)width) ){
+            float a=0,b=0; //rotated parameters
+            if(info.orientation % 180 == 0){
+                a = camera_height;
+                b = camera_width;
+            }else{
+                a = camera_width;
+                b = camera_height;
+            }
+
+            if( ((float)a)/((float)b) < ((float)height)/((float)width) ){
                 //camera preview more square than surface to present
-                mRatio[0] = ((((float)camera_height)*((float)height))/(((float)camera_width)*((float)width))); //multiply by q>1
+                mRatio[0] = ((((float)b)*((float)height))/(((float)a)*((float)width))); //multiply by q>1
                 mRatio[1] = 1.0f;
 
                 fovYdeg = (float) thetaH;
@@ -250,12 +259,12 @@ public class CameraRenderer extends GLSurfaceView implements
                 Log.i("DcamFOV2.c1", "setXfov: " + this.fov_x_deg[0] );
             }else{
                 mRatio[0] = 1.0f;
-                mRatio[1] = (((float)camera_width)/((float)camera_height))/(((float)height)/((float)width)); //multiply by the same(inv) q < 1
+                mRatio[1] = (((float)a)/((float)b))/(((float)height)/((float)width)); //multiply by the same(inv) q < 1
                 this.fov_x_deg[0] = (float) thetaV;
                 fovYdeg = (180.0/Math.PI) * ((float) Math.atan(Math.tan(Math.PI*thetaH/180.0)/mRatio[1]));
                 Log.i("DcamFOV2.c2", "setXfov: " + this.fov_x_deg[0] );
             }
-            fov_yx_ratio[0] = ((float)camera_height)/((float)camera_width);
+            fov_yx_ratio[0] = ((float)b)/((float)a);
             //default_phys_ratio = 0.007 * (this.fov_x_deg[0]/36.1);
        /* }else{
             rot_angle = 0.0f;
