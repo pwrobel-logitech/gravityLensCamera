@@ -46,8 +46,17 @@ public class ZoomWindowInfo extends DialogFragment {
 
         this.tab_adapter1 = new CustomPagerAdapter();
         this.pager = (ViewPager) view.findViewById(R.id.pager1);
+        pager.invalidate();
         this.pager.setAdapter(this.tab_adapter1);
-        this.pager.setCurrentItem(1);
+
+        int num_tab = which_tab_num;
+        if (num_tab >= this.tab_adapter1.getCount())
+            num_tab = 0;
+        this.pager.invalidate();
+        this.tab_adapter1.notifyDataSetChanged();
+        this.pager.setCurrentItem(num_tab);
+
+        view.invalidate();
 
         return view;
     }
@@ -57,6 +66,20 @@ public class ZoomWindowInfo extends DialogFragment {
     public void setLanguagesInfo(Set<String> langs, String lang){
         this.languages = langs;
         this.language = lang;
+    }
+
+    private int which_tab_num;
+    public void setWhichTabSelectedByDefault(int which){
+        this.which_tab_num = which;
+    }
+
+    public void update_pager(){
+        if(this.pager != null)
+            this.pager.invalidate();
+        if(this.tab_adapter1 != null)
+            this.tab_adapter1.notifyDataSetChanged();
+        if(this.pager != null)
+            this.pager.setCurrentItem(this.which_tab_num);
     }
 
     private String getStringResourceByName(String aString) {

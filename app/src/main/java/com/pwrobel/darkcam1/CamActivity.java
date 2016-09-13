@@ -156,6 +156,8 @@ public class CamActivity extends Activity implements MassSelectedListener {
     }
 
 
+    private int which_tab_about_selected=0;
+
     public void disableButtons(){
         this.buttonOne.setEnabled(false);
         this.gearButton.setEnabled(false);
@@ -250,15 +252,18 @@ public class CamActivity extends Activity implements MassSelectedListener {
     }
 
     private void hideZoomInfoDialog() {
-        if(this.zoomInfoWin != null)
+        if(this.zoomInfoWin != null){
             if(this.zoomInfoWin.isVisible())
                 this.zoomInfoWin.dismiss();
+            this.zoomInfoWin = null;
+        }
     }
 
     private void showZoomInfoDialog() {
-        if(this.zoomInfoWin != null) {
-            this.zoomInfoWin.show(mfm, "fragment_edit_name2");
-        }
+        this.zoomInfoWin = new ZoomWindowInfo();
+        this.zoomInfoWin.setLanguagesInfo(this.languages, this.current_lang);
+        this.zoomInfoWin.setWhichTabSelectedByDefault(this.which_tab_about_selected);
+        this.zoomInfoWin.show(mfm, "fragment_edit_name2");
     }
 
     private void hideMassChooserDialog() {
@@ -292,11 +297,14 @@ public class CamActivity extends Activity implements MassSelectedListener {
                 {
                     case R.id.menu_aboutapp:
                         //Toast.makeText(CamActivity.this, "AboutApp is Selected", Toast.LENGTH_SHORT).show();
+                        CamActivity.this.which_tab_about_selected = 1;
                         CamActivity.this.showZoomInfoDialog();
                         return true;
 
                     case R.id.menu_preferences:
-                        Toast.makeText(CamActivity.this, "Preferences is Selected", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(CamActivity.this, "Preferences is Selected", Toast.LENGTH_SHORT).show();
+                        CamActivity.this.which_tab_about_selected = 0;
+                        CamActivity.this.showZoomInfoDialog();
                         return true;
                 }
                 return false;

@@ -34,6 +34,10 @@
         sdf\n
         sdf\n
     </string>
+    <string name="en_about_app_description1">
+        Thank you for using this app.\n\n
+        If you would like to support the me, you can always donate :)
+    </string>
 
     <string name="pl_progress_title">Zapisywanie obrazu</string>
     <string name="pl_progress_msg">Czekaj, przetwarzam</string>
@@ -46,6 +50,24 @@
     <string name="pl_menu_aboutapp">O aplikacji</string>
     <string name="pl_description_phenomenon1">sa
         ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf sdsa asd fasdfs sadfas sadfggf dsafasgas
+        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
+        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
+        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
+        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
+        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
+        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
+                ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
+        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
+        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
+        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
+        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
+        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
+                ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
+        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
+        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
+        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
+        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
+        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
         asdf
         sfdsadfffffffffffffffffffffffffffsadf
         asfddddsadf
@@ -63,6 +85,11 @@
         hh\n
         sdf\n
         sdf\n
+    </string>
+    <string name="pl_about_app_description1">
+        Dziękuję za skorzystanie z tej applikacji.\n\n
+        Jeśli chciałbyś mnie wspomóc w dalszym rozwijaniu tej aplikacji, usuwaniu błędów,
+        poprawy tłumaczenia, możesz zawsze udzielić wsparcia finansowego :)
     </string>
 
 
