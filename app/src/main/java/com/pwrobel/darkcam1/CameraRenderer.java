@@ -435,7 +435,8 @@ public class CameraRenderer extends GLSurfaceView implements
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     public void onDestroy(){
         updateTexture = false;
-        mSurfaceTexture.release();
+        if(mSurfaceTexture != null)
+            mSurfaceTexture.release();
         if(mCamera != null){
             mCamera.stopPreview();
             mCamera.setPreviewCallback(null);
