@@ -94,6 +94,30 @@ public class CamActivity extends Activity implements MassSelectedListener {
 
     @Override
     public void onStart(){
+        Log.i("darkcam activity", "Activity onStart");
+        super.onStart();
+        Log.i("darkcam activity", "Activity onStart finished");
+    }
+
+
+    @Override
+    public void onPause(){
+        Log.i("darkcam activity", "Activity onPause");
+        super.onPause();
+        this.hideMassChooserDialog();
+        this.hideZoomInfoDialog();
+        if(this.progress != null)
+            if(this.progress.isShowing())
+                this.progress.dismiss();
+        this.enableButtons();
+        if(mRenderer != null)
+            mRenderer.onDestroy();
+        Log.i("darkcam activity", "Activity onPause finished");
+    }
+
+    @Override
+    public void onResume(){
+
         this.mScaleFactor = 1.0f;
 
         this.languages = new HashSet<String>();
@@ -122,31 +146,7 @@ public class CamActivity extends Activity implements MassSelectedListener {
 
 
         this.addListeners();
-
-        Log.i("darkcam activity", "Activity onStart");
-        super.onStart();
         this.enableButtons();
-        Log.i("darkcam activity", "Activity onStart finished");
-    }
-
-
-    @Override
-    public void onPause(){
-        Log.i("darkcam activity", "Activity onPause");
-        super.onPause();
-        this.hideMassChooserDialog();
-        this.hideZoomInfoDialog();
-        if(this.progress != null)
-            if(this.progress.isShowing())
-                this.progress.dismiss();
-        this.enableButtons();
-        if(mRenderer != null)
-            mRenderer.onDestroy();
-        Log.i("darkcam activity", "Activity onPause finished");
-    }
-
-    @Override
-    public void onResume(){
 
         Log.i("darkcam activity", "Activity onResume");
         super.onResume();
