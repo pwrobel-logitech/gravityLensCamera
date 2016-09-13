@@ -32,7 +32,7 @@ public class ZoomWindowInfo extends DialogFragment {
         //getDialog().getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         View view = inflater.inflate(R.layout.fragment_layout2, container);
         TextView tilte = (TextView)view.findViewById(R.id.info_zoom_text_title);
-        String modtitle = (this.getTextInCurrentLang("choose_mass"));
+        String modtitle = (this.getTextInCurrentLang("description_phenomenon1"));
         tilte.setText(modtitle);
 
         getDialog().setTitle("Hello");

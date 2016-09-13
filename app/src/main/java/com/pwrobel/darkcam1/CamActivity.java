@@ -289,7 +289,8 @@ public class CamActivity extends Activity implements MassSelectedListener {
                 switch (item.getItemId())
                 {
                     case R.id.menu_aboutapp:
-                        Toast.makeText(CamActivity.this, "AboutApp is Selected", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(CamActivity.this, "AboutApp is Selected", Toast.LENGTH_SHORT).show();
+                        CamActivity.this.showZoomInfoDialog();
                         return true;
 
                     case R.id.menu_preferences:

@@ -15,6 +15,25 @@
     <string name="en_mass_unit_suffix">of the Earth mass</string>
     <string name="en_menu_preferences">Preferences</string>
     <string name="en_menu_aboutapp">About app</string>
+    <string name="en_description_phenomenon1">
+        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffssfffffffffffffffffffffffffffffffsffffffsaaaaaaaaaaaaaaaasxffffffsfasdffasdffasdf sdff     asdffasad sdaf asdf sdaf asd fasd fd asd
+        sfdsadfffffffffffffffffffffffffffsadf
+        asfddddsadf
+        sadffffffsadfsad
+        asfdasddddddddddddassf
+        sfd
+        afffasdf\n
+        fdg\n
+        dgff\n
+        http://www.google.com \n
+        link above\n
+        sdg\n
+        dfg\n
+        Here image\n
+        hh\n
+        sdf\n
+        sdf\n
+    </string>
 
     <string name="pl_progress_title">Zapisywanie obrazu</string>
     <string name="pl_progress_msg">Czekaj, przetwarzam</string>
@@ -25,5 +44,26 @@
     <string name="pl_mass_unit_suffix">masy Ziemii</string>
     <string name="pl_menu_preferences">Opcje</string>
     <string name="pl_menu_aboutapp">O aplikacji</string>
+    <string name="pl_description_phenomenon1">sa
+        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf sdsa asd fasdfs sadfas sadfggf dsafasgas
+        asdf
+        sfdsadfffffffffffffffffffffffffffsadf
+        asfddddsadf
+        sadffffffsadfsad
+        asfdasddddddddddddassf
+        sfd
+        afffasdf\n
+        fdg\n
+        dgff\n
+        http://www.google.pl \n
+        link above\n
+        sdg\n
+        dfg\n
+        Here image\n
+        hh\n
+        sdf\n
+        sdf\n
+    </string>
+
 
 </resources>
