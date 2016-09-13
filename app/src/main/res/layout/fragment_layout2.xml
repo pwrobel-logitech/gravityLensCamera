@@ -1,18 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/mass_choose"
-    android:layout_width="wrap_content" android:layout_height="wrap_content"
-    android:layout_gravity="center" android:orientation="vertical"  >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_layout_in_dialogfragment1"
+    android:orientation="vertical">
 
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/info_zoom_text_title" android:text="aaaa"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:gravity="center"
-        android:autoLink="web"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp" />
+        <android.support.v4.view.PagerTitleStrip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:paddingTop="5dp"
+            android:paddingBottom="4dp"
+            android:paddingRight="4dp"
+            android:paddingLeft="4dp"
+            android:padding="4dp" />
+
+        <LinearLayout
+            android:id="@+id/page_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/info_zoom_text_title" android:text="aaaa"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:gravity="center"
+                android:autoLink="web"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/page_two"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            <TextView
+                android:text="PAGE TWO IN"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#fff"
+                android:textSize="24dp"/>
+        </LinearLayout>
+
+    </android.support.v4.view.ViewPager>
 
 </LinearLayout>

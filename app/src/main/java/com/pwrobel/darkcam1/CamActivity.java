@@ -119,6 +119,8 @@ public class CamActivity extends Activity implements MassSelectedListener {
         this.zoomInfoWin.setLanguagesInfo(this.languages, this.current_lang);
 
         massInfoTextArea = (ImageButton)findViewById(R.id.mass_info);
+
+
         this.addListeners();
 
         Log.i("darkcam activity", "Activity onStart");

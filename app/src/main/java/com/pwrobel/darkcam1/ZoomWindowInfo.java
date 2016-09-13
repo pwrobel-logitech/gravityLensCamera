@@ -3,11 +3,14 @@ package com.pwrobel.darkcam1;
 import android.app.Activity;
 import android.app.DialogFragment;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -17,6 +20,9 @@ import java.util.Set;
  * Created by pwrobel on 08.09.16.
  */
 public class ZoomWindowInfo extends DialogFragment {
+
+    CustomPagerAdapter tab_adapter1;
+    ViewPager pager;
 
     public ZoomWindowInfo() {
         // Empty constructor required for DialogFragment
@@ -35,7 +41,13 @@ public class ZoomWindowInfo extends DialogFragment {
         String modtitle = (this.getTextInCurrentLang("description_phenomenon1"));
         tilte.setText(modtitle);
 
-        getDialog().setTitle("Hello");
+        getDialog().setTitle(null);
+        //getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+
+        this.tab_adapter1 = new CustomPagerAdapter();
+        this.pager = (ViewPager) view.findViewById(R.id.pager1);
+        this.pager.setAdapter(this.tab_adapter1);
+        this.pager.setCurrentItem(1);
 
         return view;
     }
