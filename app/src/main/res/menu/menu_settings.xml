@@ -6,8 +6,6 @@
          Set id, icon and Title for each menu item
     -->
 
-    <item android:id="@+id/menu_preferences2"
-        android:title="Test kamerki na LG v2" />
 
     <item android:id="@+id/menu_preferences"
        android:title="Preferences" />

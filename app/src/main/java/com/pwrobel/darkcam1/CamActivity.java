@@ -6,6 +6,7 @@ package com.pwrobel.darkcam1;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.DialogFragment;
 import android.app.FragmentManager;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -263,6 +264,7 @@ public class CamActivity extends Activity implements MassSelectedListener {
         this.zoomInfoWin = new ZoomWindowInfo();
         this.zoomInfoWin.setLanguagesInfo(this.languages, this.current_lang);
         this.zoomInfoWin.setWhichTabSelectedByDefault(this.which_tab_about_selected);
+        this.zoomInfoWin.setStyle(DialogFragment.STYLE_NO_TITLE, 0);
         this.zoomInfoWin.show(mfm, "fragment_edit_name2");
     }
 

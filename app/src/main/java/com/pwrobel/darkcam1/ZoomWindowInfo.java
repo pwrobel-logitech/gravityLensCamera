@@ -1,6 +1,7 @@
 package com.pwrobel.darkcam1;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.app.DialogFragment;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -31,6 +32,28 @@ public class ZoomWindowInfo extends DialogFragment {
     private Activity motherActivity;
 
     @Override
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        Dialog dialog = super.onCreateDialog(savedInstanceState);
+
+        // request a window without the title
+        //dialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+        return dialog;
+    }
+
+    @Override
+    public void onStart()
+    {
+        super.onStart();
+        Dialog dialog = getDialog();
+        if (dialog != null)
+        {
+            int width = ViewGroup.LayoutParams.MATCH_PARENT;
+            int height = ViewGroup.LayoutParams.MATCH_PARENT;
+            dialog.getWindow().setLayout(width, height);
+        }
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         this.motherActivity = getActivity();
@@ -45,8 +68,10 @@ public class ZoomWindowInfo extends DialogFragment {
         String modon = (this.getTextInCurrentLang("about_app_description1"));
         tdonation.setText(modon);
 
-        getDialog().setTitle(null);
+        //getDialog().setTitle(null);
         //getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+
+        //setStyle(STYLE_NO_TITLE, 0);
 
         this.tab_adapter1 = new CustomPagerAdapter(ZoomWindowInfo.this);
         this.pager = (ViewPager) view.findViewById(R.id.pager1);
