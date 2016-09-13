@@ -41,10 +41,14 @@ public class ZoomWindowInfo extends DialogFragment {
         String modtitle = (this.getTextInCurrentLang("description_phenomenon1"));
         tilte.setText(modtitle);
 
+        TextView tdonation = (TextView)view.findViewById(R.id.text_info_donations);
+        String modon = (this.getTextInCurrentLang("about_app_description1"));
+        tdonation.setText(modon);
+
         getDialog().setTitle(null);
         //getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
 
-        this.tab_adapter1 = new CustomPagerAdapter();
+        this.tab_adapter1 = new CustomPagerAdapter(ZoomWindowInfo.this);
         this.pager = (ViewPager) view.findViewById(R.id.pager1);
         pager.invalidate();
         this.pager.setAdapter(this.tab_adapter1);
@@ -66,6 +70,10 @@ public class ZoomWindowInfo extends DialogFragment {
     public void setLanguagesInfo(Set<String> langs, String lang){
         this.languages = langs;
         this.language = lang;
+    }
+
+    public String query_string_in_current_lang(String tag){
+        return this.getTextInCurrentLang(tag);
     }
 
     private int which_tab_num;

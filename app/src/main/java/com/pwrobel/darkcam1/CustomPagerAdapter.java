@@ -10,8 +10,11 @@ import android.view.View;
  */
 class CustomPagerAdapter extends PagerAdapter {
 
-    CustomPagerAdapter(){
+    ZoomWindowInfo parent_info_dialog;
+
+    CustomPagerAdapter(ZoomWindowInfo info){
         super();
+        this.parent_info_dialog = info;
     }
 
     public Object instantiateItem(View collection, int position) {
@@ -38,7 +41,11 @@ class CustomPagerAdapter extends PagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position){
-        return "Titleee";
+        if(this.parent_info_dialog == null)
+            return Integer.toString(position);
+        String query = "title_tab"+position+"_phenomenon";
+        String obtained = this.parent_info_dialog.query_string_in_current_lang(query);
+        return obtained;
     }
 
     @Override
