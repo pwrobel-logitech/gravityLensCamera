@@ -19,19 +19,6 @@
     <string name="en_menu_preferences">Preferences</string>
     <string name="en_menu_aboutapp">About app</string>
     <string name="en_description_phenomenon1">
-        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffssfffffffffffffffffffffffffffffffsffffffsaaaaaaaaaaaaaaaasxffffffsfasdffasdffasdf sdff     asdffasad sdaf asdf sdaf asd fasd fd asd
-        sfdsadfffffffffffffffffffffffffffsadf
-        asfddddsadf
-        sadffffffsadfsad
-        asfdasddddddddddddassf
-        sfd
-        afffasdf\n
-        fdg\n
-        dgff\n
-        http://www.google.com \n
-        link above\n
-        sdg\n
-        dfg\n
         Here image\n
         hh\n
         sdf\n
@@ -41,6 +28,11 @@
         Thank you for using this app.\n\n
         If you would like to support the me, you can always donate :)
     </string>
+    <string name="en_ovh_page1">http://wrobel731.ovh.org/blackholecam/index.html</string>
+    <string name="en_donation_link1">https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=Z2TVKTC6NHQLE</string>
+    <string name="en_note1">Support webpage for this app:</string>
+    <string name="en_note2">Donation link:</string>
+
 
     <string name="pl_title_tab0_phenomenon">Jak to działa</string>
     <string name="pl_title_tab1_phenomenon">Wsparcie</string>
@@ -53,33 +45,8 @@
     <string name="pl_mass_unit_suffix">masy Ziemii</string>
     <string name="pl_menu_preferences">Opcje</string>
     <string name="pl_menu_aboutapp">O aplikacji</string>
-    <string name="pl_description_phenomenon1">sa
-        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf sdsa asd fasdfs sadfas sadfggf dsafasgas
-        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
-        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
-        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
-        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
-        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
-        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
-                ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
-        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
-        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
-        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
-        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
-        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
-                ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
-        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
-        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
-        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
-        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
-        ADgdsfdffffffffffssssssssssssffffffffffssssssssssffffffffffffffffsssffffffffffffffssasffffffffffffffffffffffssfxffffffsfasdffasdffasdf
-        asdf
-        sfdsadfffffffffffffffffffffffffffsadf
-        asfddddsadf
-        sadffffffsadfsad
-        asfdasddddddddddddassf
-        sfd
-        afffasdf\n
+    <string name="pl_description_phenomenon1">
+        df\n
         fdg\n
         dgff\n
         http://www.google.pl \n
@@ -92,10 +59,15 @@
         sdf\n
     </string>
     <string name="pl_about_app_description1">
-        Dziękuję za skorzystanie z tej applikacji.\n\n
+        Dziękuję za skorzystanie z tej applikacji. Jest ona całkowicie darmowa - pełna i płatna jej wersja na Google Play store
+        ma identyczną funkcjonalność\n\n
         Jeśli chciałbyś mnie wspomóc w dalszym rozwijaniu tej aplikacji, usuwaniu błędów,
         poprawy tłumaczenia, możesz zawsze udzielić wsparcia finansowego :)
     </string>
+    <string name="pl_ovh_page1">http://wrobel731.ovh.org/blackholecam/index.html \n</string>
+    <string name="pl_donation_link1">https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=Z2TVKTC6NHQLE \n</string>
+    <string name="pl_note1">Strona internetowa wsparcia dla tej aplikacji:</string>
+    <string name="pl_note2">Link płatności:</string>
 
 
 </resources>

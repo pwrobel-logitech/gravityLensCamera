@@ -68,6 +68,22 @@ public class ZoomWindowInfo extends DialogFragment {
         String modon = (this.getTextInCurrentLang("about_app_description1"));
         tdonation.setText(modon);
 
+        TextView tdonation2 = (TextView)view.findViewById(R.id.donation_link1);
+        String modon2 = (this.getTextInCurrentLang("donation_link1"));
+        tdonation2.setText(modon2);
+
+        TextView tdonation3 = (TextView)view.findViewById(R.id.page_ovh_info);
+        String modon3 = (this.getTextInCurrentLang("ovh_page1"));
+        tdonation3.setText(modon3);
+
+        TextView tdonation4 = (TextView)view.findViewById(R.id.donation_link1_info1);
+        String modon4 = (this.getTextInCurrentLang("note2"));
+        tdonation4.setText(modon4);
+
+        TextView tdonation5 = (TextView)view.findViewById(R.id.page_ovh_info_note1);
+        String modon5 = (this.getTextInCurrentLang("note1"));
+        tdonation5.setText(modon5);
+
         //getDialog().setTitle(null);
         //getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
 
