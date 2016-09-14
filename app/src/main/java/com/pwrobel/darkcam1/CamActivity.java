@@ -52,6 +52,18 @@ public class CamActivity extends Activity implements MassSelectedListener {
     private ProgressDialog progress;
     private Set<String> languages;
     private String current_lang;
+    private String system_lang;
+
+    private void setLanguageFromSystem(){
+        this.setCurrentLang("en"); //default language
+        this.system_lang = getResources().getConfiguration().locale.getLanguage();
+        for(String s: languages){
+            if(system_lang.contains(s)){
+                this.current_lang = s;
+                return;
+            }
+        }
+    }
 
     public ProgressDialog getProgressDialog(){
         return this.progress;
@@ -125,7 +137,7 @@ public class CamActivity extends Activity implements MassSelectedListener {
 
         this.addLanguage("en");
         this.addLanguage("pl");
-        this.setCurrentLang("pl");
+        this.setLanguageFromSystem();
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
