@@ -32,6 +32,7 @@
     <string name="en_donation_link1">https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=Z2TVKTC6NHQLE</string>
     <string name="en_note1">Support webpage for this app:</string>
     <string name="en_note2">Donation link:</string>
+    <string name="en_linkify_pp">Link</string>
 
 
     <string name="pl_title_tab0_phenomenon">Jak to działa</string>
@@ -65,9 +66,10 @@
         poprawy tłumaczenia, możesz zawsze udzielić wsparcia finansowego :)
     </string>
     <string name="pl_ovh_page1">http://wrobel731.ovh.org/blackholecam/index.html \n</string>
-    <string name="pl_donation_link1">https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=Z2TVKTC6NHQLE \n</string>
+    <string name="pl_donation_link1">https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=Z2TVKTC6NHQLE</string>
     <string name="pl_note1">Strona internetowa wsparcia dla tej aplikacji:</string>
     <string name="pl_note2">Link płatności:</string>
+    <string name="pl_linkify_pp">Link</string>
 
 
 </resources>

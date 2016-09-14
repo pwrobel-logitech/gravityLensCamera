@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.text.util.Linkify;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -16,11 +17,40 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by pwrobel on 08.09.16.
  */
 public class ZoomWindowInfo extends DialogFragment {
+
+        /**
+         * @param textView
+         *            textView who's text you want to change
+         * @param linkThis
+         *            a regex of what text to turn into a link
+         * @param toThis
+         *            the url you want to send them to
+         */
+        private static void internaladdLinks(TextView textView, String linkThis, String toThis) {
+            Pattern pattern = Pattern.compile(linkThis);
+            String scheme = toThis;
+            android.text.util.Linkify.addLinks(textView, pattern, scheme, new android.text.util.Linkify.MatchFilter() {
+                @Override
+                public boolean acceptMatch(CharSequence s, int start, int end) {
+                    return true;
+                }
+            }, new android.text.util.Linkify.TransformFilter() {
+
+                @Override
+                public String transformUrl(Matcher match, String url) {
+                    return "";
+                }
+            });
+        }
+
+
 
     CustomPagerAdapter tab_adapter1;
     ViewPager pager;
@@ -69,8 +99,11 @@ public class ZoomWindowInfo extends DialogFragment {
         tdonation.setText(modon);
 
         TextView tdonation2 = (TextView)view.findViewById(R.id.donation_link1);
-        String modon2 = (this.getTextInCurrentLang("donation_link1"));
+        String modon2 = (this.getTextInCurrentLang("linkify_pp"));
         tdonation2.setText(modon2);
+        //Pattern p1 = Pattern.compile(modon2);
+        String scheme = this.getTextInCurrentLang("donation_link1");
+        ZoomWindowInfo.internaladdLinks(tdonation2, modon2, scheme);
 
         TextView tdonation3 = (TextView)view.findViewById(R.id.page_ovh_info);
         String modon3 = (this.getTextInCurrentLang("ovh_page1"));

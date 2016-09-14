@@ -73,7 +73,6 @@
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:autoLink="web"
                 android:text="Donate"
                 android:id="@+id/donation_link1" />
 
