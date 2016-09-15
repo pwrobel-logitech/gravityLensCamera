@@ -53,7 +53,11 @@
         It is completly free and without ads - paid for version is available on the Google Store only for donation purposes.\n\n
         If you would like to support me in further progress, bugfixing, translation improvement,
         you can always donate any amount you like :)\n\n
-        Or you can visit my small webpage for this app.
+        Or you can visit my small webpage for this app.\n
+        \n
+        Requires android 4.2 or more, + support for 32-bit floats on GPU to correctly simulate black hole on the camera preview(OpenGL).
+        Final, high-resolution image saved on memory card is rendered on CPU in a multi-threaded fashion (depending on the number
+        of physical cores on the phone).
     </string>
 
     <string name="en_ovh_page1">http://wrobel731.ovh.org/blackholecam/index.html</string>
@@ -113,6 +117,9 @@
         Jeśli chciałbyś mnie wspomóc w dalszym rozwijaniu tej aplikacji, usuwaniu błędów,
         poprawy tłumaczenia, możesz zawsze udzielić wsparcia finansowego :) \n\n
         Możesz również odwiedzić moją małą stronę dla tej aplikacji.\n
+        \n
+        Wymaga androida 4.2 lub więcej, + wsparcie dla 32-bitowych liczb zmiennoprzecinkowych na GPU do prawidłowego symulowania podglądu(OpenGL). Finalny obraz
+        o wysokiej rozdzielczości jest renderowany wielowątkowo na CPU (zależnie od ilości fizycznych rdzeni w telefonie).
     </string>
     <string name="pl_ovh_page1">http://wrobel731.ovh.org/blackholecam/index.html</string>
     <string name="pl_ovh_page1_linkify">stronę</string>
