@@ -28,7 +28,7 @@ void lowest_priority(){
     pthread_setschedparam(pthread_self(), policy, &param);
 }
 
-inline double clamp(double a, double low, double high){
+inline float clamp(float a, float low, float high){
     if(a < low)
         return low;
     if(a > high)
@@ -37,27 +37,27 @@ inline double clamp(double a, double low, double high){
 }
 
 //imitate pixel shader in software
-void process_pixel(int x, int y, int w, int h, double phys_ratio, double fovX_deg,
+void process_pixel(int x, int y, int w, int h, float phys_ratio, float fovX_deg,
                    const jint* in, jint* out){
-    double fov_yx_ratio = ((double)h)/((double)w);
-    double fovX = fovX_deg * (M_PI/180.0) ;
-    double fovY = fov_yx_ratio * fovX;
+    float fov_yx_ratio = ((float)h)/((float)w);
+    float fovX = fovX_deg * (M_PI/180.0) ;
+    float fovY = fov_yx_ratio * fovX;
 
-    double xnorm = ((double)x)/((double)w);
-    double ynorm = ((double)y)/((double)h);
+    float xnorm = ((float)x)/((float)w);
+    float ynorm = ((float)y)/((float)h);
 
-    double tx = tan((xnorm - 0.5) * fovX);
-    double ty = tan((ynorm - 0.5) * fovY);
-    double fi = atan(sqrt(tx*tx+ty*ty));
+    float tx = tan((xnorm - 0.5) * fovX);
+    float ty = tan((ynorm - 0.5) * fovY);
+    float fi = atan(sqrt(tx*tx+ty*ty));
 
     int final_col;
 
     if(fi < phys_ratio){
         final_col = 0x00000000;
     }else{
-        double coeff = 1.0 - phys_ratio * (1.0 / (fi * fi));
-        double xn = clamp(0.5 + coeff*(xnorm-0.5),0.0,1.0);
-        double yn = clamp(0.5 + coeff*(ynorm-0.5),0.0,1.0);
+        float coeff = 1.0 - phys_ratio * (1.0 / (fi * fi));
+        float xn = clamp(0.5 + coeff*(xnorm-0.5),0.0,1.0);
+        float yn = clamp(0.5 + coeff*(ynorm-0.5),0.0,1.0);
         int readcoord = ((int)(xn*w)) + w * ((int)(yn*h));
         if(readcoord < 0)
             readcoord = 0;
@@ -73,8 +73,8 @@ struct subimage_info{
     int div_y;
     int num_x;
     int num_y;
-    double phys_ratio;
-    double fovX_deg;
+    float phys_ratio;
+    float fovX_deg;
     int w;
     int h;
     jint *in_buf;
@@ -84,10 +84,10 @@ struct subimage_info{
 void *perform_subimage_transform(void *args) {
     lowest_priority();
     subimage_info* info = (subimage_info*)args;
-    int loop_x_start = (int)(((double)info->num_x/(double)info->div_x)*info->w);
-    int loop_x_end = (int)(((double)(info->num_x+1)/(double)info->div_x)*info->w);
-    int loop_y_start = (int)(((double)info->num_y/(double)info->div_y)*info->h);
-    int loop_y_end = (int)(((double)(info->num_y+1)/(double)info->div_y)*info->h);
+    int loop_x_start = (int)(((float)info->num_x/(float)info->div_x)*info->w);
+    int loop_x_end = (int)(((float)(info->num_x+1)/(float)info->div_x)*info->w);
+    int loop_y_start = (int)(((float)info->num_y/(float)info->div_y)*info->h);
+    int loop_y_end = (int)(((float)(info->num_y+1)/(float)info->div_y)*info->h);
     __android_log_print(ANDROID_LOG_VERBOSE, APPNAME, "raaaatio %f, rx %d, ry %d, loopingx: q%d,%dq, loopingy: q%d,%dq", info->phys_ratio,
     info->num_x, info->num_y, loop_x_start,loop_x_end,
                         loop_y_start,loop_y_end);
@@ -130,8 +130,8 @@ JNIEXPORT void JNICALL Java_com_pwrobel_darkcam1_NativeCPUBackend_process_1buffe
         nfo.num_y = 0;
         nfo.w = w;
         nfo.h = h;
-        nfo.phys_ratio = phys_ratio;
-        nfo.fovX_deg = fovX_deg;
+        nfo.phys_ratio = (float)phys_ratio;
+        nfo.fovX_deg = (float)fovX_deg;
         nfo.in_buf = (jint*)in_buff;
         nfo.out_buf = out_buff;
 
