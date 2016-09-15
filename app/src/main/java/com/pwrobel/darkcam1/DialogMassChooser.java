@@ -139,7 +139,12 @@ public class DialogMassChooser extends DialogFragment {
     }
 
     private String getTextInCurrentLang(String text){
-        return (this.getStringResourceByName(this.language + "_" + text));
+        String found = this.getStringResourceByName(this.language + "_" + text);
+        if(found == null || found == ""){
+            return this.getStringResourceByName("en_" + text);
+        }else {
+            return found;
+        }
     }
 
     //public static String fixedLengthString(String string, int length) {

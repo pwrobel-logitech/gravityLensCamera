@@ -96,7 +96,12 @@ public class CamActivity extends Activity implements MassSelectedListener {
     }
 
     public String getTextInCurrentLang(String text){
-        return (this.getStringResourceByName(this.current_lang + "_" + text));
+        String found = this.getStringResourceByName(this.current_lang + "_" + text);
+        if(found == null || found == ""){
+            return this.getStringResourceByName("en_" + text);
+        }else {
+            return found;
+        }
     }
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -277,6 +282,9 @@ public class CamActivity extends Activity implements MassSelectedListener {
         this.zoomInfoWin.setLanguagesInfo(this.languages, this.current_lang);
         this.zoomInfoWin.setWhichTabSelectedByDefault(this.which_tab_about_selected);
         this.zoomInfoWin.setStyle(DialogFragment.STYLE_NO_TITLE, 0);
+        if(this.mRenderer != null){
+            this.zoomInfoWin.setDataFov(this.mRenderer.getDataFov1(), this.mRenderer.getDataFov2());
+        }
         this.zoomInfoWin.show(mfm, "fragment_edit_name2");
     }
 

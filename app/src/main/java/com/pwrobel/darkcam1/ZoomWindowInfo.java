@@ -94,9 +94,18 @@ public class ZoomWindowInfo extends DialogFragment {
         String modtitle = (this.getTextInCurrentLang("description_phenomenon1"));
         tilte.setText(modtitle);
 
+        ZoomWindowInfo.internaladdLinks(tilte, this.getTextInCurrentLang("description_phenomenon1_linkify"),
+                this.getTextInCurrentLang("description_phenomenon1_link"));
+
+
         TextView tilte2 = (TextView)view.findViewById(R.id.info_zoom_text_title2);
         String modtitle2 = (this.getTextInCurrentLang("description_phenomenon2"));
+        modtitle2 = modtitle2.replaceAll("XXXXX", String.valueOf(this.dataFov2));
+        modtitle2 = modtitle2.replaceAll("YYYYY", String.valueOf(this.dataFov1));
         tilte2.setText(modtitle2);
+
+        ZoomWindowInfo.internaladdLinks(tilte2, this.getTextInCurrentLang("description_phenomenon2_linkify"),
+                this.getTextInCurrentLang("description_phenomenon2_link"));
 
         TextView tdonation = (TextView)view.findViewById(R.id.text_info_donations);
         String modon = (this.getTextInCurrentLang("about_app_description1"));
@@ -179,11 +188,22 @@ public class ZoomWindowInfo extends DialogFragment {
     }
 
     private String getTextInCurrentLang(String text){
-        return (this.getStringResourceByName(this.language + "_" + text));
+        String found = this.getStringResourceByName(this.language + "_" + text);
+        if(found == null || found == ""){
+            return this.getStringResourceByName("en_" + text);
+        }else {
+            return found;
+        }
     }
 
     public static String fixedLengthString(String string, int length) {
         return String.format("%1$"+length+ "s", string);
+    }
+
+    private float dataFov1=0, dataFov2=0;
+    public void setDataFov(float f1, float f2){
+        this.dataFov1 = f1;
+        this.dataFov2 = f2;
     }
 
 

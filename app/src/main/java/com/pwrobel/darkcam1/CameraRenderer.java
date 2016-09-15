@@ -126,6 +126,15 @@ public class CameraRenderer extends GLSurfaceView implements
         }
     }
 
+    private float data_fov1=0, data_fov2=0;
+    public float getDataFov1(){
+        return data_fov1;
+    }
+
+    public float getDataFov2(){
+        return data_fov2;
+    }
+
     @Override
     public synchronized void onFrameAvailable(SurfaceTexture surfaceTexture){
         updateTexture = true;
@@ -220,6 +229,9 @@ public class CameraRenderer extends GLSurfaceView implements
         //setup the fovX (the smaller one) angle in degrees
         double thetaV = (param.getVerticalViewAngle());
         double thetaH = (param.getHorizontalViewAngle());
+
+        this.data_fov1 = (float)thetaH;
+        this.data_fov2 = (float)thetaV;
 
         Log.i("DcamFOV", "Vangle: " + String.valueOf(thetaV) + ", Hangle: " + String.valueOf(thetaH));
         if(thetaV < 10.0)
