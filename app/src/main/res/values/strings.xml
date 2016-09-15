@@ -19,10 +19,22 @@
     <string name="en_menu_preferences">Preferences</string>
     <string name="en_menu_aboutapp">About app</string>
     <string name="en_description_phenomenon1">
-        Here image\n
-        hh\n
-        sdf\n
-        sdf\n
+       This application demonstrates the gravitational effect of an small black hole nearby you.
+       It uses a back camera of your mobile phone, to see the environment, and then it deflects the
+       light rays according to the black hole gravitational pull. The whole effect is called the
+       gravitational lens, and can be understood by looking at the picture(1) below - black hole as an red object in the center:
+    </string>
+    <string name="en_description_phenomenon2">
+        You can change the black hole mass by touching the screen with two fingers and then pinching or spreading them.
+        Or, you can use the bottom-right black button to do the same - as you can see then, the black hole mass is of the
+        order of inner planet mass - like mars or almost the earth. By clicking the big camera button in the middle,
+        you can save the full-resolution image with the black hole on your phone storage card into the separate MyBlackHoles folder
+        (use the menu option in the app to find the folder easier).
+        The gravity lens here tries to be as accurate, as possible - yet it still assumes that all that the camera sees is very far away -
+        which does not have to be neccessarily true - especially for the object close to you. Also, the approximation is not very accurate close to the event horizon (black circle
+        in the middle - corresponding to the real size of the event horizon) - because the phone camera has only some narrow, limited
+        field of view - so the artifacts close to the event horizon are unavoidable here. Black hole in this app is assumed to be always 1m away from you - the effect of increasing this distance would have
+        exaclty the same effect as decreasing black hole mass.
     </string>
     <string name="en_about_app_description1">
         Thank you for using this app.\n\n
@@ -47,21 +59,16 @@
     <string name="pl_menu_preferences">Opcje</string>
     <string name="pl_menu_aboutapp">O aplikacji</string>
     <string name="pl_description_phenomenon1">
-        df\n
-        fdg\n
-        dgff\n
-        http://www.google.pl \n
-        link above\n
-        sdg\n
-        dfg\n
-        Here image\n
-        hh\n
-        sdf\n
-        sdf\n
+       aaaaaaa
+
+    </string>
+    <string name="pl_description_phenomenon2">
+       bbbbbbbbbbbbbb
     </string>
     <string name="pl_about_app_description1">
-        Dziękuję za skorzystanie z tej applikacji. Jest ona całkowicie darmowa - pełna i płatna jej wersja na Google Play store
-        ma identyczną funkcjonalność\n\n
+        Dziękuję za skorzystanie z tej applikacji. Jest ona całkowicie darmowa i bez reklam - pełna i płatna
+        jej wersja na Google Play store
+        ma identyczną funkcjonalność i jest jedynie sposobem na wsparcie finansowe.\n\n
         Jeśli chciałbyś mnie wspomóc w dalszym rozwijaniu tej aplikacji, usuwaniu błędów,
         poprawy tłumaczenia, możesz zawsze udzielić wsparcia finansowego :)
     </string>

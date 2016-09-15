@@ -21,7 +21,8 @@
             android:paddingBottom="4dp"
             android:paddingRight="4dp"
             android:paddingLeft="4dp"
-            android:padding="4dp" />
+            android:padding="4dp"
+            style="@style/Base.TextAppearance.AppCompat.Button" />
 
         <LinearLayout
             android:id="@+id/page_one"
@@ -33,10 +34,32 @@
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:gravity="center"
                 android:autoLink="web"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="5dp" />
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginBottom="1dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:src="@drawable/lenseffect"
+                android:scrollIndicators="end"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bbbbbbb"
+                android:id="@+id/info_zoom_text_title2"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginBottom="13dp" />
         </LinearLayout>
 
         <LinearLayout

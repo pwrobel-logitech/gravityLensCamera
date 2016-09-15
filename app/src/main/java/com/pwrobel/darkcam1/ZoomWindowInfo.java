@@ -1,5 +1,5 @@
 package com.pwrobel.darkcam1;
-
+//lens image - credit for : ANDREW HAMILTON
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -93,6 +93,10 @@ public class ZoomWindowInfo extends DialogFragment {
         TextView tilte = (TextView)view.findViewById(R.id.info_zoom_text_title);
         String modtitle = (this.getTextInCurrentLang("description_phenomenon1"));
         tilte.setText(modtitle);
+
+        TextView tilte2 = (TextView)view.findViewById(R.id.info_zoom_text_title2);
+        String modtitle2 = (this.getTextInCurrentLang("description_phenomenon2"));
+        tilte2.setText(modtitle2);
 
         TextView tdonation = (TextView)view.findViewById(R.id.text_info_donations);
         String modon = (this.getTextInCurrentLang("about_app_description1"));
