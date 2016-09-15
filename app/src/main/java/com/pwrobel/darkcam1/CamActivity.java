@@ -215,7 +215,7 @@ public class CamActivity extends Activity implements MassSelectedListener {
                 CamActivity.this.disableButtons();
                 final ProgressDialog progress = new ProgressDialog(CamActivity.this);
                 CamActivity.this.progress = progress;
-                progress.setTitle(CamActivity.this.getTextInCurrentLang("progress_title")+" R"+rotation);
+                progress.setTitle(CamActivity.this.getTextInCurrentLang("progress_title"));
                 progress.setMessage(CamActivity.this.getTextInCurrentLang("progress_msg"));
                 progress.setCancelable(false);
                 progress.show();

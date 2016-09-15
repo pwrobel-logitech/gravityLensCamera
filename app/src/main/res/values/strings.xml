@@ -7,7 +7,7 @@
     <string name="phototake_name">Photo</string>
 
 
-    <string name="en_title_tab0_phenomenon">How does it works</string>
+    <string name="en_title_tab0_phenomenon">Description</string>
     <string name="en_title_tab1_phenomenon">Support</string>
     <string name="en_progress_title">Saving image</string>
     <string name="en_progress_msg">Wait while processing</string>
@@ -16,8 +16,8 @@
     <string name="en_saving_img_to_sd">Saving processed image to the card</string>
     <string name="en_choose_mass">Select black hole mass</string>
     <string name="en_mass_unit_suffix">of the Earth mass</string>
-    <string name="en_menu_preferences">Preferences</string>
-    <string name="en_menu_aboutapp">About app</string>
+    <string name="en_menu_preferences">Description</string>
+    <string name="en_menu_aboutapp">Support</string>
     <string name="en_description_phenomenon1">
        This application demonstrates the gravitational effect of an small black hole nearby you.
        It uses a back camera of your mobile phone, to see the environment, and then it deflects the
@@ -39,9 +39,9 @@
         exaclty the same effect as decreasing black hole mass. Non-rotating black hole is being used - something known as the
         Schwarzschild solution of the field equations for spherically-symetrical object.
         \n
-        Field of view of your back camera, as reported by the phone:\n
-        horizontal: XXXXX degrees\n
-        vertical  : YYYYY degrees.
+        Field of view of your back camera, as reported by the phone:\n\n
+        horizontal: XXXXXX degrees\n
+        vertical  : YYYYYY degrees.
         \n
         \n
         (1) Credit for the Andrew Hamilton for the picture.
@@ -49,18 +49,21 @@
     <string name="en_description_phenomenon2_linkify">Schwarzschild solution</string>
     <string name="en_description_phenomenon2_link">https://en.wikipedia.org/wiki/Schwarzschild_metric</string>
     <string name="en_about_app_description1">
-        Thank you for using this app.\n\n
-        If you would like to support the me, you can always donate :)
+        Thank you for using this app, please rate it, whether you like it or not :)
+        It is completly free and without ads - paid for version is available on the Google Store only for donation purposes.\n\n
+        If you would like to support me in further progress, bugfixing, translation improvement,
+        you can always donate any amount you like :)\n\n
+        Or you can visit my small webpage for this app.
     </string>
 
     <string name="en_ovh_page1">http://wrobel731.ovh.org/blackholecam/index.html</string>
+    <string name="en_ovh_page1_linkify">webpage</string>
     <string name="en_donation_link1">https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=Z2TVKTC6NHQLE</string>
-    <string name="en_note1">Support webpage for this app:</string>
-    <string name="en_note2">Donation link:</string>
-    <string name="en_linkify_pp">Link</string>
+    <string name="en_donation_link1_linkify">donate</string>
 
 
-    <string name="pl_title_tab0_phenomenon">Jak to działa</string>
+
+    <string name="pl_title_tab0_phenomenon">Opis</string>
     <string name="pl_title_tab1_phenomenon">Wsparcie</string>
     <string name="pl_progress_title">Zapisywanie obrazu</string>
     <string name="pl_progress_msg">Czekaj, przetwarzam</string>
@@ -69,31 +72,52 @@
     <string name="pl_saving_img_to_sd">Zapisywanie przetworzonego obrazka na kartę</string>
     <string name="pl_choose_mass">Wybierz masę czarnej dziury</string>
     <string name="pl_mass_unit_suffix">masy Ziemii</string>
-    <string name="pl_menu_preferences">Opcje</string>
-    <string name="pl_menu_aboutapp">O aplikacji</string>
+    <string name="pl_menu_preferences">Opis</string>
+    <string name="pl_menu_aboutapp">Wsparcie</string>
     <string name="pl_description_phenomenon1">
-       aaaaaaa
+       Ta aplikacja obrazuje efekt grawitacji czarnej dziury na otoczenie. Używa ona tylnej kamerki telefonu
+        do rejestracji obrazu i ugięcia promieni świetlnych zgodnie z masą i odległością czarnej dziury od obserwatora.
+        Cały efekt nosi nazwę soczewki grawitacyjnej, i jest zobrazowany na obrazku(1) poniżej - czarna dziura jako czerwony obiek w centrum:
 
     </string>
-    <string name="pl_description_phenomenon1_linkify">gravitational lens</string>
-    <string name="pl_description_phenomenon1_link">https://en.wikipedia.org/wiki/Gravitational_lens</string>
+    <string name="pl_description_phenomenon1_linkify">soczewki grawitacyjnej</string>
+    <string name="pl_description_phenomenon1_link">https://pl.wikipedia.org/wiki/Soczewkowanie_grawitacyjne</string>
     <string name="pl_description_phenomenon2">
-       bbbbbbbbbbbbbb
+       Możesz zmieniać masę czarnej dziury poprzez gest przybliżenia i oddalenia dwoma palcami na ekranie aplikacji. Albo, ten sam
+        efekt, wraz z informacją o masie, możesz uzyskać kilkając ikonę w dolnym prawym rogu. Jak widzisz,
+        masa czarnej dziury możliwa do ustawienia jest rzędu wielkości mas takich planet jak Mars czy Ziemia.
+        Klikając wielki przycisk kamerki na środku, możesz zapisać obrazek z czarną dziurą w pełnej rozdzielczości na kartę pamięci
+        twojego telefonu do osobnego folderu MyBlackHoles (w menu opcji jest pozycja co przeniesie cię do tego folderu automatycznie).
+        Efekt soczewki grawitacyjnej tutaj stara się być tak wierny rzeczywistości jak możliwe - ale ciągle poddany jest pewnym założeniom uproszczającym -
+        jak to że obraz widziany przez kamerkę jest znacznie dalej od czarnej dziury - co nie musi być prawdą dla przedmiotów obok ciebie (kamerka telefonu nie wie jak daleko są widziane przez nią obiekty).
+        Również przybliżenie bardzo blisko horyzontu zdarzeń
+        (czarne kółko na środku - odpowiadające rzeczywistemu rozmiarowi kątowemu horyzontu zdarzeń)
+        nie jest dobre i generuje pewne nieścisłości - kamerka telefonu ma pewne ograniczenie kątowe pola widzenia i promienie światła przechodzące
+        zbyt blisko horyzontu zdarzeń nie mają szansy trafić do obserwatora z obszaru widzenia kamerki, gdyż byłyby uginane zbyt mocno.\n
+        Czarna dziura jest umiejscowiona w odległości 1m od kamery - zwiększenie tego dystansu 2x wpłynęłoby na obraz tak samo jak zmniejszenie masy
+        czarnej dziury dwukrotnie.
+        Przybliżone rozwiązanie Schwarzchilda równań ogólnej teorii względności - statyczna, nierotująca czarna dziura, jest tutaj użyte do symulacji.\n
+        Pole widzenia twojej tylnej kamery telefonu, wg. systemu:\n\n
+        poziomo: XXXXXX stopni\n
+        pionowo  : YYYYYY stopni.
+        \n
+        \n
+        (1) Podziękowania za obrazek dla: Andrew Hamilton.
     </string>
-    <string name="pl_description_phenomenon2_linkify">Schwarzschild solution</string>
-    <string name="pl_description_phenomenon2_link">https://en.wikipedia.org/wiki/Schwarzschild_metric</string>
+    <string name="pl_description_phenomenon2_linkify">rozwiązanie Schwarzchilda</string>
+    <string name="pl_description_phenomenon2_link">https://pl.wikipedia.org/wiki/Metryka_Schwarzschilda</string>
     <string name="pl_about_app_description1">
-        Dziękuję za skorzystanie z tej applikacji. Jest ona całkowicie darmowa i bez reklam - pełna i płatna
+        Dziękuję za skorzystanie z tej applikacji. Jest ona całkowicie darmowa i bez reklam - płatna
         jej wersja na Google Play store
         ma identyczną funkcjonalność i jest jedynie sposobem na wsparcie finansowe.\n\n
         Jeśli chciałbyś mnie wspomóc w dalszym rozwijaniu tej aplikacji, usuwaniu błędów,
-        poprawy tłumaczenia, możesz zawsze udzielić wsparcia finansowego :)
+        poprawy tłumaczenia, możesz zawsze udzielić wsparcia finansowego :) \n\n
+        Możesz również odwiedzić moją małą stronę dla tej aplikacji.\n
     </string>
-    <string name="pl_ovh_page1">http://wrobel731.ovh.org/blackholecam/index.html \n</string>
+    <string name="pl_ovh_page1">http://wrobel731.ovh.org/blackholecam/index.html</string>
+    <string name="pl_ovh_page1_linkify">stronę</string>
     <string name="pl_donation_link1">https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=Z2TVKTC6NHQLE</string>
-    <string name="pl_note1">Strona internetowa wsparcia dla tej aplikacji:</string>
-    <string name="pl_note2">Link płatności:</string>
-    <string name="pl_linkify_pp">Link</string>
+    <string name="pl_donation_link1_linkify">wsparcia finansowego</string>
 
 
 </resources>

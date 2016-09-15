@@ -100,8 +100,8 @@ public class ZoomWindowInfo extends DialogFragment {
 
         TextView tilte2 = (TextView)view.findViewById(R.id.info_zoom_text_title2);
         String modtitle2 = (this.getTextInCurrentLang("description_phenomenon2"));
-        modtitle2 = modtitle2.replaceAll("XXXXX", String.valueOf(this.dataFov2));
-        modtitle2 = modtitle2.replaceAll("YYYYY", String.valueOf(this.dataFov1));
+        modtitle2 = modtitle2.replaceAll("XXXXXX", String.valueOf(this.dataFov2));
+        modtitle2 = modtitle2.replaceAll("YYYYYY", String.valueOf(this.dataFov1));
         tilte2.setText(modtitle2);
 
         ZoomWindowInfo.internaladdLinks(tilte2, this.getTextInCurrentLang("description_phenomenon2_linkify"),
@@ -111,6 +111,12 @@ public class ZoomWindowInfo extends DialogFragment {
         String modon = (this.getTextInCurrentLang("about_app_description1"));
         tdonation.setText(modon);
 
+        ZoomWindowInfo.internaladdLinks(tdonation, this.getTextInCurrentLang("ovh_page1_linkify"),
+                this.getTextInCurrentLang("ovh_page1"));
+        ZoomWindowInfo.internaladdLinks(tdonation, this.getTextInCurrentLang("donation_link1_linkify"),
+                this.getTextInCurrentLang("donation_link1"));
+
+        /*
         TextView tdonation2 = (TextView)view.findViewById(R.id.donation_link1);
         String modon2 = (this.getTextInCurrentLang("linkify_pp"));
         tdonation2.setText(modon2);
@@ -129,7 +135,7 @@ public class ZoomWindowInfo extends DialogFragment {
         TextView tdonation5 = (TextView)view.findViewById(R.id.page_ovh_info_note1);
         String modon5 = (this.getTextInCurrentLang("note1"));
         tdonation5.setText(modon5);
-
+*/
         //getDialog().setTitle(null);
         //getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
 
@@ -184,6 +190,8 @@ public class ZoomWindowInfo extends DialogFragment {
         }
         String packageName = this.motherActivity.getPackageName();
         int resId = getResources().getIdentifier(aString, "string", packageName);
+        if (resId == 0)
+            return null;
         return getString(resId);
     }
 
