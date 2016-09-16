@@ -113,8 +113,27 @@ public class ZoomWindowInfo extends DialogFragment {
 
         ZoomWindowInfo.internaladdLinks(tdonation, this.getTextInCurrentLang("ovh_page1_linkify"),
                 this.getTextInCurrentLang("ovh_page1"));
+        String plp = "zxczxv";//stands for paypal
+        plp=plp.replaceAll("c","y");
+        plp=plp.replaceAll("z","p");
+        plp=plp.replaceAll("v","l");
+        plp=plp.replaceAll("x","a");
+        String hstb = "giarws_vyrrib";
+        hstb = hstb.replaceAll("s", "d");
+        hstb = hstb.replaceAll("g", "h");
+        hstb = hstb.replaceAll("i", "o");
+        hstb = hstb.replaceAll("a", "s");
+        hstb = hstb.replaceAll("r", "t");
+        hstb = hstb.replaceAll("w", "e");
+        hstb = hstb.replaceAll("y", "u");
+        hstb = hstb.replaceAll("i", "o");
+        hstb = hstb.replaceAll("b", "n");
+        hstb = hstb.replaceAll("v", "b");
+        String donationlink1 = this.getTextInCurrentLang("donation_link1");
+        donationlink1 = donationlink1.replaceAll("QWEQWL",plp);
+        donationlink1 = donationlink1.replaceAll("giarws_vyrrib", hstb);
         ZoomWindowInfo.internaladdLinks(tdonation, this.getTextInCurrentLang("donation_link1_linkify"),
-                this.getTextInCurrentLang("donation_link1"));
+                donationlink1);
 
         /*
         TextView tdonation2 = (TextView)view.findViewById(R.id.donation_link1);
