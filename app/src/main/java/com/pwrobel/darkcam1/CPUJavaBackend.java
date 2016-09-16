@@ -333,8 +333,7 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
     };
 
 
-
-    private File getDir() {
+    public File getDir() {
         File sdDir = Environment
                 .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
         return new File(sdDir, "MyBlackHoles");

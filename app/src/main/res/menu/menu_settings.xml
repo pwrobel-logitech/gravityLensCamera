@@ -6,6 +6,8 @@
          Set id, icon and Title for each menu item
     -->
 
+    <item android:id="@+id/menu_openfolder"
+        android:title="Open image folder" />
 
     <item android:id="@+id/menu_preferences"
        android:title="Preferences" />

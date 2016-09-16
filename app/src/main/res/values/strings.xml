@@ -12,10 +12,12 @@
     <string name="en_progress_title">Saving image</string>
     <string name="en_progress_msg">Wait while processing</string>
     <string name="en_could_not_save_img1">Image could not be saved</string>
+    <string name="en_could_not_open_folder">Cannot open/create the image folder</string>
     <string name="en_saved_img1">Image saved</string>
     <string name="en_saving_img_to_sd">Saving processed image to the card</string>
     <string name="en_choose_mass">Select black hole mass</string>
     <string name="en_mass_unit_suffix">of the Earth mass</string>
+    <string name="en_menu_openfolder">Open image folder</string>
     <string name="en_menu_preferences">Description</string>
     <string name="en_menu_aboutapp">Support</string>
     <string name="en_description_phenomenon1">
@@ -74,8 +76,10 @@
     <string name="pl_could_not_save_img1">Nie udało się zapisać obrazu</string>
     <string name="pl_saved_img1">Obraz zapisano</string>
     <string name="pl_saving_img_to_sd">Zapisywanie przetworzonego obrazka na kartę</string>
+    <string name="pl_could_not_open_folder">Nie mogę otworzyć folderu z obrazkami</string>
     <string name="pl_choose_mass">Wybierz masę czarnej dziury</string>
     <string name="pl_mass_unit_suffix">masy Ziemii</string>
+    <string name="pl_menu_openfolder">Otwórz folder obrazków</string>
     <string name="pl_menu_preferences">Opis</string>
     <string name="pl_menu_aboutapp">Wsparcie</string>
     <string name="pl_description_phenomenon1">

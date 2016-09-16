@@ -126,6 +126,14 @@ public class CameraRenderer extends GLSurfaceView implements
         }
     }
 
+    public String getBlackHolesStorageDir(){
+        if(this.image_processor_ != null){
+            String dir = this.image_processor_.getDir().toString();
+            return dir;
+        }
+        return "";
+    }
+
     private float data_fov1=0, data_fov2=0;
     public float getDataFov1(){
         return data_fov1;

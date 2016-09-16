@@ -2,6 +2,8 @@ package com.pwrobel.darkcam1;
 
 import android.graphics.ImageFormat;
 
+import java.io.File;
+
 /**
  * Created by pwrobel on 05.06.16.
  */
@@ -27,6 +29,9 @@ public interface StaticPhotoRenderBackend {
 
     //inform about the last picture name with path saved to the disk.
     public String getLast_file_saved();
+
+    //inform about directory into which pictures are saved
+    public File getDir();
 
     //set info about the object, mass, distance and field of viev in x-direction - horizontal
     //two angles are used as an check control - one of that would be still used finally, based on the image size

@@ -10,8 +10,10 @@ import android.app.DialogFragment;
 import android.app.FragmentManager;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -31,6 +33,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Context;
 
+import java.io.File;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -294,6 +297,21 @@ public class CamActivity extends Activity implements MassSelectedListener {
                 this.mMassChooser.dismiss();
     }
 
+    private void LaunchOpenFolderIntent(String dir){
+        File folder = new File(dir);
+        boolean success = true;
+        if (!folder.exists()) { //there is no such folder
+            success = folder.mkdir();
+        }
+        if (success) {
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setDataAndType(Uri.fromFile(folder), "*/*");
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, this.getTextInCurrentLang("could_not_open_folder"), Toast.LENGTH_LONG).show();
+        }
+    }
 
     private PopupMenu mySettingsMenu = null;
     // Initiating Menu xml (menu_settings.xml) - this is called by the android
@@ -317,6 +335,10 @@ public class CamActivity extends Activity implements MassSelectedListener {
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId())
                 {
+                    case R.id.menu_openfolder:
+                        String storagedir = CamActivity.this.mRenderer.getBlackHolesStorageDir();
+                        CamActivity.this.LaunchOpenFolderIntent(storagedir);
+                        return true;
                     case R.id.menu_aboutapp:
                         //Toast.makeText(CamActivity.this, "AboutApp is Selected", Toast.LENGTH_SHORT).show();
                         CamActivity.this.which_tab_about_selected = 1;
