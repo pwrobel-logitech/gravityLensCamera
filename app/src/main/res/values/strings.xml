@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Blackhole Cam</string>
+    <string name="app_name">BlackHole Cam</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="phototake_name">Photo</string>
@@ -35,10 +35,10 @@
         you can save the full-resolution image with the black hole on your phone storage card into the separate MyBlackHoles folder
         (use the menu option in the app to find the folder easier).
         The gravity lens here tries to be as accurate, as possible - yet it still assumes that all that the camera sees is very far away -
-        which does not have to be neccessarily true - especially for the object close to you. Also, the approximation is not very accurate close to the event horizon (black circle
+        which does not have to be necessarily true - especially for the object close to you. Also, the approximation is not very accurate close to the event horizon (black circle
         in the middle - corresponding to the real size of the event horizon) - because the phone camera has only some narrow, limited
-        field of view - so the artifacts close to the event horizon are unavoidable here. Black hole in this app is assumed to be always 1m away from you - the effect of increasing this distance would have
-        exaclty the same effect as decreasing black hole mass. Non-rotating black hole is being used - something known as the
+        field of view - so the artifacts close to the event horizon are unavoidable here. Black hole in this app is assumed to be always 1 meter (3.28ft) away from you - the effect of increasing this distance would have
+        exactly the same effect as decreasing black hole mass. Non-rotating black hole is being used - something known as the
         Schwarzschild solution of the field equations for spherically-symetrical object.
         \n
         Field of view of your back camera, as reported by the phone:\n\n
@@ -52,7 +52,7 @@
     <string name="en_description_phenomenon2_link">https://en.wikipedia.org/wiki/Schwarzschild_metric</string>
     <string name="en_about_app_description1">
         Thank you for using this app, please rate it, whether you like it or not :)
-        It is completly free and without ads - paid for version is available on the Google Store only for donation purposes.\n\n
+        It is completly free and without advertisements. Paid version on the store is only for donation purposes.\n\n
         If you would like to support me in further progress, bugfixing, translation improvement,
         you can always donate any amount you like :)\n\n
         Or you can visit my small webpage for this app.\n
@@ -130,5 +130,78 @@
     <string name="pl_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="pl_donation_link1_linkify">wsparcia finansowego</string>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <string name="zh_title_tab0_phenomenon">描述</string>
+    <string name="zh_title_tab1_phenomenon">支持</string>
+    <string name="zh_progress_title">保存图像</string>
+    <string name="zh_progress_msg">等待处理</string>
+    <string name="zh_could_not_save_img1">图像无法保存</string>
+    <string name="zh_could_not_open_folder">无法打开/创建图像文件夹</string>
+    <string name="zh_saved_img1">图像保存</string>
+    <string name="zh_saving_img_to_sd">保存处理后的图像到存储卡</string>
+    <string name="zh_choose_mass">选择黑洞质量</string>
+    <string name="zh_mass_unit_suffix">地球质量</string>
+    <string name="zh_menu_openfolder">打开图像文件夹</string>
+    <string name="zh_menu_preferences">描述</string>
+    <string name="zh_menu_aboutapp">支持</string>
+    <string name="zh_description_phenomenon1">
+该应用程序演示附近你一个小的黑洞的引力效应。
+       它使用移动电话的后照相机，看环境，然后将其偏转
+       根据黑洞引力的光线。整个效果被称为
+       引力透镜，并且可以通过查看下面的图片（1）可以理解 - 黑洞作为中心的红色物体：
+    </string>
+    <string name="zh_description_phenomenon1_linkify">引力透镜</string>
+    <string formatted="false" name="zh_description_phenomenon1_link">https://zh.wikipedia.org/wiki/%E5%BC%95%E5%8A%9B%E9%80%8F%E9%95%9C</string>
+    <string name="zh_description_phenomenon2">
+     你可以用两个手指触摸屏幕，然后挤压或传播这些改变黑洞质量。
+        或者，你可以使用右下角黑色按钮做同样的 - 你可以看到那么，黑洞质量的
+        内行星质量的秩序 - 像火星或接近地球。点击中间的大拍照键，
+        你可以用你的手机存储卡上的黑洞保存全分辨率图像分割成单独的文件夹MyBlackHoles
+        （使用菜单选项中的应用程序，找到文件夹更容易）。
+        这里的重力透镜努力做到准确，尽可能 - 但它仍然假定所有的摄像头看到很远的地方 -
+        这并不必须是一定真 - 特别是对靠近你的对象。此外，近似不是很准确接近事件视界（黑圈
+        在中间 - 对应于视界的实际大小） - 因为手机照相机仅具有一些窄，有限
+        视野 - 如此接近的事件视界的文物是不可避免的在这里。在此应用程序黑洞被认为是始终为1米（3.28英尺）离你而去 - 增加这个距离才能产生的效果
+        正是因为减小黑洞质量相同的效果。非旋转的黑洞正在使用 - 这被称为
+        为球状对称物体的场方程的史瓦西解。
+        \n
+        看你的背部摄像头领域，所报告的电话：\n \n
+        水平：XXXXXX 度的\n
+        垂直：YYYYYY 度。
+        \n
+        \n
+        （1）信用为安德鲁·汉密尔顿的图片。
+    </string>
+    <string name="zh_description_phenomenon2_linkify">史瓦西解</string>
+    <string formatted="false" name="zh_description_phenomenon2_link">https://zh.wikipedia.org/wiki/%E5%8F%B2%E7%93%A6%E8%A5%BF%E5%BA%A6%E8%A6%8F</string>
+    <string name="zh_about_app_description1">
+      感谢您使用这个程序，请评价它，不管你喜欢还是不喜欢 :)
+        它是完全地免费，无广告。在商店付费版本仅用于捐赠目的。\n\n
+        如果你想支持我的进一步进展，错误修复，提高翻译，
+        你总是可以捐赠，你喜欢的任何金额 :)\n\n
+        或者您也可以访问我为这个应用程序的小网页。\n
+        \n
+        需要Android4.2以上，+32位支持GPU上的浮正确模拟相机预览（OpenGL的）黑洞。
+        保存在存储卡最后，高分辨率图像以多线程方式CPU上呈现（根据数
+        在手机上物理核心）。
+    </string>
+
+    <string name="zh_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_en.html</string>
+    <string name="zh_ovh_page1_linkify">网页</string>
+    <string name="zh_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
+    <string name="zh_donation_link1_linkify">捐赠</string>
 
 </resources>
