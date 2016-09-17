@@ -366,12 +366,12 @@
         поле зрения - так артефакты вблизи горизонта событий неизбежны здесь. Черная дыра в этом приложении предполагается всегда 1 метр (3,28 фута) от вас - эффект увеличения этого расстояния будет иметь
         точно такой же эффект, уменьшая массу черной дыры. Невращающийся черная дыра используется - нечто, известное как
         Шварцшильда решение уравнений поля для сферически-симметричной объекта.
-        \п
-        Поле зрения вашей задней камеры, как сообщил по телефону: \п \п
-        горизонтальная: XXXXXX градусов \п
+        \n
+        Поле зрения вашей задней камеры, как сообщил по телефону: \n\n
+        горизонтальная: XXXXXX градусов \n
         по вертикали: YYYYYY градусов.
-        \п
-        \п
+        \n
+        \n
         (1) Кредит на Эндрю Гамильтон на картинке.
     </string>
     <string name="ru_description_phenomenon2_linkify">Шварцшильда решение</string>
@@ -578,6 +578,76 @@
     <string name="it_ovh_page1_linkify">piccolo sito</string>
     <string name="it_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="it_donation_link1_linkify">donare</string>
+
+
+
+
+
+
+
+    <string name="ar_title_tab0_phenomenon"> وصف </string>
+    <string name="ar_title_tab1_phenomenon"> الدعم </string>
+    <string name="ar_progress_title"> صورة إنقاذ </string>
+    <string name="ar_progress_msg"> الانتظار لحين تجهيز </string>
+    <string name="ar_could_not_save_img1"> لا يمكن حفظ صورة </string>
+    <string name="ar_could_not_open_folder"> لا يمكن فتح / إنشاء مجلد الصور </string>
+    <string name="ar_saved_img1"> الصورة المحفوظة </string>
+    <string name="ar_saving_img_to_sd"> إنقاذ صورة المصنعة لبطاقة </string>
+    <string name="ar_choose_mass"> تحديد كتلة الثقب الأسود </string>
+    <string name="ar_mass_unit_suffix"> من كتلة الأرض </string>
+    <string name="ar_menu_openfolder"> مجلد الصور المفتوح </string>
+    <string name="ar_menu_preferences"> وصف </string>
+    <string name="ar_menu_aboutapp"> الدعم </string>
+    <string name="ar_description_phenomenon1">
+يوضح هذا التطبيق من تأثير جاذبية الثقب الأسود صغير قريب لك.
+        ويستخدم الكاميرا الخلفية للهاتف المحمول، لمعرفة البيئة، وبعد ذلك ينحرف عن
+        الأشعة الضوئية وفقا لثقب أسود الجاذبية. ويطلق على تأثير كله
+        عدسة الجاذبية، ويمكن فهمها من خلال النظر في الصورة (1) أدناه - الثقب الأسود ككائن الأحمر في المركز:
+    </string>
+    <string name="ar_description_phenomenon1_linkify"> عدسة الجاذبية </string>
+    <string formatted="false" name="ar_description_phenomenon1_link"> https://ar.wikipedia.org/wiki/%D8%B9%D8%AF%D8%B3%D8%A9_%D8%A7%D9%84%D8%AC%D8%A7%D8%B0%D8%A8%D9%8A%D8%A9 </string>
+    <string name="ar_description_phenomenon2">
+
+        يمكنك تغيير كتلة الثقب الأسود عن طريق لمس الشاشة مع اثنين من أصابع ثم معسر أو نشرها.
+        أو، يمكنك استخدام الزر الأسود الأيمن السفلي لتفعل الشيء نفسه - كما ترون ذلك الحين، وكتلة الثقب الأسود هي من
+        ترتيب كتلة الكوكب الداخلية - مثل المريخ أو ما يقرب من الأرض. بالضغط على زر الكاميرا كبير في الوسط،
+        يمكنك حفظ الصورة كامل القرار مع الثقب الأسود على بطاقة تخزين الهاتف الخاص بك إلى مجلد منفصل MyBlackHoles
+        (استخدام خيار القائمة في تطبيق للعثور على مجلد أسهل).
+        تحاول عدسة الجاذبية هنا لتكون دقيقة، وقت ممكن - ومع ذلك لا يزال يفترض أن كل ما تراه الكاميرا هي بعيدة جدا -
+        الذي ليس من الضروري أن يكون صحيحا بالضرورة - خاصة بالنسبة للكائن قريب منك. أيضا، وتقريب ليست قريبة دقيقة للغاية إلى أفق الحدث (دائرة سوداء
+        في الوسط - الموافق الحجم الحقيقي للأفق الحدث) - لأن الكاميرا الهاتف لديه سوى بعض ضيقة، محدودة
+        مجال الرؤية - حتى القطع الأثرية على مقربة من أفق الحدث لا يمكن تجنبها هنا. ومن المفترض الثقب الأسود في هذا التطبيق ليكون دائما 1 متر (3.28ft) بعيدا عنك - تأثير من شأنه زيادة هذه المسافة ديك
+        بالضبط نفس تأثير انخفاض كتلة الثقب الأسود. يتم استخدامه غير الدورية الثقب الأسود - ما يعرف باسم
+        حل شوارزشيلد من معادلات المجال لكائن كرويا متناظرة.
+        
+        مجال الرؤية من الكاميرا الخلفية الخاصة بك، كما ذكرت عن طريق الهاتف:
+        درجة XXXXXX: أفقي
+        درجة YYYYYY: الرأسي.
+        
+        
+        (1) الائتمان لأندرو هاملتون للصورة.
+
+    </string>
+    <string name="ar_description_phenomenon2_linkify"> حل شوارزشيلد </string>
+    <string formatted="false" name="ar_description_phenomenon2_link"> https://ar.wikipedia.org/wiki/%D9%85%D8%B5%D9%81%D9%88%D9%81%D8%A9_%D8%B4%D9%88%D8%A7%D8%B1%D8%B2%D8%B4%D9%8A%D9%84%D8%AF </string>
+    <string name="ar_about_app_description1">
+
+        شكرا لكم لاستخدام هذا التطبيق، يرجى تقييم ذلك، ما إذا كنت ترغب في ذلك أم لا :)
+         فهو حر تماما وبدون إعلانات. النسخة المدفوعة على متجر ليست سوى لأغراض التبرع.
+         إذا كنت ترغب في دعم لي في إحراز المزيد من التقدم، وتحديد الخطأ، وتحسين الترجمة،
+         يمكنك التبرع دائما أي مبلغ تريده :)
+         أو يمكنك زيارة صفحتي الصغيرة لهذا التطبيق.
+         
+         يتطلب الروبوت 4.2 أو أكثر، + دعم 32 بت يطفو على GPU لمحاكاة الثقب الأسود على معاينة الكاميرا (برنامج OpenGL) بشكل صحيح.
+         يتم تقديم النهائية، عالية الدقة صورة محفوظة على بطاقة الذاكرة على وحدة المعالجة المركزية بطريقة متعددة الخيوط (اعتمادا على عدد
+         من النوى الفعلية على الهاتف).
+
+    </string>
+
+    <string name="ar_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_en.html</string>
+    <string name="ar_ovh_page1_linkify"> صفحتي </string>
+    <string name="ar_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
+    <string name="ar_donation_link1_linkify"> تبرع </string>
 
 
 </resources>
