@@ -88,7 +88,7 @@ void *perform_subimage_transform(void *args) {
     int loop_x_end = (int)(((float)(info->num_x+1)/(float)info->div_x)*info->w);
     int loop_y_start = (int)(((float)info->num_y/(float)info->div_y)*info->h);
     int loop_y_end = (int)(((float)(info->num_y+1)/(float)info->div_y)*info->h);
-    __android_log_print(ANDROID_LOG_VERBOSE, APPNAME, "raaaatio %f, rx %d, ry %d, loopingx: q%d,%dq, loopingy: q%d,%dq", info->phys_ratio,
+    //__android_log_print(ANDROID_LOG_VERBOSE, APPNAME, "raaaatio %f, rx %d, ry %d, loopingx: q%d,%dq, loopingy: q%d,%dq", info->phys_ratio,
     info->num_x, info->num_y, loop_x_start,loop_x_end,
                         loop_y_start,loop_y_end);
     for (int j = loop_y_start; j < loop_y_end; j++) //y
