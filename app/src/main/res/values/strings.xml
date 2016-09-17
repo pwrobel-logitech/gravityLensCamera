@@ -417,4 +417,69 @@
     <string name="ru_donation_link1_linkify">жертвовать</string>
 
 
+
+
+
+    <string name="de_title_tab0_phenomenon">Beschreibung</string>
+    <string name="de_title_tab1_phenomenon">Unterstützen</string>
+    <string name="de_progress_title">Speichern von Bild</string>
+    <string name="de_progress_msg">Warten Sie, während der Verarbeitung</string>
+    <string name="de_could_not_save_img1">Bild konnte nicht gespeichert werden</string>
+    <string name="de_could_not_open_folder">Kann nicht öffnen / erstellen Sie den Bildordner</string>
+    <string name="de_saved_img1">Bild gespeichert</string>
+    <string name="de_saving_img_to_sd">Speichern von verarbeiteten Bilds auf der Karte</string>
+    <string name="de_choose_mass">Wählen Masse des Schwarzen Lochs</string>
+    <string name="de_mass_unit_suffix">der Erdmasse</string>
+    <string name="de_menu_openfolder">Bild öffnen Ordner</string>
+    <string name="de_menu_preferences">Beschreibung</string>
+    <string name="de_menu_aboutapp">Unterstützen</string>
+    <string name="de_description_phenomenon1">
+     Diese Anwendung zeigt die Gravitationswirkung eines kleinen schwarzen Loch in der Nähe Sie.
+        Es verwendet eine rückseitige Kamera Ihres Mobiltelefons , um die Umwelt zu sehen, und dann lenkt es das
+        Lichtstrahlen nach dem schwarzen Loch Anziehungskraft . Der gesamte Effekt wird genannt
+        Gravitationslinse und kann durch einen Blick auf das Bild (1) unten verstanden werden - schwarzes Loch als ein rotes Objekt in der Mitte:
+    </string>
+    <string name="de_description_phenomenon1_linkify">Gravitationslinse</string>
+    <string name="de_description_phenomenon1_link">https://de.wikipedia.org/wiki/Gravitationslinseneffekt</string>
+    <string name="de_description_phenomenon2">
+        Sie können die Masse des Schwarzen Lochs ändern, indem Sie den Bildschirm mit zwei Fingern zu berühren und dann kneifen oder sie zu verbreiten.
+        Alternativ können Sie auch die rechte untere schwarze Taste verwenden, das gleiche zu tun - wie man dann sehen kann, ist die Masse des Schwarzen Lochs ist von der
+        Reihenfolge der inneren Planetenmasse - wie Mars oder fast die Erde. Durch die große Kamera-Taste in der Mitte klicken,
+        können Sie die Vollauflösendes Bild mit dem schwarzen Loch auf Ihrem Telefon die Speicherkarte in den separaten MyBlackHoles Ordner speichern
+        (Verwenden Sie die Menüoption in der App die Ordner leichter zu finden).
+        Die Schwere Linse hier versucht, so genau, wie möglich zu sein - doch es geht weiterhin davon aus, dass alles, was die Kamera sieht, ist sehr weit weg -
+        das muss nicht unbedingt der Fall sein - vor allem für das Objekt Ihrer Nähe. Auch ist die Näherung nicht sehr genau der Nähe des Ereignishorizonts (schwarzer Kreis
+        in der Mitte - entsprechend der tatsächlichen Größe des Ereignishorizont) - weil die Handy-Kamera nur einige schmale hat, begrenzt
+        Sichtfeld - so die Artefakte der Nähe des Ereignishorizonts sind hier unumgänglich. Schwarzes Loch in dieser App wird davon ausgegangen, von Ihnen immer 1 Meter (3.28ft) weg zu sein - um die Wirkung dieser Strecke zu erhöhen würde
+        genau die gleiche Wirkung wie Masse des Schwarzen Lochs abnimmt. Nicht rotierende Schwarze Loch verwendet wird - etwas, bekannt als die
+        Schwarzschild-Lösung der Feldgleichungen für sphärisch symetrical Objekt.
+        \n
+        Sichtfeld der Kamera zurück, wie das Telefon gemeldet: \n \n
+        horizontal: XXXXXX Grad \n
+        vertikal: YYYYYY Grad.
+        \n
+        \n
+        (1) Kredit für die Andrew Hamilton für das Bild.
+    </string>
+    <string name="de_description_phenomenon2_linkify">Schwarzschild-Lösung</string>
+    <string name="de_description_phenomenon2_link">https://de.wikipedia.org/wiki/Schwarzschild-Metrik</string>
+    <string name="de_about_app_description1">
+        Vielen Dank für die Nutzung dieser App, bewerten Sie es, ob Sie es mögen oder nicht :)
+         Es ist völlig kostenlos und ohne Werbung. Paid-Version auf dem Speicher ist nur für die Spende Zwecke. \n \n
+         Wenn Sie möchten, dass ich in weitere Fortschritte zu unterstützen, Bugfixing, Übersetzung Verbesserung,
+         Sie können immer jede Menge spenden Sie:) \n \n
+         Oder Sie können meine kleine Webseite für diese App zu besuchen. \n
+         \n
+         Erfordert Android 4.2 oder mehr beträgt, + Unterstützung für 32-Bit auf GPU auf der Kameravorschau (OpenGL) richtig zu simulieren schwarzes Loch schwimmt.
+         Finale, hochauflösendes Bild auf der Speicherkarte gespeichert auf CPU in einem Multi-Threaded Mode gemacht wird (abhängig von der Anzahl
+         von physischen Kerne am Telefon).
+    </string>
+
+    <string name="de_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_de.html</string>
+    <string name="de_ovh_page1_linkify">Webseite</string>
+    <string name="de_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
+    <string name="de_donation_link1_linkify">spenden</string>
+
+
+
 </resources>
