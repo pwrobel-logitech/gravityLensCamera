@@ -284,45 +284,40 @@
     <string name="es_menu_preferences">Descripción</string>
     <string name="es_menu_aboutapp">Apoyo</string>
     <string name="es_description_phenomenon1">
-       Esta aplicación demuestra el efecto gravitacional de un pequeño agujero negro cerca de usted.
-        Utiliza una cámara posterior de su teléfono móvil, para ver el medio ambiente, y luego se desvía el
-        los rayos de luz de acuerdo con el agujero negro atracción gravitatoria. El efecto total se denomina
-        lente gravitacional, y puede ser entendido por mirar el cuadro (1) más abajo - agujero negro como un objeto de color rojo en el centro:
+        Esta aplicación demuestra el efecto gravitacional de un pequeño agujero negro cerca de usted.
+        Utiliza una cámara posterior de su teléfono móvil, para ver el medio ambiente, y luego se desvía el los rayos de luz de acuerdo con el agujero negro atracción gravitatoria. El efecto total se denomina lente gravitacional, y puede ser entendido por mirar el cuadro (1) más abajo - agujero negro como un objeto de color rojo en el centro:
     </string>
     <string name="es_description_phenomenon1_linkify">lente gravitacional</string>
     <string name="es_description_phenomenon1_link">https://es.wikipedia.org/wiki/Lente_gravitacional</string>
     <string name="es_description_phenomenon2">
-       Se puede cambiar la masa del agujero negro tocando la pantalla con dos dedos y luego pinchar o propagarlos.
-        O bien, puede utilizar el botón negro de abajo a la derecha para hacer lo mismo - como se puede ver a continuación, la masa del agujero negro es de la
-        orden de la masa planeta interior - como Marte o casi la tierra. Al hacer clic en el botón de cámara grande en el medio,
-        puede guardar la imagen a resolución completa con el agujero negro en su tarjeta de almacenamiento del teléfono en la carpeta separada MyBlackHoles
-        (Utilice la opción de menú en la aplicación para encontrar la carpeta más fácil).
-        La lente de la gravedad aquí intenta ser lo más preciso, como sea posible - sin embargo, todavía se supone que todo lo que ve la cámara está muy lejos -
-        que no tiene por qué ser necesariamente cierto - especialmente para el objeto cerca de usted. Además, la aproximación no es muy preciso cerca del horizonte de sucesos (círculo negro
-        en el medio - que corresponde al tamaño real del horizonte de sucesos) - debido a que la cámara del teléfono tiene sólo algunos estrecha, limitada
-        campo de visión - por lo que los artefactos cerca del horizonte de sucesos son inevitables aquí. agujero negro en esta aplicación se supone que es siempre 1 metro (3.28 pies) de distancia de usted - el efecto de aumentar esta distancia tendría
-        exactamente el mismo efecto que la disminución de la masa del agujero negro. No giratoria agujero negro está siendo utilizado - algo que se conoce como el
-        solución de Schwarzschild de las ecuaciones de campo de objeto esféricamente simétrica.
-        \norte
-        Campo de visión de la cámara de nuevo, según lo informado por el teléfono: \n \n
-        horizontal: XXXXXX grados \n
-        vertical: YYYYYY grados
-        \n
-        \n
-        (1) crédito para el Andrew Hamilton para la foto.
+        Se puede cambiar la masa del agujero negro tocando la pantalla con dos dedos y luego pinchar o propagarlos.
+        O bien, puede utilizar el botón negro de abajo a la derecha para hacer lo mismo - como se puede ver a continuación, la masa del agujero negro es de la
+        orden de la masa planeta interior - como Marte o casi la tierra. Al hacer clic en el botón de cámara grande en el medio,
+        puede guardar la imagen a resolución completa con el agujero negro en su tarjeta de almacenamiento del teléfono en la carpeta separada MyBlackHoles (Utilice la opción de menú en la aplicación para encontrar la carpeta más fácil).
+        La lente de la gravedad aquí intenta ser lo más preciso, como sea posible - sin embargo, todavía se supone que todo lo que ve la cámara está muy lejos -
+        que no tiene por qué ser necesariamente cierto - especialmente para el objeto cerca de usted. Además, la aproximación no es muy preciso cerca del horizonte de sucesos (círculo negro en el medio - que corresponde al tamaño real del horizonte de sucesos) - debido a que la cámara del teléfono tiene sólo algunos estrecha, limitada
+        campo de visión - por lo que los artefactos cerca del horizonte de sucesos son inevitables aquí. agujero negro en esta aplicación se supone que es siempre 1 metro (3.28 pies) de distancia de usted - el efecto de aumentar esta distancia tendría
+        exactamente el mismo efecto que la disminución de la masa del agujero negro. No giratoria agujero negro está siendo utilizado - algo que se conoce como el
+        solución de Schwarzschild de las ecuaciones de campo de objeto esféricamente simétrica. \n
+        Campo de visión de la cámara de nuevo, según lo informado por el teléfono: \n \n
+        horizontal: XXXXXX grados \n
+        vertical: YYYYYY grados
+        \n
+        \n
+        (1) crédito para el Andrew Hamilton para la foto.
     </string>
     <string name="es_description_phenomenon2_linkify">solución de Schwarzschild</string>
     <string formatted="false" name="es_description_phenomenon2_link">https://es.wikipedia.org/wiki/M%C3%A9trica_de_Schwarzschild</string>
     <string name="es_about_app_description1">
         Gracias por usar esta aplicación, por favor puntúalo, nos guste o no :)
-         Es totalmente gratis y sin anuncios. Versión de pago en la tienda es sólo para fines de donación. \n \n
-         Si usted quisiera que me apoyen en mayor progreso, fijación de error, mejora de la traducción,
-         siempre se puede donar cualquier cantidad que usted tiene gusto :) \n \n
-         O puede visitar mi pequeña página web para esta aplicación. \n
-         \n
-         Requiere Android 4.2 o más, + soporte para 32 bits flota en la GPU para simular correctamente agujero negro en la previa de la cámara (OpenGL).
-         Final de alta resolución de imagen, guardada en la tarjeta de memoria en la CPU se representa de un modo multi-hilo (en función del número
-         de núcleos físicos en el teléfono).
+        Es totalmente gratis y sin anuncios. Versión de pago en la tienda es sólo para fines de donación. \n \n
+        Si usted quisiera que me apoyen en mayor progreso, fijación de error, mejora de la traducción,
+        siempre se puede donar cualquier cantidad que usted tiene gusto :) \n \n
+        O puede visitar mi pequeña página web para esta aplicación. \n
+        \n
+        Requiere Android 4.2 o más, + soporte para 32 bits flota en la GPU para simular correctamente agujero negro en la previa de la cámara (OpenGL).
+        Final de alta resolución de imagen, guardada en la tarjeta de memoria en la CPU se representa de un modo multi-hilo (en función del número
+        de núcleos físicos en el teléfono).
     </string>
 
     <string name="es_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_es.html</string>
@@ -354,45 +349,43 @@
     <string name="ru_menu_preferences">Описание</string>
     <string name="ru_menu_aboutapp">Поддержка</string>
     <string name="ru_description_phenomenon1">
-       Это приложение демонстрирует гравитационный эффект с небольшой черной дыры рядом вы.
-        Он использует заднюю камеру своего мобильного телефона, чтобы увидеть окружающую среду, а затем он отклоняет
-        световые лучи в соответствии с черной дырой тянуть. Весь эффект называется
-        гравитационная линза, и можно понять, глядя на картину (1) ниже - черной дыры как красный объект в центре:
+        Это приложение демонстрирует гравитационный эффект с небольшой черной дыры рядом вы.
+        Он использует заднюю камеру своего мобильного телефона, чтобы увидеть окружающую среду, а затем он отклоняет
+        световые лучи в соответствии с черной дырой тянуть. Весь эффект называется
+        гравитационная линза, и можно понять, глядя на картину (1) ниже - черной дыры как красный объект в центре:
     </string>
     <string name="ru_description_phenomenon1_linkify">гравитационная линза</string>
     <string formatted="false" name="ru_description_phenomenon1_link">https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F_%D0%BB%D0%B8%D0%BD%D0%B7%D0%B0</string>
     <string name="ru_description_phenomenon2">
-       Вы можете изменить массу черной дыры, касаясь экрана двумя пальцами, а затем щипать или раздвигая их.
-        Или, вы можете использовать кнопку правый нижний черный, чтобы сделать то же самое - как вы можете видеть то, масса черной дыры имеет
-        порядок внутренней массы планеты - как Марс или почти на земле. При нажатии на кнопку большой камеры в середине,
-        вы можете сохранить в полном разрешении изображение с черной дыры на телефонной карте памяти в отдельную папку MyBlackHoles
-        (Используйте пункт меню в приложение, чтобы найти папку проще).
-        Серьезность линза здесь пытается быть настолько точным, насколько это возможно - но все еще предполагает, что все, что видит камера очень далеко -
-        который не должен быть обязательно верно - особенно для объекта рядом с вами. Кроме того, приближение не очень точно близко к горизонту событий (черный круг
-        в середине - что соответствует реальному размеру горизонта событий) - потому что телефон камера имеет только некоторые узкие, ограниченные
-        поле зрения - так артефакты вблизи горизонта событий неизбежны здесь. Черная дыра в этом приложении предполагается всегда 1 метр (3,28 фута) от вас - эффект увеличения этого расстояния будет иметь
-        точно такой же эффект, уменьшая массу черной дыры. Невращающийся черная дыра используется - нечто, известное как
-        Шварцшильда решение уравнений поля для сферически-симметричной объекта.
-        \п
-        Поле зрения вашей задней камеры, как сообщил по телефону: \п \п
-        горизонтальная: XXXXXX градусов \п
-        по вертикали: YYYYYY градусов.
-        \п
-        \п
-        (1) Кредит на Эндрю Гамильтон на картинке.
+        Вы можете изменить массу черной дыры, касаясь экрана двумя пальцами, а затем щипать или раздвигая их. Или, вы можете использовать кнопку правый нижний черный, чтобы сделать то же самое - как вы можете видеть то, масса черной дыры имеет
+        порядок внутренней массы планеты - как Марс или почти на земле. При нажатии на кнопку большой камеры в середине,
+        вы можете сохранить в полном разрешении изображение с черной дыры на телефонной карте памяти в отдельную папку MyBlackHoles (Используйте пункт меню в приложение, чтобы найти папку проще).
+        Серьезность линза здесь пытается быть настолько точным, насколько это возможно - но все еще предполагает, что все, что видит камера очень далеко -
+        который не должен быть обязательно верно - особенно для объекта рядом с вами. Кроме того, приближение не очень точно близко к горизонту событий (черный круг
+        в середине - что соответствует реальному размеру горизонта событий) - потому что телефон камера имеет только некоторые узкие, ограниченные
+        поле зрения - так артефакты вблизи горизонта событий неизбежны здесь. Черная дыра в этом приложении предполагается всегда 1 метр (3,28 фута) от вас - эффект увеличения этого расстояния будет иметь
+        точно такой же эффект, уменьшая массу черной дыры. Невращающийся черная дыра используется - нечто, известное как
+        Шварцшильда решение уравнений поля для сферически-симметричной объекта.
+        \п
+        Поле зрения вашей задней камеры, как сообщил по телефону: \п \п
+        горизонтальная: XXXXXX градусов \п
+        по вертикали: YYYYYY градусов.
+        \п
+        \п
+        (1) Кредит на Эндрю Гамильтон на картинке.
     </string>
     <string name="ru_description_phenomenon2_linkify">Шварцшильда решение</string>
     <string formatted="false" name="ru_description_phenomenon2_link">https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D0%BA%D0%B0_%D0%A8%D0%B2%D0%B0%D1%80%D1%86%D1%88%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0</string>
     <string name="ru_about_app_description1">
         Благодарим Вас за использование этого приложения, пожалуйста, оцените его, нравится ли вам это или нет :)
-         Это абсолютно бесплатно и без рекламы. Платная версия на магазине только для целей донорства. \n \n
-         Если вы хотели бы поддержать меня в дальнейшем прогрессе, исправление ошибок, улучшение перевода,
-         вы всегда можете пожертвовать любую сумму, которую вы любите:) \n \n
-         Или же вы можете посетить мой небольшой веб-страницу для этого приложения. \n
-         \n
-         Требуется Android версии 4.2 или более, + поддержка 32-битных плавает на GPU, чтобы правильно смоделировать черную дыру на камеры предварительного просмотра (OpenGL).
-         Заключительный, с высоким разрешением изображения, сохраненные на карте памяти оказывается на CPU в многопоточном моды (в зависимости от количества
-         физических ядер на телефоне).
+        Это абсолютно бесплатно и без рекламы. Платная версия на магазине только для целей донорства. \n \n
+        Если вы хотели бы поддержать меня в дальнейшем прогрессе, исправление ошибок, улучшение перевода,
+        вы всегда можете пожертвовать любую сумму, которую вы любите:) \n \n
+        Или же вы можете посетить мой небольшой веб-страницу для этого приложения. \n
+        \n
+        Требуется Android версии 4.2 или более, + поддержка 32-битных плавает на GPU, чтобы правильно смоделировать черную дыру на камеры предварительного просмотра (OpenGL).
+        Заключительный, с высоким разрешением изображения, сохраненные на карте памяти оказывается на CPU в многопоточном моды (в зависимости от количества
+        физических ядер на телефоне).
     </string>
 
     <string name="ru_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_ru.html</string>
@@ -418,45 +411,44 @@
     <string name="de_menu_preferences">Beschreibung</string>
     <string name="de_menu_aboutapp">Unterstützen</string>
     <string name="de_description_phenomenon1">
-     Diese Anwendung zeigt die Gravitationswirkung eines kleinen schwarzen Loch in der Nähe Sie.
-        Es verwendet eine rückseitige Kamera Ihres Mobiltelefons , um die Umwelt zu sehen, und dann lenkt es das
-        Lichtstrahlen nach dem schwarzen Loch Anziehungskraft . Der gesamte Effekt wird genannt
-        Gravitationslinse und kann durch einen Blick auf das Bild (1) unten verstanden werden - schwarzes Loch als ein rotes Objekt in der Mitte:
+        Diese Anwendung zeigt die Gravitationswirkung eines kleinen schwarzen Loch in der Nähe Sie.
+        Es verwendet eine rückseitige Kamera Ihres Mobiltelefons , um die Umwelt zu sehen, und dann lenkt es das
+        Lichtstrahlen nach dem schwarzen Loch Anziehungskraft . Der gesamte Effekt wird genannt
+        Gravitationslinse und kann durch einen Blick auf das Bild (1) unten verstanden werden - schwarzes Loch als ein rotes Objekt in der Mitte:
     </string>
     <string name="de_description_phenomenon1_linkify">Gravitationslinse</string>
     <string name="de_description_phenomenon1_link">https://de.wikipedia.org/wiki/Gravitationslinseneffekt</string>
     <string name="de_description_phenomenon2">
         Sie können die Masse des Schwarzen Lochs ändern, indem Sie den Bildschirm mit zwei Fingern zu berühren und dann kneifen oder sie zu verbreiten.
-        Alternativ können Sie auch die rechte untere schwarze Taste verwenden, das gleiche zu tun - wie man dann sehen kann, ist die Masse des Schwarzen Lochs ist von der
-        Reihenfolge der inneren Planetenmasse - wie Mars oder fast die Erde. Durch die große Kamera-Taste in der Mitte klicken,
-        können Sie die Vollauflösendes Bild mit dem schwarzen Loch auf Ihrem Telefon die Speicherkarte in den separaten MyBlackHoles Ordner speichern
-        (Verwenden Sie die Menüoption in der App die Ordner leichter zu finden).
-        Die Schwere Linse hier versucht, so genau, wie möglich zu sein - doch es geht weiterhin davon aus, dass alles, was die Kamera sieht, ist sehr weit weg -
-        das muss nicht unbedingt der Fall sein - vor allem für das Objekt Ihrer Nähe. Auch ist die Näherung nicht sehr genau der Nähe des Ereignishorizonts (schwarzer Kreis
-        in der Mitte - entsprechend der tatsächlichen Größe des Ereignishorizont) - weil die Handy-Kamera nur einige schmale hat, begrenzt
-        Sichtfeld - so die Artefakte der Nähe des Ereignishorizonts sind hier unumgänglich. Schwarzes Loch in dieser App wird davon ausgegangen, von Ihnen immer 1 Meter (3.28ft) weg zu sein - um die Wirkung dieser Strecke zu erhöhen würde
-        genau die gleiche Wirkung wie Masse des Schwarzen Lochs abnimmt. Nicht rotierende Schwarze Loch verwendet wird - etwas, bekannt als die
-        Schwarzschild-Lösung der Feldgleichungen für sphärisch symetrical Objekt.
-        \n
-        Sichtfeld der Kamera zurück, wie das Telefon gemeldet: \n \n
-        horizontal: XXXXXX Grad \n
-        vertikal: YYYYYY Grad.
-        \n
-        \n
-        (1) Kredit für die Andrew Hamilton für das Bild.
+        Alternativ können Sie auch die rechte untere schwarze Taste verwenden, das gleiche zu tun - wie man dann sehen kann, ist die Masse des Schwarzen Lochs ist von der
+        Reihenfolge der inneren Planetenmasse - wie Mars oder fast die Erde. Durch die große Kamera-Taste in der Mitte klicken,
+        können Sie die Vollauflösendes Bild mit dem schwarzen Loch auf Ihrem Telefon die Speicherkarte in den separaten MyBlackHoles Ordner speichern
+        (Verwenden Sie die Menüoption in der App die Ordner leichter zu finden).
+        Die Schwere Linse hier versucht, so genau, wie möglich zu sein - doch es geht weiterhin davon aus, dass alles, was die Kamera sieht, ist sehr weit weg -
+        das muss nicht unbedingt der Fall sein - vor allem für das Objekt Ihrer Nähe. Auch ist die Näherung nicht sehr genau der Nähe des Ereignishorizonts (schwarzer Kreis
+        in der Mitte - entsprechend der tatsächlichen Größe des Ereignishorizont) - weil die Handy-Kamera nur einige schmale hat, begrenzt
+        Sichtfeld - so die Artefakte der Nähe des Ereignishorizonts sind hier unumgänglich. Schwarzes Loch in dieser App wird davon ausgegangen, von Ihnen immer 1 Meter (3.28ft) weg zu sein - um die Wirkung dieser Strecke zu erhöhen würde
+        genau die gleiche Wirkung wie Masse des Schwarzen Lochs abnimmt. Nicht rotierende Schwarze Loch verwendet wird - etwas, bekannt als die
+        Schwarzschild-Lösung der Feldgleichungen für sphärisch symetrical Objekt.
+        \n
+        Sichtfeld der Kamera zurück, wie das Telefon gemeldet: \n \n
+        horizontal: XXXXXX Grad \n
+        vertikal: YYYYYY Grad.
+        \n
+        \n
+        (1) Kredit für die Andrew Hamilton für das Bild.
     </string>
     <string name="de_description_phenomenon2_linkify">Schwarzschild-Lösung</string>
     <string name="de_description_phenomenon2_link">https://de.wikipedia.org/wiki/Schwarzschild-Metrik</string>
     <string name="de_about_app_description1">
-        Vielen Dank für die Nutzung dieser App, bewerten Sie es, ob Sie es mögen oder nicht :)
-         Es ist völlig kostenlos und ohne Werbung. Paid-Version auf dem Speicher ist nur für die Spende Zwecke. \n \n
-         Wenn Sie möchten, dass ich in weitere Fortschritte zu unterstützen, Fehler Fixierung, Übersetzung Verbesserung,
-         Sie können immer jede Menge spenden Sie:) \n \n
-         Oder Sie können meine kleine Webseite für diese App zu besuchen. \n
-         \n
-         Erfordert Android 4.2 oder mehr beträgt, + Unterstützung für 32-Bit auf GPU auf der Kameravorschau (OpenGL) richtig zu simulieren schwarzes Loch schwimmt.
-         Finale, hochauflösendes Bild auf der Speicherkarte gespeichert auf CPU in einem Multi-Threaded Mode gemacht wird (abhängig von der Anzahl
-         von physischen Kerne am Telefon).
+        Vielen Dank für die Nutzung dieser App, bewerten Sie es, ob Sie es mögen oder nicht :) Es ist völlig kostenlos und ohne Werbung. Paid-Version auf dem Speicher ist nur für die Spende Zwecke. \n \n
+        Wenn Sie möchten, dass ich in weitere Fortschritte zu unterstützen, Fehler Fixierung, Übersetzung Verbesserung,
+        Sie können immer jede Menge spenden Sie:) \n \n
+        Oder Sie können meine kleine Webseite für diese App zu besuchen. \n
+        \n
+        Erfordert Android 4.2 oder mehr beträgt, + Unterstützung für 32-Bit auf GPU auf der Kameravorschau (OpenGL) richtig zu simulieren schwarzes Loch schwimmt.
+        Finale, hochauflösendes Bild auf der Speicherkarte gespeichert auf CPU in einem Multi-Threaded Mode gemacht wird (abhängig von der Anzahl
+        von physischen Kerne am Telefon).
     </string>
 
     <string name="de_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_de.html</string>
@@ -483,45 +475,43 @@
     <string name="fr_menu_preferences">La description</string>
     <string name="fr_menu_aboutapp">Soutien</string>
     <string name="fr_description_phenomenon1">
-       Cette application démontre l\'effet gravitationnel d\'un petit trou noir à proximité vous.
-        Il utilise une caméra arrière de votre téléphone mobile, pour voir l\'environnement, et il dévie le
-        rayons lumineux selon le trou noir attraction gravitationnelle. L\'effet entier est appelé
-        lentille gravitationnelle, et peut être compris en regardant l\'image (1) ci-dessous - trou noir comme un objet rouge au centre:
+        Cette application démontre l\'effet gravitationnel d\'un petit trou noir à proximité vous.
+        Il utilise une caméra arrière de votre téléphone mobile, pour voir l\'environnement, et il dévie le rayons lumineux selon le trou noir attraction gravitationnelle. L\'effet entier est appelé
+        lentille gravitationnelle, et peut être compris en regardant l\'image (1) ci-dessous - trou noir comme un objet rouge au centre:
     </string>
     <string name="fr_description_phenomenon1_linkify">lentille gravitationnelle</string>
     <string name="fr_description_phenomenon1_link">https://fr.wikipedia.org/wiki/Lentille_gravitationnelle</string>
     <string name="fr_description_phenomenon2">
         Vous pouvez changer la masse du trou noir en touchant l\'écran avec deux doigts, puis pincer ou de les propager.
-        Ou, vous pouvez utiliser le bouton noir en bas à droite pour faire la même chose - comme vous pouvez le voir ensuite, la masse du trou noir est de la
-        ordre de masse planète intérieure - comme mars ou presque la terre. En cliquant sur le gros bouton de la caméra dans le milieu,
-        vous pouvez enregistrer l\'image en pleine résolution avec le trou noir sur votre téléphone carte de stockage dans le dossier MyBlackHoles séparé
-        (Utilisez l\'option de menu dans l\'application pour trouver le dossier plus facile).
-        La lentille de gravité ici tente d\'être aussi précis, que possible - mais il suppose encore que tout ce que voit la caméra est très loin -
-        qui ne doit pas être nécessairement vrai - en particulier pour l\'objet près de chez vous. En outre, le rapprochement est pas très précis à proximité de l\'horizon des événements (cercle noir
-        au milieu - correspondant à la taille réelle de l\'horizon des événements) - parce que la caméra de téléphone ne dispose que d\'une partie étroite, limitée
-        champ de vision - de sorte que les objets proches de l\'horizon des événements sont inévitables ici. Trou noir dans cette application est supposé être toujours 1 mètre (3.28ft) loin de vous - l\'effet d\'augmenter cette distance aurait
-        exactement le même effet que la diminution de la masse du trou noir. Non-trou noir en rotation est utilisée - quelque chose de connu sous le nom
-        solution de Schwarzschild des équations de champ pour l\'objet sphériquement symétrique.
-        \n
-        Champ de vision de votre appareil photo, tel que rapporté par le téléphone: \n \n
-        horizontal: XXXXXX degrés \n
-        degrés de YYYYYY: vertical.
-        \n
-        \n
-        (1) Crédit pour Andrew Hamilton pour la photo.
+        Ou, vous pouvez utiliser le bouton noir en bas à droite pour faire la même chose - comme vous pouvez le voir ensuite, la masse du trou noir est de la
+        ordre de masse planète intérieure - comme mars ou presque la terre. En cliquant sur le gros bouton de la caméra dans le milieu,
+        vous pouvez enregistrer l\'image en pleine résolution avec le trou noir sur votre téléphone carte de stockage dans le dossier MyBlackHoles séparé
+        (Utilisez l\'option de menu dans l\'application pour trouver le dossier plus facile).
+        La lentille de gravité ici tente d\'être aussi précis, que possible - mais il suppose encore que tout ce que voit la caméra est très loin -
+        qui ne doit pas être nécessairement vrai - en particulier pour l\'objet près de chez vous. En outre, le rapprochement est pas très précis à proximité de l\'horizon des événements (cercle noir
+        au milieu - correspondant à la taille réelle de l\'horizon des événements) - parce que la caméra de téléphone ne dispose que d\'une partie étroite, limitée
+        champ de vision - de sorte que les objets proches de l\'horizon des événements sont inévitables ici. Trou noir dans cette application est supposé être toujours 1 mètre (3.28ft) loin de vous - l\'effet d\'augmenter cette distance aurait
+        exactement le même effet que la diminution de la masse du trou noir. Non-trou noir en rotation est utilisée - quelque chose de connu sous le nom
+        solution de Schwarzschild des équations de champ pour l\'objet sphériquement symétrique.
+        \n
+        Champ de vision de votre appareil photo, tel que rapporté par le téléphone: \n \n
+        horizontal: XXXXXX degrés \n
+        degrés de YYYYYY: vertical.
+        \n
+        \n
+        (1) Crédit pour Andrew Hamilton pour la photo.
     </string>
     <string name="fr_description_phenomenon2_linkify">solution de Schwarzschild</string>
     <string formatted="false" name="fr_description_phenomenon2_link">https://fr.wikipedia.org/wiki/M%C3%A9trique_de_Schwarzschild</string>
-    <string name="fr_about_app_description1">
-       Merci d\'utiliser cette application, s\'il vous plaît noter, que ça vous plaise ou non :)
-         Il est entièrement gratuit et sans publicité. Version payante sur le magasin est uniquement à des fins de dons. \n \n
-         Si vous souhaitez me soutenir dans de nouveaux progrès, fixation d\'erreur, l\'amélioration de la traduction,
-         vous pouvez toujours faire un don de tout montant que vous voulez:) \n \n
-         Ou vous pouvez visiter ma petite page Web pour cette application. \n
-         \n
-         Nécessite Android 4.2 ou plus, + support pour 32 bits flotte sur GPU pour simuler correctement le trou noir sur la prévisualisation de la caméra (OpenGL).
-         Final, image haute résolution enregistrée sur la carte mémoire est rendu sur le processeur dans un mode multi-thread (en fonction du nombre
-         de cœurs physiques sur le téléphone).
+    <string name="fr_about_app_description1"> Merci d\'utiliser cette application, s\'il vous plaît noter, que ça vous plaise ou non :)
+        Il est entièrement gratuit et sans publicité. Version payante sur le magasin est uniquement à des fins de dons. \n \n
+        Si vous souhaitez me soutenir dans de nouveaux progrès, fixation d\'erreur, l\'amélioration de la traduction,
+        vous pouvez toujours faire un don de tout montant que vous voulez:) \n \n
+        Ou vous pouvez visiter ma petite page Web pour cette application. \n
+        \n
+        Nécessite Android 4.2 ou plus, + support pour 32 bits flotte sur GPU pour simuler correctement le trou noir sur la prévisualisation de la caméra (OpenGL).
+        Final, image haute résolution enregistrée sur la carte mémoire est rendu sur le processeur dans un mode multi-thread (en fonction du nombre
+        de cœurs physiques sur le téléphone).
     </string>
 
     <string name="fr_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_fr.html</string>
@@ -547,45 +537,41 @@
     <string name="it_menu_preferences">Descrizione</string>
     <string name="it_menu_aboutapp">Supporto</string>
     <string name="it_description_phenomenon1">
-       Questa applicazione dimostra l\'effetto gravitazionale di un piccolo buco nero nelle vicinanze si.
-        Esso utilizza una fotocamera posteriore del telefono cellulare, per vedere l\'ambiente, e poi si devia il
-        raggi di luce in base alla forza gravitazionale buco nero. L\'effetto complessivo è chiamato
-        lente gravitazionale, e può essere compreso da guardando la foto (1) di seguito - buco nero come un oggetto rosso al centro:
+        Questa applicazione dimostra l\'effetto gravitazionale di un piccolo buco nero nelle vicinanze si.
+        Esso utilizza una fotocamera posteriore del telefono cellulare, per vedere l\'ambiente, e poi si devia il
+        raggi di luce in base alla forza gravitazionale buco nero. L\'effetto complessivo è chiamato
+        lente gravitazionale, e può essere compreso da guardando la foto (1) di seguito - buco nero come un oggetto rosso al centro:
     </string>
     <string name="it_description_phenomenon1_linkify">lente gravitazionale</string>
     <string name="it_description_phenomenon1_link">https://it.wikipedia.org/wiki/Lente_gravitazionale</string>
     <string name="it_description_phenomenon2">
         È possibile modificare la massa del buco nero toccando lo schermo con due dita e poi pizzicare o diffusione.
-        In alternativa, è possibile utilizzare il pulsante nero in basso a destra a fare lo stesso - come si può vedere, allora, la massa del buco nero è del
-        ordine della massa pianeta interno - come Marte o quasi la terra. Cliccando sul pulsante grande macchina fotografica nel mezzo,
-        è possibile salvare l\'immagine a piena risoluzione con il buco nero sulla scheda di memoria del telefono nella cartella separata MyBlackHoles
-        (Utilizzare l\'opzione di menu in app per trovare la cartella più facile).
-        La lente gravitazionale qui cerca di essere il più precisi, per quanto possibile - ma assume ancora che tutto ciò che la fotocamera vede è molto lontano -
-        che non deve essere necessariamente vero - soprattutto per l\'oggetto vicino a voi. Inoltre, l\'approssimazione non è molto preciso vicino all\'orizzonte degli eventi (cerchio nero
-        nel mezzo - corrispondente alla dimensione reale della orizzonte degli eventi) - in quanto la fotocamera del telefono ha solo un po \'stretta, limitata
-        campo di vista - così i manufatti vicino all\'orizzonte degli eventi sono inevitabili qui. Buco nero in questa applicazione si presume che sia sempre 1 metro (3.28Ft) lontano da voi - l\'effetto di aumentare questa distanza avrebbe
-        esattamente lo stesso effetto di diminuire la massa buco nero. Non rotante buco nero è in uso - qualcosa conosciuto come il
-        soluzione di Schwarzschild delle equazioni di campo per oggetto sferico-simmetrico.
-        \n
-        Il campo di vista della fotocamera posteriore, come riportato dal telefono: \n \n
-        orizzontale: XXXXXX gradi \n
-        YYYYYY: verticale.
-        \n
-        \n
-        (1) Credito per l\'Andrew Hamilton per l\'immagine.
+        In alternativa, è possibile utilizzare il pulsante nero in basso a destra a fare lo stesso - come si può vedere, allora, la massa del buco nero è del ordine della massa pianeta interno - come Marte o quasi la terra. Cliccando sul pulsante grande macchina fotografica nel mezzo,
+        è possibile salvare l\'immagine a piena risoluzione con il buco nero sulla scheda di memoria del telefono nella cartella separata MyBlackHoles
+        (Utilizzare l\'opzione di menu in app per trovare la cartella più facile).
+        La lente gravitazionale qui cerca di essere il più precisi, per quanto possibile - ma assume ancora che tutto ciò che la fotocamera vede è molto lontano -
+        che non deve essere necessariamente vero - soprattutto per l\'oggetto vicino a voi. Inoltre, l\'approssimazione non è molto preciso vicino all\'orizzonte degli eventi (cerchio nero
+        nel mezzo - corrispondente alla dimensione reale della orizzonte degli eventi) - in quanto la fotocamera del telefono ha solo un po \'stretta, limitata
+        campo di vista - così i manufatti vicino all\'orizzonte degli eventi sono inevitabili qui. Buco nero in questa applicazione si presume che sia sempre 1 metro (3.28Ft) lontano da voi - l\'effetto di aumentare questa distanza avrebbe
+        esattamente lo stesso effetto di diminuire la massa buco nero. Non rotante buco nero è in uso - qualcosa conosciuto come il
+        soluzione di Schwarzschild delle equazioni di campo per oggetto sferico-simmetrico.
+        \n
+        Il campo di vista della fotocamera posteriore, come riportato dal telefono: \n \n
+        orizzontale: XXXXXX gradi \n
+        YYYYYY: verticale.
+        \n
+        \n
+        (1) Credito per l\'Andrew Hamilton per l\'immagine.
     </string>
     <string name="it_description_phenomenon2_linkify">soluzione di Schwarzschild</string>
     <string name="it_description_phenomenon2_link">https://it.wikipedia.org/wiki/Spazio-tempo_di_Schwarzschild</string>
     <string name="it_about_app_description1">
-      Grazie per aver usato questa applicazione, si prega di votarla, che vi piaccia o no :)
-         E \'completamente gratuito e senza pubblicità. versione a pagamento sul negozio è solo a scopo di donazione. \n \n
-         Se volete sostenermi in ulteriore progresso, fissaggio errore, miglioramento traduzione,
-         si può sempre donare qualsiasi importo che gradite :) \n \n
-         Oppure si può visitare il mio piccolo sito per questa applicazione. \n
-         \n
-         Richiede Android 4.2 o superiore, + supporto per 32-bit galleggia su GPU per simulare correttamente buco nero sulla preview fotocamera (OpenGL).
-         Finale ad alta risoluzione, salvati su scheda di memoria viene resa su CPU in modo multi-threaded (a seconda del numero
-         di core fisici al telefono).
+        Grazie per aver usato questa applicazione, si prega di votarla, che vi piaccia o no :)
+        E \'completamente gratuito e senza pubblicità. versione a pagamento sul negozio è solo a scopo di donazione. \n \n
+        Se volete sostenermi in ulteriore progresso, fissaggio errore, miglioramento traduzione,
+        si può sempre donare qualsiasi importo che gradite :) \n \n
+        Oppure si può visitare il mio piccolo sito per questa applicazione. \n
+        Finale ad alta risoluzione, salvati su scheda di memoria viene resa su CPU in modo multi-threaded (a seconda del numero di core fisici al telefono).
     </string>
 
     <string name="it_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_it.html</string>
