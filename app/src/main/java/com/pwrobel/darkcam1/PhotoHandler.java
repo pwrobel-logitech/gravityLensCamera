@@ -11,6 +11,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by pwrobel on 17.08.16.
@@ -67,7 +69,7 @@ public class PhotoHandler implements Camera.PictureCallback {
                             Toast.makeText(context, act.getTextInCurrentLang("could_not_save_img1")+" : "+last_file_saved,
                                     Toast.LENGTH_LONG).show();
                         }else if(error_code == 1) {
-                            Toast.makeText(context, act.getTextInCurrentLang("saved_img1")+" : "+last_file_saved,
+                            Toast.makeText(context, act.getTextInCurrentLang("saved_img1")+" : "+trim_path(last_file_saved),
                                     Toast.LENGTH_LONG).show();
                             }
                     }
@@ -81,6 +83,19 @@ public class PhotoHandler implements Camera.PictureCallback {
         camera.stopPreview();
         camera.startPreview();
 
+    }
+
+    private String trim_path(String fullpath){
+        int slash_hit = 0;
+        String trimmed="";
+        for(int i = fullpath.length() - 1; i >= 0; i-- ){
+            if(fullpath.charAt(i)=='/')
+                slash_hit++;
+            if(slash_hit == 2) {
+                trimmed = fullpath.substring(i);
+            }
+        }
+        return trimmed;
     }
 
     private File getDir() {

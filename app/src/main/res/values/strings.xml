@@ -62,7 +62,7 @@
         of physical cores on the phone).
     </string>
 
-    <string name="en_ovh_page1">http://wrobel731.ovh.org/blackholecam/index_en.html</string>
+    <string name="en_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_en.html</string>
     <string name="en_ovh_page1_linkify">webpage</string>
     <string name="en_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="en_donation_link1_linkify">donate</string>
@@ -125,7 +125,7 @@
         Wymaga androida 4.2 lub więcej, + wsparcie dla 32-bitowych liczb zmiennoprzecinkowych na GPU do prawidłowego symulowania podglądu(OpenGL). Finalny obraz
         o wysokiej rozdzielczości jest renderowany wielowątkowo na CPU (zależnie od ilości fizycznych rdzeni w telefonie).
     </string>
-    <string name="pl_ovh_page1">http://wrobel731.ovh.org/blackholecam/index_pl.html</string>
+    <string name="pl_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_pl.html</string>
     <string name="pl_ovh_page1_linkify">stronę</string>
     <string name="pl_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="pl_donation_link1_linkify">wsparcia finansowego</string>
