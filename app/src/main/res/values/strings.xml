@@ -907,5 +907,65 @@
 
 
 
+    <string name="hr_title_tab0_phenomenon">Opis</string>
+    <string name="hr_title_tab1_phenomenon">Podrška</string>
+    <string name="hr_progress_title">Spremanje slike</string>
+    <string name="hr_progress_msg">Pričekajte dok se obrada</string>
+    <string name="hr_could_not_save_img1">Slika ne može biti spremljena</string>
+    <string name="hr_could_not_open_folder">Ne mogu otvoriti / stvoriti mapu slike</string>
+    <string name="hr_saved_img1">Slika je spremljena</string>
+    <string name="hr_saving_img_to_sd">Spremanje obrađene slike na karticu</string>
+    <string name="hr_choose_mass">Odaberite crna rupa mase</string>
+    <string name="hr_mass_unit_suffix">Zemljine mase</string>
+    <string name="hr_menu_openfolder">Otvori mapu slika</string>
+    <string name="hr_menu_preferences">Opis</string>
+    <string name="hr_menu_aboutapp">Podrška</string>
+    <string name="hr_description_phenomenon1">
+        Ova aplikacija pokazuje gravitacijsko djelovanje na male crne rupe u blizini vas.
+        Ona koristi stražnja kamera mobilnog telefona, kako bi vidjeli okoliša, a zatim ga savija
+        zrake svjetlosti prema crnoj rupi gravitacijske sile. Cijela učinak naziva
+        gravitacijska leća, te se može razumjeti gledajući slike (1) ispod - crne rupe kao crveni objekt u centru:
+    </string>
+    <string name="hr_description_phenomenon1_linkify">gravitacijska leća</string>
+    <string formatted="false" name="hr_description_phenomenon1_link">https://hr.wikipedia.org/wiki/Gravitacijske_le%C4%87e</string>
+    <string name="hr_description_phenomenon2">
+        Možete promijeniti u crnu rupu mase dodirom na zaslon s dva prsta, a zatim štipanje ili ih širi.
+        Ili, možete koristiti crni gumb na dnu desnog da učine isto - kao što možete vidjeti tada, crna rupa mase od
+        Redoslijed unutarnjeg planeta mase - kao što su Mars ili gotovo zemlji. Klikom na veliki gumb fotoaparata u sredini,
+        možete spremiti sliku u punoj razlučivosti uz crnu rupu na svoj telefon memorijsku karticu u zasebne mape MyBlackHoles
+        (Koristite opciju izbornika u aplikaciji kako biste pronašli mapu lakše).
+        Gravitacija leća ovdje pokušava biti što precizniji, što je više moguće - ali to još uvijek pretpostavlja da sve što kamera vidi vrlo daleko -
+        što ne mora biti nužno istina - pogotovo za objekt blizu vas. Također, aproksimacija nije jako točna blizu horizonta događaja (crni krug
+        u sredini - odgovara stvarnoj veličini horizont događaja) - jer telefon kamera ima samo neki uzak, ograničen
+        Vidno polje - tako da predmeti u blizini horizonta događaja su neizbježni ovdje. Crna rupa u ovoj aplikaciji se pretpostavlja da je uvijek jedan metar (3.28ft) daleko od vas - učinak povećanja tu udaljenost bi trebala
+        potpuno isti učinak kao i smanjenjem crna rupa mase. Non-rotirajuće crne rupe se koristi - nešto poznat kao
+        Schwarzschild rješenje od poljskih jednadžbi za kuglasto-simetričnom objekta.
+        \n
+        Vidno polje leđa kameri, kako je izvijestila telefon: \n \n
+        horizontalna: XXXXXX stupnjeva \n
+        vertikalna: YYYYYY stupnjeva.
+        \n
+        \n
+        (1) Kreditna za Andrew Hamilton za sliku.
+    </string>
+    <string name="hr_description_phenomenon2_linkify">Schwarzschild rješenje</string>
+    <string name="hr_description_phenomenon2_link">https://hr.wikipedia.org/wiki/Schwarzschildova_metrika</string>
+    <string name="hr_about_app_description1">
+        Hvala Vam što koristite ovu aplikaciju, molimo da ocijenite ga, da li se to vama ili ne :)
+        To je potpuno besplatan i bez reklama. Plaćeni verzija na namirnicama je samo za donacije svrhe. \n \n
+        Ukoliko želite da me podržati u daljnji napredak, bugfixing, poboljšanja prevođenje,
+        uvijek možete donirati bilo koji iznos želite:) \n \ n
+        Ili možete posjetiti moju malu web stranicu za ovu aplikaciju. \n \n
+        Zahtijeva Android 4.2 ili više, + podrška za 32-bitne pluta na GPU pravilno simulirati crnu rupu na pregled kamera (OpenGL).
+        Konačno, visoke rezolucije slike spremljene na memorijskoj kartici je donesena na CPU u multi-navojem način (ovisno o broju
+        fizičkih jezgri na telefonu).
+    </string>
+
+    <string name="hr_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_hr.html</string>
+    <string name="hr_ovh_page1_linkify">web stranicu</string>
+    <string name="hr_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
+    <string name="hr_donation_link1_linkify">donirati</string>
+
+
 
 </resources>
