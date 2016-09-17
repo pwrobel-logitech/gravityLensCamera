@@ -204,7 +204,7 @@ public class ZoomWindowInfo extends DialogFragment {
 
     private String getStringResourceByName(String aString) {
         if(this.motherActivity == null) {
-            Log.i("darkcam", "error, mother activity null inside mass chooser dialog");
+            //Log.i("darkcam", "error, mother activity null inside mass chooser dialog");
             return "";
         }
         String packageName = this.motherActivity.getPackageName();

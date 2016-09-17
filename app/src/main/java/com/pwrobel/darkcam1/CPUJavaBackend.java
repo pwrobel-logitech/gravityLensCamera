@@ -81,8 +81,8 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
             this.fovY_internal = this.fovX;
         }
 
-        Log.i("QQQQQdecode bmp info: ", "decW: "+bitmap.getWidth()+" decH: "+bitmap.getHeight());
-        Log.i("QQQQQdecode bmp info: ", "using Xfov:" + this.fovX_internal);
+        //Log.i("QQQQQdecode bmp info: ", "decW: "+bitmap.getWidth()+" decH: "+bitmap.getHeight());
+        //Log.i("QQQQQdecode bmp info: ", "using Xfov:" + this.fovX_internal);
         this.RGB_buf = new int[w * h];
         this.postprocessed_RGB_buf = new int[w * h];
     };
@@ -135,7 +135,7 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
             t1.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
-            Log.i("darkcam: ", "Failed to join the Big image processor thread.");
+            //Log.i("darkcam: ", "Failed to join the Big image processor thread.");
         }
     }
 
@@ -169,7 +169,7 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
             t2.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
-            Log.i("darkcam: ", "Failed to join the Big image processor 2 threads.");
+            //Log.i("darkcam: ", "Failed to join the Big image processor 2 threads.");
         }
     }
 
@@ -229,7 +229,7 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
             t4.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
-            Log.i("darkcam: ", "Failed to join the Big image processor 4 threads.");
+            //Log.i("darkcam: ", "Failed to join the Big image processor 4 threads.");
         }
     }
 

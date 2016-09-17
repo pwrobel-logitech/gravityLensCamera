@@ -44,7 +44,7 @@ public class CamActivity extends Activity implements MassSelectedListener {
     public void onMassSelected(double selector) {
         this.mScaleFactor = selector;
         mRenderer.invalidate();
-        Log.i("darkcam ", "Scale changed from dialog: " + String.valueOf(mScaleFactor));
+        //Log.i("darkcam ", "Scale changed from dialog: " + String.valueOf(mScaleFactor));
         mRenderer.updateBlackHoleScale(mScaleFactor);
     }
 
@@ -108,22 +108,22 @@ public class CamActivity extends Activity implements MassSelectedListener {
     }
 
     protected void onCreate(Bundle savedInstanceState) {
-        Log.i("darkcam activity", "Activity onStart");
+        //Log.i("darkcam activity", "Activity onStart");
         super.onCreate(savedInstanceState);
-        Log.i("darkcam activity", "Activity onStart finished");
+        //Log.i("darkcam activity", "Activity onStart finished");
     }
 
     @Override
     public void onStart(){
-        Log.i("darkcam activity", "Activity onStart");
+        //Log.i("darkcam activity", "Activity onStart");
         super.onStart();
-        Log.i("darkcam activity", "Activity onStart finished");
+        //Log.i("darkcam activity", "Activity onStart finished");
     }
 
 
     @Override
     public void onPause(){
-        Log.i("darkcam activity", "Activity onPause");
+        //Log.i("darkcam activity", "Activity onPause");
         super.onPause();
         this.hideMassChooserDialog();
         this.hideZoomInfoDialog();
@@ -133,7 +133,7 @@ public class CamActivity extends Activity implements MassSelectedListener {
         this.enableButtons();
         if(mRenderer != null)
             mRenderer.onDestroy();
-        Log.i("darkcam activity", "Activity onPause finished");
+        //Log.i("darkcam activity", "Activity onPause finished");
     }
 
     @Override
@@ -183,11 +183,11 @@ public class CamActivity extends Activity implements MassSelectedListener {
         this.addListeners();
         this.enableButtons();
 
-        Log.i("darkcam activity", "Activity onResume");
+        //Log.i("darkcam activity", "Activity onResume");
         super.onResume();
         mRenderer.onResume();
         this.enableButtons();
-        Log.i("darkcam activity", "Activity onResume finished");
+        //Log.i("darkcam activity", "Activity onResume finished");
     }
 
 
@@ -419,7 +419,7 @@ public class CamActivity extends Activity implements MassSelectedListener {
                 CamActivity.this.mMassChooser.setFactorScale(CamActivity.this.mScaleFactor);
             }
             mRenderer.invalidate();
-            Log.i("darkcam ", "Scale changed : " + String.valueOf(mScaleFactor));
+            //Log.i("darkcam ", "Scale changed : " + String.valueOf(mScaleFactor));
             mRenderer.updateBlackHoleScale(mScaleFactor);
             return true;
         }

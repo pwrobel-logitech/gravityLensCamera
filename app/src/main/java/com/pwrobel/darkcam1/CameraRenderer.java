@@ -232,7 +232,7 @@ public class CameraRenderer extends GLSurfaceView implements
 
         }
 
-        Log.i("Dcam_prewiev_set_size", "width: " + String.valueOf(camera_width) + ", height: " + String.valueOf(camera_height));
+        //Log.i("Dcam_prewiev_set_size", "width: " + String.valueOf(camera_width) + ", height: " + String.valueOf(camera_height));
 
         //setup the fovX (the smaller one) angle in degrees
         double thetaV = (param.getVerticalViewAngle());
@@ -276,13 +276,13 @@ public class CameraRenderer extends GLSurfaceView implements
 
                 fovYdeg = (float) thetaH;
                 this.fov_x_deg[0] = (float)((180.0/Math.PI) * ((float) Math.atan(Math.tan(Math.PI*thetaV/180.0)/mRatio[0])));
-                Log.i("DcamFOV2.c1", "setXfov: " + this.fov_x_deg[0] );
+                //Log.i("DcamFOV2.c1", "setXfov: " + this.fov_x_deg[0] );
             }else{
                 mRatio[0] = 1.0f;
                 mRatio[1] = (((float)a)/((float)b))/(((float)height)/((float)width)); //multiply by the same(inv) q < 1
                 this.fov_x_deg[0] = (float) thetaV;
                 fovYdeg = (180.0/Math.PI) * ((float) Math.atan(Math.tan(Math.PI*thetaH/180.0)/mRatio[1]));
-                Log.i("DcamFOV2.c2", "setXfov: " + this.fov_x_deg[0] );
+                //Log.i("DcamFOV2.c2", "setXfov: " + this.fov_x_deg[0] );
             }
             fov_yx_ratio[0] = ((float)b)/((float)a);
             //default_phys_ratio = 0.007 * (this.fov_x_deg[0]/36.1);
@@ -367,11 +367,11 @@ public class CameraRenderer extends GLSurfaceView implements
         Camera.Size bestSize = null;
         List<Camera.Size> sizeList = mCamera.getParameters().getSupportedPictureSizes();
         bestSize = sizeList.get(0);
-        Log.i("dark cam", "Take picture, supported size, rawwidth: "+bestSize.width+", rawheight: " + bestSize.height);
+        //Log.i("dark cam", "Take picture, supported size, rawwidth: "+bestSize.width+", rawheight: " + bestSize.height);
         for(int i = 1; i < sizeList.size(); i++){
             if((sizeList.get(i).width * sizeList.get(i).height) > (bestSize.width * bestSize.height)){
                 bestSize = sizeList.get(i);
-                Log.i("dark cam", "Take picture, supported size, rawwidth: "+bestSize.width+", rawheight: " + bestSize.height);
+                //Log.i("dark cam", "Take picture, supported size, rawwidth: "+bestSize.width+", rawheight: " + bestSize.height);
             }
         }
         param.setPictureSize(bestSize.width, bestSize.height);
@@ -380,7 +380,7 @@ public class CameraRenderer extends GLSurfaceView implements
         double thetaH = (param.getHorizontalViewAngle());
         //mCamera.setParameters(param);
 
-        Log.i("QQQQQDcamFOVBig", "Vangle: "+String.valueOf(thetaV)+", Hangle: "+String.valueOf(thetaH));
+        //Log.i("QQQQQDcamFOVBig", "Vangle: "+String.valueOf(thetaV)+", Hangle: "+String.valueOf(thetaH));
 
         /* choose the maximum aera size for the preview - currently unused
         Camera.Size bestSize = null;
