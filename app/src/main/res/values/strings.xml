@@ -702,7 +702,7 @@
         Obrigado por usar este aplicativo, por favor classifique-lo, quer você goste ou não :)
         É totalmente gratuito e sem propagandas. versão paga na loja é apenas para fins de doação. \n \n
         Se você gostaria de me apoiar em maior progresso, correções de bugs, melhorias de tradução,
-        você sempre pode doar qualquer quantia que quiser:) \n \n
+        você sempre pode doar qualquer quantia que quiser :) \n \n
         Ou você pode visitar a minha pequena página da web para este app. \n
         \n
         Requer Android 4.2 ou mais, + suporte para 32-bit flutua na GPU para simular corretamente buraco negro na visualização da câmera (OpenGL). imagem final, de alta resolução, salvo no cartão de memória é processado na CPU de uma forma multi-threaded (dependendo do número de núcleos físicos no telefone).
@@ -712,6 +712,133 @@
     <string name="pt_ovh_page1_linkify">página da web</string>
     <string name="pt_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="pt_donation_link1_linkify">doar</string>
+
+
+
+
+    <string name="ko_title_tab0_phenomenon">서술</string>
+    <string name="ko_title_tab1_phenomenon">지원하다</string>
+    <string name="ko_progress_title">저장 이미지</string>
+    <string name="ko_progress_msg">처리하는 동안 기다립니다</string>
+    <string name="ko_could_not_save_img1">이미지를 저장할 수 없습니다</string>
+    <string name="ko_could_not_open_folder">열려 있지 / 이미지 폴더를 만들 수 있습니다</string>
+    <string name="ko_saved_img1">이미지 저장</string>
+    <string name="ko_saving_img_to_sd">카드에 처리 된 이미지를 저장</string>
+    <string name="ko_choose_mass">블랙홀의 질량을 선택</string>
+    <string name="ko_mass_unit_suffix">지구 질량의</string>
+    <string name="ko_menu_openfolder">열기 이미지 폴더</string>
+    <string name="ko_menu_preferences">서술</string>
+    <string name="ko_menu_aboutapp">지원하다</string>
+    <string name="ko_description_phenomenon1">
+        이 응용 프로그램은 가까운 곳에 작은 블랙홀의 중력 효과를 보여줍니다.
+        그것은 환경을보고, 휴대 전화의 후면 카메라를 사용하고, 다음은 편향
+        블랙홀 중력에 따라 광선. 전체 효과는 호출되는
+        중력 렌즈는, 아래 그림 (1)을 보면 알 수있다 - 중앙에 빨간색 개체로 블랙홀 :
+    </string>
+    <string name="ko_description_phenomenon1_linkify">중력 렌즈</string>
+    <string formatted="false" name="ko_description_phenomenon1_link">https://ko.wikipedia.org/wiki/%EC%A4%91%EB%A0%A5%EB%A0%8C%EC%A6%88</string>
+    <string name="ko_description_phenomenon2">
+        당신은 두 손가락으로 화면을 터치 한 다음 곤란하거나 확산에 의해 블랙홀의 질량을 변경할 수 있습니다.
+        또는, 당신은 동일한 기능을 수행 할 오른쪽 하단 검은 색 버튼을 사용할 수 있습니다 - 당신이 다음 볼 수 있듯이, 블랙홀의 질량은이다
+        내부 행성 질량의 순서 - 화성 또는 거의 지구 등을들 수있다. 중간에 큰 카메라 버튼을 클릭하면,
+        당신은 별도의 MyBlackHoles 폴더로 휴대폰 저장 카드의 블랙홀로 전체 해상도 이미지를 저장할 수 있습니다
+        (폴더를 쉽게 찾을 수있는 응용 프로그램의 메뉴 옵션을 사용 :).
+        여기에 중력 렌즈는 가능한 한 정확한 수하려고 - 아직 여전히 카메라가 보는 모든 아주 멀리 떨어져 있다고 가정합니다 -
+        특히 가까운 당신에게 개체에 대한 - 이는 반드시 사실 필요가 없습니다. 또한, 근사는 사건의 지평선에 매우 정확 가까이 (검은 색 원이 아니다
+        중간에 -) 사건의 지평선의 실제 크기에 해당 - 휴대폰 카메라는 일부 좁은 제한이 있기 때문에
+        시야 - 그래서 사상의 지평선에 가까운 유물은 여기를 피할 수 있습니다. 이 응용 프로그램에서 블랙홀은 당신을 멀리 항상 1m (3.28ft)로 간주됩니다 -이 거리가 증가하는 것의 효과를
+        정확히 블랙홀 질량을 감소시키는 것과 같은 효과. 블랙홀 비 회전하면 사용되는 -로 알려진 뭔가를
+        구형 객체의 필드 방정식의 슈바르츠 실트 솔루션입니다.
+        \n
+        휴대 전화에 의해보고로 다시 카메라의 시야 : \n \n
+        수평 : XXXXXX 학위 \n
+        수직 : YYYYYY 학위.
+        \n
+        \n
+        사진의 앤드류 해밀턴 (1) 신용.
+    </string>
+    <string name="ko_description_phenomenon2_linkify">슈바르츠 실트 솔루션</string>
+    <string formatted="false" name="ko_description_phenomenon2_link">https://ko.wikipedia.org/wiki/%EC%8A%88%EB%B0%94%EB%A5%B4%EC%B8%A0%EC%8B%A4%ED%8A%B8_%EA%B3%84%EB%9F%89</string>
+    <string name="ko_about_app_description1">
+        이 응용 프로그램을 사용하여 주셔서 감사합니다, 당신이 그것을 좋아 여부, 평점하시기 바랍니다 :)
+        그것은 완전 무료 및 광고를하지 않고있다. 가게에 유료 버전은 기부 목적만을위한 것입니다. \n \n
+        당신이 더 진행, 버그를 수정, 번역 개선에서 저를 지원하려는 경우,
+        당신은 항상 당신이 원하는 금액을 기부 할 수 있습니다) \n \n
+        또는이 응용 프로그램 내 작은 웹 페이지를 방문 할 수 있습니다. \n
+        \n
+        4.2 이상의 안드로이드, + 32 비트에 대한 지원이 제대로 카메라 미리보기 (OpenGL을)에 블랙홀을 시뮬레이션하는 GPU에 수레가 필요합니다.
+        메모리 카드에 저장된 최종 고해상도 화상이 멀티 쓰레드 방식으로 CPU에 렌더링된다 (수에 따라
+        전화 물리적 코어)의.
+    </string>
+
+    <string name="ko_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_ko.html</string>
+    <string name="ko_ovh_page1_linkify">웹 페이지</string>
+    <string name="ko_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
+    <string name="ko_donation_link1_linkify">기부</string>
+
+
+
+
+
+    <string name="cs_title_tab0_phenomenon">Popis</string>
+    <string name="cz_title_tab1_phenomenon">Podpora</string>
+    <string name="cs_progress_title">Ukládání image</string>
+    <string name="cs_progress_msg">Počkejte, až zpracování</string>
+    <string name="cs_could_not_save_img1">Obrázek nelze uložit</string>
+    <string name="cs_could_not_open_folder">Nelze otevřít / vytvořit složku obrazu</string>
+    <string name="cs_saved_img1">Obrázek byl uložen</string>
+    <string name="cs_saving_img_to_sd">Ukládání zpracovaný snímek na kartu</string>
+    <string name="cs_choose_mass">Vyberte černé díry hmotu</string>
+    <string name="cs_mass_unit_suffix">zemského hmoty</string>
+    <string name="cs_menu_openfolder">Otevřít složku image</string>
+    <string name="cs_menu_preferences">Popis</string>
+    <string name="cs_menu_aboutapp">Podpora</string>
+    <string name="cs_description_phenomenon1">
+        Tato aplikace demonstruje gravitační účinek jako malé černé díry nejbližším vás.
+        Využívá zadním fotoaparátem mobilního telefonu, aby se zjistilo životní prostředí, a pak se vychyluje
+        světelné paprsky podle černé díry gravitační silou. Celý efekt se nazývá
+        Gravitační čočky, a mohou být chápány při pohledu na obrázku (1) níže - černé díry jako červený objekt ve středu:
+    </string>
+    <string name="cs_description_phenomenon1_linkify">Gravitační čočky</string>
+    <string formatted="false" name="cz_description_phenomenon1_link">https://cs.wikipedia.org/wiki/Gravita%C4%8Dn%C3%AD_%C4%8Do%C4%8Dka</string>
+    <string name="cs_description_phenomenon2">
+        Můžete změnit černá díra hmotnosti dotykem na obrazovku dvěma prsty a pak sevření nebo jejich šíření.
+        Nebo můžete použít černé tlačítko pravý dolní aby učinili totéž - jak můžete vidět poté, černá díra hmotnost je zařazen do kategorií
+        Pořadí vnitřní planety hmoty - jako Mars nebo téměř na zemi. Kliknutím na tlačítko velkou fotoaparátu ve středu,
+        můžete uložit v plném rozlišení obrazu s černou dírou na svém telefonu paměťovou kartu do samostatné složky MyBlackHoles
+        (Použijte volbu v menu v aplikaci nalézt složku jednodušší).
+        Gravitační čočka zde se snaží být tak přesné, jak je to možné - a stále předpokládá, že vše, co kamera vidí, je velmi daleko -
+        které nemusí být nutně pravda - zvláště pro objekt blízko vás. Také aproximace není příliš přesný blízko k horizontu událostí (černý kruh
+        ve středu - odpovídající skutečné velikosti horizontu událostí) - proto, že telefon s fotoaparátem má pouze některé úzký, omezený
+        Zorné pole - takže artefakty v blízkosti horizontu událostí jsou zde nevyhnutelné. Černá díra v této aplikaci je převzat být vždy o 1 metr (3,28 stop) od sebe - za následek zvýšení tuto vzdálenost by měla
+        přesně stejný účinek jako snížení hmotnosti černé díry. Non-rotující černé díry je používán - něco, známý jako
+        Schwarzschild řešení polních rovnic pro spherically-symetrické objektu. \n
+        Zorné pole svého zadního fotoaparátu, jak je uvedeno u telefonu: \n \n
+        horizontální: XXXXXX stupňů \n
+        vertikální: yyyyyy stupňů.
+        \n
+        \n
+        (1) Ocenění za Andrew Hamilton na obrázku.
+    </string>
+    <string name="cs_description_phenomenon2_linkify">Schwarzschild řešení</string>
+    <string name="cs_description_phenomenon2_link">https://cs.wikipedia.org/wiki/Schwarzschildova_metrika</string>
+    <string name="cs_about_app_description1">
+        Děkujeme, že používáte tuto aplikaci, prosím, hodnotit jej, ať se vám to líbí nebo ne :)
+        Je zcela zdarma a bez reklam. Placená verze v obchodě je určen pouze pro účely darování. \n \n
+        Pokud byste chtěli, aby mě podpořit v dalším postupu, chyb-opravujících, zlepšení překladů
+        vždy můžete darovat jakoukoliv částku se vám líbí :) \n \n
+        Nebo můžete navštívit můj malý webové stránky pro tuto aplikaci. \n
+        \n
+        Vyžaduje Android 4.2 nebo vyšší, + podpora pro 32-bitové plave na GPU správně simulovat černou díru na náhledu fotoaparátu (OpenGL).
+        Final, s vysokým rozlišením obrazu uloženy na paměťové kartě je vykreslen na CPU v multi-threaded způsobem (v závislosti na počtu
+        fyzických jader na telefonu).
+    </string>
+
+    <string name="cs_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_cs.html</string>
+    <string name="cs_ovh_page1_linkify">webové stránky</string>
+    <string name="cs_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
+    <string name="cs_donation_link1_linkify">darovat</string>
+
 
 
 
