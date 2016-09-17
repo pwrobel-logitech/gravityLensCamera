@@ -644,10 +644,75 @@
 
     </string>
 
-    <string name="ar_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_en.html</string>
+    <string name="ar_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_ar.html</string>
     <string name="ar_ovh_page1_linkify"> صفحتي </string>
     <string name="ar_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="ar_donation_link1_linkify"> تبرع </string>
+
+
+
+
+
+
+
+    <string name="pt_title_tab0_phenomenon">Descrição</string>
+    <string name="pt_title_tab1_phenomenon">Apoio</string>
+    <string name="pt_progress_title">Imagem Economia</string>
+    <string name="pt_progress_msg">Aguarde enquanto o processamento</string>
+    <string name="pt_could_not_save_img1">A imagem não poderia ser salvo</string>
+    <string name="pt_could_not_open_folder">Não é possível abrir / criar a pasta de imagem</string>
+    <string name="pt_saved_img1">imagem salva</string>
+    <string name="pt_saving_img_to_sd">Salvando imagem processada para o cartão</string>
+    <string name="pt_choose_mass">Escolha massa do buraco negro</string>
+    <string name="pt_mass_unit_suffix">da massa de terra</string>
+    <string name="pt_menu_openfolder">Abrir pasta de imagem</string>
+    <string name="pt_menu_preferences">Descrição</string>
+    <string name="pt_menu_aboutapp">Apoio</string>
+    <string name="pt_description_phenomenon1">
+        Esta aplicação demonstra o efeito gravitacional de um pequeno buraco negro nas proximidades você.
+        Ele usa uma câmera traseira de seu telefone móvel, para ver o ambiente e, em seguida, ele desvia o
+        os raios de luz de acordo com a força gravitacional do buraco negro. O efeito é chamado de conjunto
+        lente gravitacional, e pode ser compreendida olhando para a foto (1) abaixo - buraco negro como um objeto vermelho no centro:
+    </string>
+    <string name="pt_description_phenomenon1_linkify">lente gravitacional</string>
+    <string name="pt_description_phenomenon1_link">https://pt.wikipedia.org/wiki/Lente_gravitacional</string>
+    <string name="pt_description_phenomenon2">
+        Você pode alterar a massa do buraco negro tocando a tela com dois dedos e, em seguida, beliscar ou espalhá-los.
+        Ou, você pode usar o botão preto inferior direito de fazer o mesmo - como você pode ver, em seguida, a massa do buraco negro é do
+        ordem de massa planeta interior - como Marte ou quase a terra. Ao clicar no botão câmera grande no meio,
+        você pode salvar a imagem de alta resolução com o buraco negro em seu cartão de memória do telefone para a pasta MyBlackHoles separada
+        (Use a opção de menu no aplicativo para encontrar a pasta mais fácil).
+        A lente gravidade aqui tenta ser o mais preciso, quanto possível - mas ainda assume que tudo o que a câmera vê é muito longe -
+        que não tem que ser necessariamente verdade - especialmente para o objeto perto de você. Além disso, a aproximação não é muito preciso perto do horizonte de eventos (círculo preto
+        no meio - correspondente ao tamanho real do horizonte de eventos) - porque a câmera do telefone tem apenas alguns estreita, limitada
+        campo de visão - para que os artefatos perto do horizonte de eventos são inevitáveis ​​aqui. buraco negro neste app é assumido como sendo sempre um metro (3,28 pés) longe de você - o efeito de aumentar essa distância teria
+        exatamente o mesmo efeito de diminuir a massa do buraco negro. Não rotativa buraco negro está sendo usado - algo conhecido como
+        solução de Schwarzschild das equações de campo para o objeto esférico-simétricas.
+        \n
+        Campo de visão de sua câmera de volta, conforme relatado pelo telefone: \n \n
+        horizontal: XXXXXX graus \n
+        graus YYYYYY: vertical.
+        \n
+        \n
+        (1) Crédito para o Andrew Hamilton para a imagem.
+    </string>
+    <string name="pt_description_phenomenon2_linkify">solução de Schwarzschild</string>
+    <string formatted="false" name="pt_description_phenomenon2_link">https://pt.wikipedia.org/wiki/M%C3%A9trica_de_Schwarzschild</string>
+    <string name="pt_about_app_description1">
+        Obrigado por usar este aplicativo, por favor classifique-lo, quer você goste ou não :)
+        É totalmente gratuito e sem propagandas. versão paga na loja é apenas para fins de doação. \n \n
+        Se você gostaria de me apoiar em maior progresso, correções de bugs, melhorias de tradução,
+        você sempre pode doar qualquer quantia que quiser:) \n \n
+        Ou você pode visitar a minha pequena página da web para este app. \n
+        \n
+        Requer Android 4.2 ou mais, + suporte para 32-bit flutua na GPU para simular corretamente buraco negro na visualização da câmera (OpenGL). imagem final, de alta resolução, salvo no cartão de memória é processado na CPU de uma forma multi-threaded (dependendo do número de núcleos físicos no telefone).
+    </string>
+
+    <string name="pt_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_pt.html</string>
+    <string name="pt_ovh_page1_linkify">página da web</string>
+    <string name="pt_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
+    <string name="pt_donation_link1_linkify">doar</string>
+
 
 
 </resources>
