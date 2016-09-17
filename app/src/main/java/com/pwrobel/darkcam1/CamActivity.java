@@ -305,9 +305,15 @@ public class CamActivity extends Activity implements MassSelectedListener {
         }
         if (success) {
             Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setDataAndType(Uri.fromFile(folder), "*/*");
+            intent.setDataAndType(Uri.fromFile(folder), "resource/folder");
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
+            try{
+                startActivity(intent);
+            }catch (android.content.ActivityNotFoundException ex){
+                intent.setDataAndType(Uri.fromFile(folder), "*/*");
+                startActivity(intent);
+            }
+
         } else {
             Toast.makeText(this, this.getTextInCurrentLang("could_not_open_folder"), Toast.LENGTH_LONG).show();
         }
