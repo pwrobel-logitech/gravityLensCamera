@@ -276,4 +276,76 @@
     <string name="ja_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="ja_donation_link1_linkify">寄付する</string>
 
+
+
+
+
+
+
+
+
+
+
+    <string name="es_title_tab0_phenomenon">Descripción</string>
+    <string name="es_title_tab1_phenomenon">Apoyo</string>
+    <string name="es_progress_title">imagen Ahorro</string>
+    <string name="es_progress_msg">Espere mientras se procesa</string>
+    <string name="es_could_not_save_img1">La imagen no pudo ser salvado</string>
+    <string name="es_could_not_open_folder">No se puede abrir / crear la carpeta de imágenes</string>
+    <string name="es_saved_img1">imagen guardada</string>
+    <string name="es_saving_img_to_sd">Guardar la imagen procesada a la tarjeta</string>
+    <string name="es_choose_mass">Seleccione la masa del agujero negro</string>
+    <string name="es_mass_unit_suffix">de la masa de la Tierra</string>
+    <string name="es_menu_openfolder">Abrir carpeta de imágenes</string>
+    <string name="es_menu_preferences">Descripción</string>
+    <string name="es_menu_aboutapp">Apoyo</string>
+    <string name="es_description_phenomenon1">
+       Esta aplicación demuestra el efecto gravitacional de un pequeño agujero negro cerca de usted.
+        Utiliza una cámara posterior de su teléfono móvil, para ver el medio ambiente, y luego se desvía el
+        los rayos de luz de acuerdo con el agujero negro atracción gravitatoria. El efecto total se denomina
+        lente gravitacional, y puede ser entendido por mirar el cuadro (1) más abajo - agujero negro como un objeto de color rojo en el centro:
+    </string>
+    <string name="es_description_phenomenon1_linkify">lente gravitacional</string>
+    <string name="es_description_phenomenon1_link">https://es.wikipedia.org/wiki/Lente_gravitacional</string>
+    <string name="es_description_phenomenon2">
+       Se puede cambiar la masa del agujero negro tocando la pantalla con dos dedos y luego pinchar o propagarlos.
+        O bien, puede utilizar el botón negro de abajo a la derecha para hacer lo mismo - como se puede ver a continuación, la masa del agujero negro es de la
+        orden de la masa planeta interior - como Marte o casi la tierra. Al hacer clic en el botón de cámara grande en el medio,
+        puede guardar la imagen a resolución completa con el agujero negro en su tarjeta de almacenamiento del teléfono en la carpeta separada MyBlackHoles
+        (Utilice la opción de menú en la aplicación para encontrar la carpeta más fácil).
+        La lente de la gravedad aquí intenta ser lo más preciso, como sea posible - sin embargo, todavía se supone que todo lo que ve la cámara está muy lejos -
+        que no tiene por qué ser necesariamente cierto - especialmente para el objeto cerca de usted. Además, la aproximación no es muy preciso cerca del horizonte de sucesos (círculo negro
+        en el medio - que corresponde al tamaño real del horizonte de sucesos) - debido a que la cámara del teléfono tiene sólo algunos estrecha, limitada
+        campo de visión - por lo que los artefactos cerca del horizonte de sucesos son inevitables aquí. agujero negro en esta aplicación se supone que es siempre 1 metro (3.28 pies) de distancia de usted - el efecto de aumentar esta distancia tendría
+        exactamente el mismo efecto que la disminución de la masa del agujero negro. No giratoria agujero negro está siendo utilizado - algo que se conoce como el
+        solución de Schwarzschild de las ecuaciones de campo de objeto esféricamente simétrica.
+        \norte
+        Campo de visión de la cámara de nuevo, según lo informado por el teléfono: \n \n
+        horizontal: XXXXXX grados \n
+        vertical: YYYYYY grados
+        \n
+        \n
+        (1) crédito para el Andrew Hamilton para la foto.
+    </string>
+    <string name="es_description_phenomenon2_linkify">solución de Schwarzschild</string>
+    <string formatted="false" name="es_description_phenomenon2_link">https://es.wikipedia.org/wiki/M%C3%A9trica_de_Schwarzschild</string>
+    <string name="es_about_app_description1">
+        Gracias por usar esta aplicación, por favor puntúalo, nos guste o no :)
+         Es totalmente gratis y sin anuncios. Versión de pago en la tienda es sólo para fines de donación. \n \n
+         Si usted quisiera que me apoyen en mayor progreso, bugfixing, mejora de la traducción,
+         siempre se puede donar cualquier cantidad que usted tiene gusto :) \n \n
+         O puede visitar mi pequeña página web para esta aplicación. \n
+         \n
+         Requiere Android 4.2 o más, + soporte para 32 bits flota en la GPU para simular correctamente agujero negro en la previa de la cámara (OpenGL).
+         Final de alta resolución de imagen, guardada en la tarjeta de memoria en la CPU se representa de un modo multi-hilo (en función del número
+         de núcleos físicos en el teléfono).
+    </string>
+
+    <string name="es_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_es.html</string>
+    <string name="es_ovh_page1_linkify">página web</string>
+    <string name="es_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
+    <string name="es_donation_link1_linkify">donar</string>
+
+
+
 </resources>

@@ -147,6 +147,7 @@ public class CamActivity extends Activity implements MassSelectedListener {
         this.addLanguage("pl");
         this.addLanguage("zh");
         this.addLanguage("ja");
+        this.addLanguage("es");
         this.setLanguageFromSystem();
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
