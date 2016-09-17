@@ -842,4 +842,70 @@
 
 
 
+
+
+
+    <string name="hu_title_tab0_phenomenon">Leírás</string>
+    <string name="hu_title_tab1_phenomenon">Támogatás</string>
+    <string name="hu_progress_title">Kép mentése</string>
+    <string name="hu_progress_msg">Várjon feldolgozása közben</string>
+    <string name="hu_could_not_save_img1">A képet nem lehet menteni</string>
+    <string name="hu_could_not_open_folder">Nem lehet létrehozni a kép mappát</string>
+    <string name="hu_saved_img1">Kép mentve</string>
+    <string name="hu_saving_img_to_sd">Mentése feldolgozott kép a kártyára</string>
+    <string name="hu_choose_mass">Válassza fekete lyuk tömegét</string>
+    <string name="hu_mass_unit_suffix">A Föld tömege</string>
+    <string name="hu_menu_openfolder">Kép megnyitása mappa</string>
+    <string name="hu_menu_preferences">Leírás</string>
+    <string name="hu_menu_aboutapp">Támogatás</string>
+    <string name="hu_description_phenomenon1">
+        Ez az alkalmazás bemutatja a gravitációs hatás egy kis fekete lyuk közelben.
+        Ez használ egy hátsó kamera a mobiltelefon, hogy a környezet, és akkor visszapattan az
+        fénysugarak szerint a fekete lyuk gravitációs vonzása. Az egész hatás az úgynevezett
+        gravitációs lencse, és lehet érteni nézi a képet (1) Az alábbi - a fekete lyuk, mint egy piros tárgy a központban:
+    </string>
+    <string name="hu_description_phenomenon1_linkify">gravitációs lencse</string>
+    <string formatted="false" name="hu_description_phenomenon1_link">https://hu.wikipedia.org/wiki/Gravit%C3%A1ci%C3%B3s_lencse</string>
+    <string name="hu_description_phenomenon2">
+        Meg lehet változtatni a fekete lyuk tömegét megérinti a képernyőt két ujjal, majd csipkedte, illetve eltávolítja őket.
+        Vagy, akkor a jobb alsó fekete gombot, hogy ugyanezt - mint látható, akkor a fekete lyuk tömege a
+        rendjét belső bolygó tömege - mint a Mars, vagy majdnem a földet. Ha rákattint a nagy kamera gomb a közepén,
+        Ön tudja menteni a teljes felbontású képet a fekete lyuk a telefon memóriakártyára a külön MyBlackHoles mappa
+        (Használja a menüpont az alkalmazás számára, hogy megtalálja azt a mappát egyszerűbb).
+        A gravitációs lencse itt próbál lenni, mint pontos, amennyire csak lehetséges - de még így is azt feltételezi, hogy mindazt, amit a kamera lát nagyon messze van -
+        ami nem kell feltétlenül igaz - különösen a tárgy közel van. Továbbá, a közelítés nem túl pontos, közel az eseményhorizont (fekete kör
+        a középső - megfelelő valós méretét az eseményhorizont) -, mert a telefon kamera csak néhány szűk, korlátozott
+        látómező - így a leletek közel az eseményhorizont elkerülhetetlenek itt. Fekete lyuk ebben az app feltételezzük, hogy mindig 1 méter (3.28ft) távol van - a hatás növelésének ezt a távolságot kellene
+        pontosan ugyanolyan hatású, mint csökkenő fekete lyuk tömegét. Nem forgó fekete lyuk van használatban - valami ismert a
+        Schwarzschild megoldás a téregyenleteket a gömb-szimmetrikus objektumot.
+        \n
+        Látómező a hátsó kamera, amint arról a telefon: \n \n
+        Vízszintes: XXXXXX fok \n
+        függőleges: YYYYYY fok.
+        \n
+        \n
+        (1) A hitel az Andrew Hamilton a képet.
+    </string>
+    <string name="hu_description_phenomenon2_linkify">Schwarzschild megoldás</string>
+    <string name="hu_description_phenomenon2_link">https://hu.wikipedia.org/wiki/Schwarzschild-metrika</string>
+    <string name="hu_about_app_description1">
+        Köszönjük, hogy használja ezt app, kérjük értékelje, akár tetszik, akár nem :)
+        Ez teljesen ingyenes, és anélkül, hogy a reklámok. Fizetett változat a boltban csak az adományozás céljából. \n \n
+        Ha szeretné támogatni engem a további fejlődést, hibajavítás, fordítás javítására,
+        akkor mindig adományoz bármilyen összeget tetszik:) \n \n
+        Vagy akkor látogasson el a kis weboldalt ehhez az alkalmazáshoz. \n
+        \n
+        Követelmény: Android 4.2 vagy több, + támogatja a 32 bites lebeg GPU helyesen szimulálni fekete lyuk a kamera előnézeti (OpenGL).
+        Végső, nagy felbontású kép mentett memóriakártyára teszi a processzor egy többszálú divat (attól függően, hogy hány
+        A fizikai magot a telefonon).
+    </string>
+
+    <string name="hu_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_hu.html</string>
+    <string name="hu_ovh_page1_linkify">weboldalt</string>
+    <string name="hu_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
+    <string name="hu_donation_link1_linkify">adományoz</string>
+
+
+
+
 </resources>
