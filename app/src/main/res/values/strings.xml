@@ -332,7 +332,7 @@
     <string name="es_about_app_description1">
         Gracias por usar esta aplicación, por favor puntúalo, nos guste o no :)
          Es totalmente gratis y sin anuncios. Versión de pago en la tienda es sólo para fines de donación. \n \n
-         Si usted quisiera que me apoyen en mayor progreso, bugfixing, mejora de la traducción,
+         Si usted quisiera que me apoyen en mayor progreso, fijación de error, mejora de la traducción,
          siempre se puede donar cualquier cantidad que usted tiene gusto :) \n \n
          O puede visitar mi pequeña página web para esta aplicación. \n
          \n
@@ -466,7 +466,7 @@
     <string name="de_about_app_description1">
         Vielen Dank für die Nutzung dieser App, bewerten Sie es, ob Sie es mögen oder nicht :)
          Es ist völlig kostenlos und ohne Werbung. Paid-Version auf dem Speicher ist nur für die Spende Zwecke. \n \n
-         Wenn Sie möchten, dass ich in weitere Fortschritte zu unterstützen, Bugfixing, Übersetzung Verbesserung,
+         Wenn Sie möchten, dass ich in weitere Fortschritte zu unterstützen, Fehler Fixierung, Übersetzung Verbesserung,
          Sie können immer jede Menge spenden Sie:) \n \n
          Oder Sie können meine kleine Webseite für diese App zu besuchen. \n
          \n
@@ -531,7 +531,7 @@
     <string name="fr_about_app_description1">
        Merci d\'utiliser cette application, s\'il vous plaît noter, que ça vous plaise ou non :)
          Il est entièrement gratuit et sans publicité. Version payante sur le magasin est uniquement à des fins de dons. \n \n
-         Si vous souhaitez me soutenir dans de nouveaux progrès, bugfixing, l\'amélioration de la traduction,
+         Si vous souhaitez me soutenir dans de nouveaux progrès, fixation d\'erreur, l\'amélioration de la traduction,
          vous pouvez toujours faire un don de tout montant que vous voulez:) \n \n
          Ou vous pouvez visiter ma petite page Web pour cette application. \n
          \n
@@ -546,6 +546,68 @@
     <string name="fr_donation_link1_linkify">faire un don</string>
 
 
+
+
+
+    <string name="it_title_tab0_phenomenon">Descrizione</string>
+    <string name="it_title_tab1_phenomenon">Supporto</string>
+    <string name="it_progress_title">Salvataggio di immagini</string>
+    <string name="it_progress_msg">Attendere durante l\'elaborazione</string>
+    <string name="it_could_not_save_img1">Immagine non poteva essere salvato</string>
+    <string name="it_could_not_open_folder">Non può aprire / creare la cartella dell\'immagine</string>
+    <string name="it_saved_img1">immagine salvata</string>
+    <string name="it_saving_img_to_sd">Salvataggio immagine elaborata sulla scheda</string>
+    <string name="it_choose_mass">Selezionare massa del buco nero</string>
+    <string name="it_mass_unit_suffix">della massa terrestre</string>
+    <string name="it_menu_openfolder">Apri cartella di immagini</string>
+    <string name="it_menu_preferences">Descrizione</string>
+    <string name="it_menu_aboutapp">Supporto</string>
+    <string name="it_description_phenomenon1">
+       Questa applicazione dimostra l\'effetto gravitazionale di un piccolo buco nero nelle vicinanze si.
+        Esso utilizza una fotocamera posteriore del telefono cellulare, per vedere l\'ambiente, e poi si devia il
+        raggi di luce in base alla forza gravitazionale buco nero. L\'effetto complessivo è chiamato
+        lente gravitazionale, e può essere compreso da guardando la foto (1) di seguito - buco nero come un oggetto rosso al centro:
+    </string>
+    <string name="it_description_phenomenon1_linkify">lente gravitazionale</string>
+    <string name="it_description_phenomenon1_link">https://it.wikipedia.org/wiki/Lente_gravitazionale</string>
+    <string name="it_description_phenomenon2">
+        È possibile modificare la massa del buco nero toccando lo schermo con due dita e poi pizzicare o diffusione.
+        In alternativa, è possibile utilizzare il pulsante nero in basso a destra a fare lo stesso - come si può vedere, allora, la massa del buco nero è del
+        ordine della massa pianeta interno - come Marte o quasi la terra. Cliccando sul pulsante grande macchina fotografica nel mezzo,
+        è possibile salvare l\'immagine a piena risoluzione con il buco nero sulla scheda di memoria del telefono nella cartella separata MyBlackHoles
+        (Utilizzare l\'opzione di menu in app per trovare la cartella più facile).
+        La lente gravitazionale qui cerca di essere il più precisi, per quanto possibile - ma assume ancora che tutto ciò che la fotocamera vede è molto lontano -
+        che non deve essere necessariamente vero - soprattutto per l\'oggetto vicino a voi. Inoltre, l\'approssimazione non è molto preciso vicino all\'orizzonte degli eventi (cerchio nero
+        nel mezzo - corrispondente alla dimensione reale della orizzonte degli eventi) - in quanto la fotocamera del telefono ha solo un po \'stretta, limitata
+        campo di vista - così i manufatti vicino all\'orizzonte degli eventi sono inevitabili qui. Buco nero in questa applicazione si presume che sia sempre 1 metro (3.28Ft) lontano da voi - l\'effetto di aumentare questa distanza avrebbe
+        esattamente lo stesso effetto di diminuire la massa buco nero. Non rotante buco nero è in uso - qualcosa conosciuto come il
+        soluzione di Schwarzschild delle equazioni di campo per oggetto sferico-simmetrico.
+        \n
+        Il campo di vista della fotocamera posteriore, come riportato dal telefono: \n \n
+        orizzontale: XXXXXX gradi \n
+        YYYYYY: verticale.
+        \n
+        \n
+        (1) Credito per l\'Andrew Hamilton per l\'immagine.
+    </string>
+    <string name="it_description_phenomenon2_linkify">soluzione di Schwarzschild</string>
+    <string name="it_description_phenomenon2_link">https://it.wikipedia.org/wiki/Spazio-tempo_di_Schwarzschild</string>
+    <string name="it_about_app_description1">
+      Grazie per aver usato questa applicazione, si prega di votarla, che vi piaccia o no :)
+         E \'completamente gratuito e senza pubblicità. versione a pagamento sul negozio è solo a scopo di donazione. \n \n
+         Se volete sostenermi in ulteriore progresso, fissaggio errore, miglioramento traduzione,
+         si può sempre donare qualsiasi importo che gradite :) \n \n
+         Oppure si può visitare il mio piccolo sito per questa applicazione. \n
+         \n
+         Richiede Android 4.2 o superiore, + supporto per 32-bit galleggia su GPU per simulare correttamente buco nero sulla preview fotocamera (OpenGL).
+         Finale ad alta risoluzione, salvati su scheda di memoria viene resa su CPU in modo multi-threaded (a seconda del numero
+         di core fisici al telefono).
+    </string>
+
+    <string name="it_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_it.html</string>
+    <string name="it_ovh_page1_linkify">piccolo sito</string>
+    <string name="it_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
+    <string name="it_donation_link1_linkify">donare</string>
 
 
 </resources>
