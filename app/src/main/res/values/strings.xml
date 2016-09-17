@@ -52,7 +52,7 @@
     <string name="en_description_phenomenon2_link">https://en.wikipedia.org/wiki/Schwarzschild_metric</string>
     <string name="en_about_app_description1">
         Thank you for using this app, please rate it, whether you like it or not :)
-        It is completly free and without advertisements. Paid version on the store is only for donation purposes.\n\n
+        It is completely free and without advertisements. Paid version on the store is only for donation purposes.\n\n
         If you would like to support me in further progress, bugfixing, translation improvement,
         you can always donate any amount you like :)\n\n
         Or you can visit my small webpage for this app.\n
@@ -203,5 +203,77 @@
     <string name="zh_ovh_page1_linkify">网页</string>
     <string name="zh_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="zh_donation_link1_linkify">捐赠</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <string name="ja_title_tab0_phenomenon">説明</string>
+    <string name="ja_title_tab1_phenomenon">サポート</string>
+    <string name="ja_progress_title">画像保存</string>
+    <string name="ja_progress_msg">処理中に待ち</string>
+    <string name="ja_could_not_save_img1">画像は保存できませんでした</string>
+    <string name="ja_could_not_open_folder">開いていない/画像フォルダを作成することができます</string>
+    <string name="ja_saved_img1">画像保存</string>
+    <string name="ja_saving_img_to_sd">カードに処理された画像を保存します</string>
+    <string name="ja_choose_mass">ブラックホールの質量を選択</string>
+    <string name="ja_mass_unit_suffix">地球の質量の</string>
+    <string name="ja_menu_openfolder">オープン画像フォルダ</string>
+    <string name="ja_menu_preferences">説明</string>
+    <string name="ja_menu_aboutapp">サポート</string>
+    <string name="ja_description_phenomenon1">
+       このアプリケーションは、あなたの近くの小さなブラックホールの重力の影響を示しています。
+       これは、環境を確認するために、携帯電話のバックカメラを使用し、それは偏向します
+       ブラックホール重力に従って光線。全体の効果が呼び出されます
+       重力レンズは、以下の画像（1）を見ることによって理解することができる - 中央に赤いオブジェクトとしてブラックホール：
+    </string>
+    <string name="ja_description_phenomenon1_linkify">重力レンズ</string>
+    <string formatted="false" name="ja_description_phenomenon1_link">https://ja.wikipedia.org/wiki/%E9%87%8D%E5%8A%9B%E3%83%AC%E3%83%B3%E3%82%BA</string>
+    <string name="ja_description_phenomenon2">
+        あなたは、2本の指で画面をタッチし、それらをつまんまたは拡散によってブラックホールの質量を変更することができます。
+        それとも、あなたが同じことを行うには、右下の黒いボタンを使用することができます - あなたが見ることができるように、ブラックホールの質量があります
+        内側の惑星の質量の順 - 火星またはほぼ地球のような。中央に大きなカメラボタンをクリックすることにより、
+        あなたは独立したMyBlackHolesフォルダにあなたの携帯電話のストレージカードのブラックホールでフル解像度の画像を保存することができます
+        （フォルダを簡単に見つけるためにアプリでメニューオプションを使用します）。
+        ここでは、重力レンズは可能な限り、正確でしようとします - まだそれはまだカメラが見るものすべてが非常に遠く離れていることを前提として -
+        これは必ずしも真である必要はありません - 特にあなたの近くにオブジェクトのため。また、近似は事象の地平線（黒丸に非常に正確で近くありません
+        途中で - ）事象の地平線の実際のサイズに対応する - 電話のカメラは、限られた、唯一のいくつかの狭いを持っているので、
+        視野 - ので、事象の地平線に近いアーティファクトはここに避けられません。このアプリでブラックホールが常に1メートル（3.28フィート）あなたから離れてであると仮定される - この距離を増加させる効果を持っているだろう
+        ブラックホールの質量を減少させることとまったく同じ効果。知られている何かを - ブラックホールが使用されている非回転
+        球状​​に対称的オブジェクトのための場の方程式のシュヴァルツシルトソリューション。
+        \n は
+        電話で報告されているように、あなたのバックカメラの視野、次のとおりです。\n \n個
+        水平：XXXXXX 度は、\n します
+        縦：YYYYYY 度。
+        \n は
+        \n は
+        （1）画像のためのアンドリュー・ハミルトンのためのクレジットを。
+    </string>
+    <string name="ja_description_phenomenon2_linkify">シュヴァルツシルトソリューション</string>
+    <string formatted="false" name="ja_description_phenomenon2_link">https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%A5%E3%83%AF%E3%83%AB%E3%83%84%E3%82%B7%E3%83%AB%E3%83%88%E8%A7%A3</string>
+    <string name="ja_about_app_description1">
+        このアプリをご利用いただきありがとうございます、あなたがそれを好きかどうか、それを評価してください:)
+        それは完全に無料で、広告なしです。ストアの有料版は、寄付のためだけです。\n\n
+        あなたはさらなる進展、バグ修正、翻訳の改善に私をサポートしたい場合、
+        あなたはいつもあなたが好きな金額を寄付することができます）\n\n
+        それとも、このアプリのための私の小さなサイトを訪問することができます。\n
+        \n
+        4.2以上のアンドロイド、+32ビットのサポートが正しくカメラのプレビュー（OpenGLの）上のブラックホールをシミュレートするために、GPUに浮かぶが必要です。
+        メモリカードに保存され、最終的な高解像度画像は、マルチスレッド方式でCPUに描画される（数によって
+        携帯電話上の物理コア）の。
+    </string>
+
+    <string name="ja_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_en.html</string>
+    <string name="ja_ovh_page1_linkify">サイト</string>
+    <string name="ja_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
+    <string name="ja_donation_link1_linkify">寄付する</string>
 
 </resources>
