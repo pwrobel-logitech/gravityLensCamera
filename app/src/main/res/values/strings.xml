@@ -199,7 +199,7 @@
         在手机上物理核心）。
     </string>
 
-    <string name="zh_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_en.html</string>
+    <string name="zh_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_zh.html</string>
     <string name="zh_ovh_page1_linkify">网页</string>
     <string name="zh_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="zh_donation_link1_linkify">捐赠</string>
@@ -271,7 +271,7 @@
         携帯電話上の物理コア）の。
     </string>
 
-    <string name="ja_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_en.html</string>
+    <string name="ja_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_ja.html</string>
     <string name="ja_ovh_page1_linkify">サイト</string>
     <string name="ja_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="ja_donation_link1_linkify">寄付する</string>
