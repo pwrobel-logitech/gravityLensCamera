@@ -482,4 +482,70 @@
 
 
 
+
+
+
+    <string name="fr_title_tab0_phenomenon">La description</string>
+    <string name="fr_title_tab1_phenomenon">Soutien</string>
+    <string name="fr_progress_title">l\'image enregistrement</string>
+    <string name="fr_progress_msg">Attendez que le traitement</string>
+    <string name="fr_could_not_save_img1">Image n\'a pas pu être sauvé</string>
+    <string name="fr_could_not_open_folder">Vous ne pouvez pas ouvrir / créer le dossier d\'image</string>
+    <string name="fr_saved_img1">image enregistrée</string>
+    <string name="fr_saving_img_to_sd">Enregistrement image traitée à la carte</string>
+    <string name="fr_choose_mass">Sélectionnez la masse du trou noir</string>
+    <string name="fr_mass_unit_suffix">de la masse de la Terre</string>
+    <string name="fr_menu_openfolder">dossier d\'images Ouvrir</string>
+    <string name="fr_menu_preferences">La description</string>
+    <string name="fr_menu_aboutapp">Soutien</string>
+    <string name="fr_description_phenomenon1">
+       Cette application démontre l\'effet gravitationnel d\'un petit trou noir à proximité vous.
+        Il utilise une caméra arrière de votre téléphone mobile, pour voir l\'environnement, et il dévie le
+        rayons lumineux selon le trou noir attraction gravitationnelle. L\'effet entier est appelé
+        lentille gravitationnelle, et peut être compris en regardant l\'image (1) ci-dessous - trou noir comme un objet rouge au centre:
+    </string>
+    <string name="fr_description_phenomenon1_linkify">lentille gravitationnelle</string>
+    <string name="fr_description_phenomenon1_link">https://fr.wikipedia.org/wiki/Lentille_gravitationnelle</string>
+    <string name="fr_description_phenomenon2">
+        Vous pouvez changer la masse du trou noir en touchant l\'écran avec deux doigts, puis pincer ou de les propager.
+        Ou, vous pouvez utiliser le bouton noir en bas à droite pour faire la même chose - comme vous pouvez le voir ensuite, la masse du trou noir est de la
+        ordre de masse planète intérieure - comme mars ou presque la terre. En cliquant sur le gros bouton de la caméra dans le milieu,
+        vous pouvez enregistrer l\'image en pleine résolution avec le trou noir sur votre téléphone carte de stockage dans le dossier MyBlackHoles séparé
+        (Utilisez l\'option de menu dans l\'application pour trouver le dossier plus facile).
+        La lentille de gravité ici tente d\'être aussi précis, que possible - mais il suppose encore que tout ce que voit la caméra est très loin -
+        qui ne doit pas être nécessairement vrai - en particulier pour l\'objet près de chez vous. En outre, le rapprochement est pas très précis à proximité de l\'horizon des événements (cercle noir
+        au milieu - correspondant à la taille réelle de l\'horizon des événements) - parce que la caméra de téléphone ne dispose que d\'une partie étroite, limitée
+        champ de vision - de sorte que les objets proches de l\'horizon des événements sont inévitables ici. Trou noir dans cette application est supposé être toujours 1 mètre (3.28ft) loin de vous - l\'effet d\'augmenter cette distance aurait
+        exactement le même effet que la diminution de la masse du trou noir. Non-trou noir en rotation est utilisée - quelque chose de connu sous le nom
+        solution de Schwarzschild des équations de champ pour l\'objet sphériquement symétrique.
+        \n
+        Champ de vision de votre appareil photo, tel que rapporté par le téléphone: \n \n
+        horizontal: XXXXXX degrés \n
+        degrés de YYYYYY: vertical.
+        \n
+        \n
+        (1) Crédit pour Andrew Hamilton pour la photo.
+    </string>
+    <string name="fr_description_phenomenon2_linkify">solution de Schwarzschild</string>
+    <string formatted="false" name="fr_description_phenomenon2_link">https://fr.wikipedia.org/wiki/M%C3%A9trique_de_Schwarzschild</string>
+    <string name="fr_about_app_description1">
+       Merci d\'utiliser cette application, s\'il vous plaît noter, que ça vous plaise ou non :)
+         Il est entièrement gratuit et sans publicité. Version payante sur le magasin est uniquement à des fins de dons. \n \n
+         Si vous souhaitez me soutenir dans de nouveaux progrès, bugfixing, l\'amélioration de la traduction,
+         vous pouvez toujours faire un don de tout montant que vous voulez:) \n \n
+         Ou vous pouvez visiter ma petite page Web pour cette application. \n
+         \n
+         Nécessite Android 4.2 ou plus, + support pour 32 bits flotte sur GPU pour simuler correctement le trou noir sur la prévisualisation de la caméra (OpenGL).
+         Final, image haute résolution enregistrée sur la carte mémoire est rendu sur le processeur dans un mode multi-thread (en fonction du nombre
+         de cœurs physiques sur le téléphone).
+    </string>
+
+    <string name="fr_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_fr.html</string>
+    <string name="fr_ovh_page1_linkify">page Web</string>
+    <string name="fr_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
+    <string name="fr_donation_link1_linkify">faire un don</string>
+
+
+
+
 </resources>
