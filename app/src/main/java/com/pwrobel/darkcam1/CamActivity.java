@@ -14,6 +14,7 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
 import android.net.Uri;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -38,7 +39,33 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+
 public class CamActivity extends Activity implements MassSelectedListener {
+
+
+    final long TWO_MINUTES = 1000*60; //one, actually
+    Handler handler = null;
+
+    final Runnable clear_screen_on = new Runnable() {
+        public void run() {
+            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        }
+    };
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev){
+        if(handler == null){
+            this.handler = new Handler();
+        }
+        if(this.handler != null){
+            handler.removeCallbacksAndMessages(null);
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+            handler.postDelayed(clear_screen_on, TWO_MINUTES);
+        }
+        super.dispatchTouchEvent(ev);
+        return false;
+    }
+
 
     @Override
     public void onMassSelected(double selector) {
@@ -125,6 +152,7 @@ public class CamActivity extends Activity implements MassSelectedListener {
     public void onPause(){
         //Log.i("darkcam activity", "Activity onPause");
         super.onPause();
+        this.handler = null;
         this.hideMassChooserDialog();
         this.hideZoomInfoDialog();
         if(this.progress != null)
@@ -138,6 +166,12 @@ public class CamActivity extends Activity implements MassSelectedListener {
 
     @Override
     public void onResume(){
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        this.handler = new Handler();
+        if(handler != null) {
+            handler.removeCallbacksAndMessages(null);
+            handler.postDelayed(clear_screen_on, TWO_MINUTES);
+        }
 
         this.mScaleFactor = 1.0f;
 

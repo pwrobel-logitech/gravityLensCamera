@@ -308,8 +308,10 @@ public class CameraRenderer extends GLSurfaceView implements
         this.image_processor_.setBlackHoleInfo(this.phys_ratio[0], 1.0, thetaV, thetaH);
         //start camera-----------------------------------------
         param.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE);
-        mCamera.setParameters(param);
-        mCamera.startPreview();
+        if(mCamera != null){
+            mCamera.setParameters(param);
+            mCamera.startPreview();
+        }
 
         //start render---------------------
         requestRender();
