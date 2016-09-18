@@ -66,7 +66,7 @@
     <string name="en_ovh_page1_linkify">webpage</string>
     <string name="en_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="en_donation_link1_linkify">donate</string>
-
+    <string name="en_install_file_explorer_app">Cannot find suitable file explorer app to open folder, try to install it..</string>
 
 
     <string name="pl_title_tab0_phenomenon">Opis</string>
@@ -129,7 +129,7 @@
     <string name="pl_ovh_page1_linkify">stronę</string>
     <string name="pl_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="pl_donation_link1_linkify">wsparcia finansowego</string>
-
+    <string name="pl_install_file_explorer_app">Nie mogę znaleźć odpowiedniej aplikacji do przeglądania plików, spróbuj doinstalować..</string>
 
 
 
@@ -188,7 +188,7 @@
     <string name="zh_ovh_page1_linkify">网页</string>
     <string name="zh_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="zh_donation_link1_linkify">捐赠</string>
-
+    <string name="zh_install_file_explorer_app">找不到合适的文件浏览器应用程序打开文件夹，尝试安装它..</string>
 
 
 
@@ -259,7 +259,7 @@
     <string name="ja_ovh_page1_linkify">サイト</string>
     <string name="ja_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="ja_donation_link1_linkify">寄付する</string>
-
+    <string name="ja_install_file_explorer_app">フォルダを開くには、適切なファイルエクスプローラアプリを見つけることができない、それをインストールしようと..</string>
 
 
 
@@ -324,7 +324,7 @@
     <string name="es_ovh_page1_linkify">página web</string>
     <string name="es_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="es_donation_link1_linkify">donar</string>
-
+    <string name="es_install_file_explorer_app">No se puede encontrar la aplicación adecuada de explorador de archivos para abrir la carpeta, tratar de instalarlo..</string>
 
 
 
@@ -392,7 +392,7 @@
     <string name="ru_ovh_page1_linkify">веб-страницу</string>
     <string name="ru_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="ru_donation_link1_linkify">жертвовать</string>
-
+    <string name="ru_install_file_explorer_app">Не удается найти подходящее приложение поиска файлов, чтобы открыть папку, попытайтесь установить его..</string>
 
 
 
@@ -455,7 +455,7 @@
     <string name="de_ovh_page1_linkify">Webseite</string>
     <string name="de_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="de_donation_link1_linkify">spenden</string>
-
+    <string name="de_install_file_explorer_app">Kann nicht geeignet Datei-Explorer app-Ordner zu öffnen, versuchen Sie es zu installieren..</string>
 
 
 
@@ -518,7 +518,7 @@
     <string name="fr_ovh_page1_linkify">page Web</string>
     <string name="fr_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="fr_donation_link1_linkify">faire un don</string>
-
+    <string name="fr_install_file_explorer_app">Vous ne trouvez pas approprié app explorateur de fichiers pour ouvrir un dossier, essayer de l\'installer..</string>
 
 
 
@@ -578,7 +578,7 @@
     <string name="it_ovh_page1_linkify">piccolo sito</string>
     <string name="it_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="it_donation_link1_linkify">donare</string>
-
+    <string name="it_install_file_explorer_app">Impossibile trovare il file explorer adatto app per aprire la cartella, tentare di installarlo..</string>
 
 
 
@@ -648,7 +648,7 @@
     <string name="ar_ovh_page1_linkify"> صفحتي </string>
     <string name="ar_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="ar_donation_link1_linkify"> تبرع </string>
-
+    <string name="ar_install_file_explorer_app"> لا يمكن العثور على مناسبة التطبيق ملف اكسبلورر لفتح مجلد، في محاولة لتثبيته .. </string>
 
 
 
@@ -712,7 +712,7 @@
     <string name="pt_ovh_page1_linkify">página da web</string>
     <string name="pt_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="pt_donation_link1_linkify">doar</string>
-
+    <string name="pt_install_file_explorer_app">Não é possível localizar aplicativo explorador de arquivos apropriado para abrir pasta, tentar instalá-lo..</string>
 
 
 
@@ -775,7 +775,7 @@
     <string name="ko_ovh_page1_linkify">웹 페이지</string>
     <string name="ko_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="ko_donation_link1_linkify">기부</string>
-
+    <string name="ko_install_file_explorer_app">폴더를 열려면 적절한 파일 탐색기 응용 프로그램을 찾을 수 없습니다, 그것을 설치하려고..</string>
 
 
 
@@ -838,7 +838,7 @@
     <string name="cs_ovh_page1_linkify">webové stránky</string>
     <string name="cs_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="cs_donation_link1_linkify">darovat</string>
-
+    <string name="cs_install_file_explorer_app">Nemůžete najít vhodné File Explorer aplikaci otevřít složku, pokuste se jej nainstalovat..</string>
 
 
 
@@ -904,7 +904,7 @@
     <string name="hu_ovh_page1_linkify">weboldalt</string>
     <string name="hu_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="hu_donation_link1_linkify">adományoz</string>
-
+    <string name="hu_install_file_explorer_app">Nem találnak megfelelő fájlkezelő alkalmazás megnyitásához mappát, próbálja meg telepíteni..</string>
 
 
     <string name="hr_title_tab0_phenomenon">Opis</string>
@@ -965,7 +965,7 @@
     <string name="hr_ovh_page1_linkify">web stranicu</string>
     <string name="hr_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="hr_donation_link1_linkify">donirati</string>
-
+    <string name="hr_install_file_explorer_app">Ne mogu naći prikladan File Explorer aplikacija za otvaranje mape, pokušajte ga instalirati..</string>
 
 
 
@@ -1028,7 +1028,7 @@
     <string name="bg_ovh_page1_linkify">уеб страница</string>
     <string name="bg_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="bg_donation_link1_linkify">дарите</string>
-
+    <string name="bg_install_file_explorer_app">Не можете да намерите подходящ приложението File Explorer, за да отворите папка, се опитват да го инсталирате..</string>
 
 
 </resources>
