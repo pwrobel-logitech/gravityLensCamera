@@ -52,7 +52,7 @@
     <string name="en_description_phenomenon2_link">https://en.wikipedia.org/wiki/Schwarzschild_metric</string>
     <string name="en_about_app_description1">
         Thank you for using this app, please rate it, whether you like it or not :)
-        It is completely free and without advertisements. Paid version on the store is only for donation purposes.\n\n
+        It is completely free and without advertisements.\n\n
         If you would like to support me in further progress, bugfixing, translation improvement,
         you can always donate any amount you like :)\n\n
         Or you can visit my small webpage for this app.\n
@@ -115,9 +115,7 @@
     <string name="pl_description_phenomenon2_linkify">rozwiązanie Schwarzchilda</string>
     <string name="pl_description_phenomenon2_link">https://pl.wikipedia.org/wiki/Metryka_Schwarzschilda</string>
     <string name="pl_about_app_description1">
-        Dziękuję za skorzystanie z tej applikacji. Jest ona całkowicie darmowa i bez reklam - płatna
-        jej wersja na Google Play store
-        ma identyczną funkcjonalność i jest jedynie sposobem na wsparcie finansowe.\n\n
+        Dziękuję za skorzystanie z tej applikacji. Jest ona całkowicie darmowa i bez reklam.\n\n
         Jeśli chciałbyś mnie wspomóc w dalszym rozwijaniu tej aplikacji, usuwaniu błędów,
         poprawy tłumaczenia, możesz zawsze udzielić wsparcia finansowego :) \n\n
         Możesz również odwiedzić moją małą stronę dla tej aplikacji.\n
@@ -246,7 +244,7 @@
     <string formatted="false" name="ja_description_phenomenon2_link">https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%A5%E3%83%AF%E3%83%AB%E3%83%84%E3%82%B7%E3%83%AB%E3%83%88%E8%A7%A3</string>
     <string name="ja_about_app_description1">
         このアプリをご利用いただきありがとうございます、あなたがそれを好きかどうか、それを評価してください :)
-        それは完全に無料で、広告なしです。ストアの有料版は、寄付のためだけです。\n\n
+        それは完全に無料で、広告なしです。\n\n
         あなたはさらなる進展、バグ修正、翻訳の改善に私をサポートしたい場合、
         あなたはいつもあなたが好きな金額を寄付することができます）\n\n
         それとも、このアプリのための私の小さなサイトを訪問することができます。\n
@@ -310,7 +308,7 @@
     <string formatted="false" name="es_description_phenomenon2_link">https://es.wikipedia.org/wiki/M%C3%A9trica_de_Schwarzschild</string>
     <string name="es_about_app_description1">
         Gracias por usar esta aplicación, por favor puntúalo, nos guste o no :)
-        Es totalmente gratis y sin anuncios. Versión de pago en la tienda es sólo para fines de donación. \n \n
+        Es totalmente gratis y sin anuncios. \n \n
         Si usted quisiera que me apoyen en mayor progreso, fijación de error, mejora de la traducción,
         siempre se puede donar cualquier cantidad que usted tiene gusto :) \n \n
         O puede visitar mi pequeña página web para esta aplicación. \n
@@ -378,7 +376,7 @@
     <string formatted="false" name="ru_description_phenomenon2_link">https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D0%BA%D0%B0_%D0%A8%D0%B2%D0%B0%D1%80%D1%86%D1%88%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0</string>
     <string name="ru_about_app_description1">
         Благодарим Вас за использование этого приложения, пожалуйста, оцените его, нравится ли вам это или нет :)
-        Это абсолютно бесплатно и без рекламы. Платная версия на магазине только для целей донорства. \n \n
+        Это абсолютно бесплатно и без рекламы. \n \n
         Если вы хотели бы поддержать меня в дальнейшем прогрессе, исправление ошибок, улучшение перевода,
         вы всегда можете пожертвовать любую сумму, которую вы любите:) \n \n
         Или же вы можете посетить мой небольшой веб-страницу для этого приложения. \n
@@ -441,7 +439,7 @@
     <string name="de_description_phenomenon2_linkify">Schwarzschild-Lösung</string>
     <string name="de_description_phenomenon2_link">https://de.wikipedia.org/wiki/Schwarzschild-Metrik</string>
     <string name="de_about_app_description1">
-        Vielen Dank für die Nutzung dieser App, bewerten Sie es, ob Sie es mögen oder nicht :) Es ist völlig kostenlos und ohne Werbung. Paid-Version auf dem Speicher ist nur für die Spende Zwecke. \n \n
+        Vielen Dank für die Nutzung dieser App, bewerten Sie es, ob Sie es mögen oder nicht :) Es ist völlig kostenlos und ohne Werbung. \n \n
         Wenn Sie möchten, dass ich in weitere Fortschritte zu unterstützen, Fehler Fixierung, Übersetzung Verbesserung,
         Sie können immer jede Menge spenden Sie:) \n \n
         Oder Sie können meine kleine Webseite für diese App zu besuchen. \n
@@ -504,7 +502,7 @@
     <string name="fr_description_phenomenon2_linkify">solution de Schwarzschild</string>
     <string formatted="false" name="fr_description_phenomenon2_link">https://fr.wikipedia.org/wiki/M%C3%A9trique_de_Schwarzschild</string>
     <string name="fr_about_app_description1"> Merci d\'utiliser cette application, s\'il vous plaît noter, que ça vous plaise ou non :)
-        Il est entièrement gratuit et sans publicité. Version payante sur le magasin est uniquement à des fins de dons. \n \n
+        Il est entièrement gratuit et sans publicité. \n \n
         Si vous souhaitez me soutenir dans de nouveaux progrès, fixation d\'erreur, l\'amélioration de la traduction,
         vous pouvez toujours faire un don de tout montant que vous voulez:) \n \n
         Ou vous pouvez visiter ma petite page Web pour cette application. \n
@@ -567,7 +565,7 @@
     <string name="it_description_phenomenon2_link">https://it.wikipedia.org/wiki/Spazio-tempo_di_Schwarzschild</string>
     <string name="it_about_app_description1">
         Grazie per aver usato questa applicazione, si prega di votarla, che vi piaccia o no :)
-        E \'completamente gratuito e senza pubblicità. versione a pagamento sul negozio è solo a scopo di donazione. \n \n
+        E \'completamente gratuito e senza pubblicità. \n \n
         Se volete sostenermi in ulteriore progresso, fissaggio errore, miglioramento traduzione,
         si può sempre donare qualsiasi importo che gradite :) \n \n
         Oppure si può visitare il mio piccolo sito per questa applicazione. \n
@@ -700,7 +698,7 @@
     <string formatted="false" name="pt_description_phenomenon2_link">https://pt.wikipedia.org/wiki/M%C3%A9trica_de_Schwarzschild</string>
     <string name="pt_about_app_description1">
         Obrigado por usar este aplicativo, por favor classifique-lo, quer você goste ou não :)
-        É totalmente gratuito e sem propagandas. versão paga na loja é apenas para fins de doação. \n \n
+        É totalmente gratuito e sem propagandas. \n \n
         Se você gostaria de me apoiar em maior progresso, correções de bugs, melhorias de tradução,
         você sempre pode doar qualquer quantia que quiser :) \n \n
         Ou você pode visitar a minha pequena página da web para este app. \n
@@ -761,7 +759,7 @@
     <string formatted="false" name="ko_description_phenomenon2_link">https://ko.wikipedia.org/wiki/%EC%8A%88%EB%B0%94%EB%A5%B4%EC%B8%A0%EC%8B%A4%ED%8A%B8_%EA%B3%84%EB%9F%89</string>
     <string name="ko_about_app_description1">
         이 응용 프로그램을 사용하여 주셔서 감사합니다, 당신이 그것을 좋아 여부, 평점하시기 바랍니다 :)
-        그것은 완전 무료 및 광고를하지 않고있다. 가게에 유료 버전은 기부 목적만을위한 것입니다. \n \n
+        그것은 완전 무료 및 광고를하지 않고있다. \n \n
         당신이 더 진행, 버그를 수정, 번역 개선에서 저를 지원하려는 경우,
         당신은 항상 당신이 원하는 금액을 기부 할 수 있습니다) \n \n
         또는이 응용 프로그램 내 작은 웹 페이지를 방문 할 수 있습니다. \n
@@ -824,7 +822,7 @@
     <string name="cs_description_phenomenon2_link">https://cs.wikipedia.org/wiki/Schwarzschildova_metrika</string>
     <string name="cs_about_app_description1">
         Děkujeme, že používáte tuto aplikaci, prosím, hodnotit jej, ať se vám to líbí nebo ne :)
-        Je zcela zdarma a bez reklam. Placená verze v obchodě je určen pouze pro účely darování. \n \n
+        Je zcela zdarma a bez reklam. \n \n
         Pokud byste chtěli, aby mě podpořit v dalším postupu, chyb-opravujících, zlepšení překladů
         vždy můžete darovat jakoukoliv částku se vám líbí :) \n \n
         Nebo můžete navštívit můj malý webové stránky pro tuto aplikaci. \n
@@ -890,7 +888,7 @@
     <string name="hu_description_phenomenon2_link">https://hu.wikipedia.org/wiki/Schwarzschild-metrika</string>
     <string name="hu_about_app_description1">
         Köszönjük, hogy használja ezt app, kérjük értékelje, akár tetszik, akár nem :)
-        Ez teljesen ingyenes, és anélkül, hogy a reklámok. Fizetett változat a boltban csak az adományozás céljából. \n \n
+        Ez teljesen ingyenes, és anélkül, hogy a reklámok. \n \n
         Ha szeretné támogatni engem a további fejlődést, hibajavítás, fordítás javítására,
         akkor mindig adományoz bármilyen összeget tetszik:) \n \n
         Vagy akkor látogasson el a kis weboldalt ehhez az alkalmazáshoz. \n
@@ -952,7 +950,7 @@
     <string name="hr_description_phenomenon2_link">https://hr.wikipedia.org/wiki/Schwarzschildova_metrika</string>
     <string name="hr_about_app_description1">
         Hvala Vam što koristite ovu aplikaciju, molimo da ocijenite ga, da li se to vama ili ne :)
-        To je potpuno besplatan i bez reklama. Plaćeni verzija na namirnicama je samo za donacije svrhe. \n \n
+        To je potpuno besplatan i bez reklama. \n \n
         Ukoliko želite da me podržati u daljnji napredak, bugfixing, poboljšanja prevođenje,
         uvijek možete donirati bilo koji iznos želite:) \n \ n
         Ili možete posjetiti moju malu web stranicu za ovu aplikaciju. \n \n
@@ -1014,7 +1012,7 @@
     <string formatted="false" name="bg_description_phenomenon2_link">https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D0%BA%D0%B0_%D0%A8%D0%B2%D0%B0%D1%80%D1%86%D1%88%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0</string>
     <string name="bg_about_app_description1">
         Благодарим Ви, че използвате това приложение, моля, оценете го, независимо дали ви харесва или не :)
-        Тя е напълно безплатна и без реклами. Платената версия на магазина е само за целите на дарение. \n \n
+        Тя е напълно безплатна и без реклами. \n \n
         Ако искате да ме подкрепят в по-нататъшен напредък, фиксиране на грешки, подобряване превод,
         Винаги можете да дарите някаква сума ти харесва:) \n \n
         Или можете да посетите моя малка уеб страница за това приложение. \n
