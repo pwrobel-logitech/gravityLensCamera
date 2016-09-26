@@ -389,7 +389,16 @@ public class CameraRenderer extends GLSurfaceView implements
         Camera.Parameters param;
         param = mCamera.getParameters();
 
-        param.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE);
+        if(param != null) {
+            List<String> focusModes = param.getSupportedFocusModes();
+            if (focusModes.contains(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE)) {
+                try {
+                    param.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE);
+                } catch (Exception e) {
+                    Log.e("darkcam", "Error setting the FOCUS_MODE_CONTINUOUS_PICTURE when doing big pic");
+                }
+            }
+        }
 
         Camera.Size bestSize = null;
         List<Camera.Size> sizeList = mCamera.getParameters().getSupportedPictureSizes();
@@ -463,14 +472,36 @@ public class CameraRenderer extends GLSurfaceView implements
             result = (info.orientation - degrees + 360) % 360;
         }
         //mCamera.setDisplayOrientation(result);
-        param.setRotation(result);
+        try{
+            param.setRotation(result);
+        }catch (Exception e){
+            Log.e("darkcam1", "Error setting the rotation param when taking big picture.");
+        }
 
-        param.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
+        if(param != null) {
+            List<String> focusModes = param.getSupportedFocusModes();
+            if (focusModes.contains(Camera.Parameters.FOCUS_MODE_AUTO)) {
+                try {
+                    param.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
+                } catch (Exception e) {
+                    Log.e("darkcam", "Error setting the FOCUS_MODE_AUTO when doing big pic");
+                }
+            }
+        }
+
         if(mCamera == null)
             return;
-        mCamera.setParameters(param);
+        try{
+            mCamera.setParameters(param);
+        }catch (Exception e){
+            Log.e("darkcam1", "setParameters exception when taking big picture.");
+        }
 
-        mCamera.takePicture(null, null, new PhotoHandler(mContext, this.image_processor_));
+        try{
+            mCamera.takePicture(null, null, new PhotoHandler(mContext, this.image_processor_));
+        }catch (Exception e){
+            Log.e("darkcam1", "takePicture exception when taking big picture.");
+        }
     }
 
     private void renderQuad(int aPosition){
