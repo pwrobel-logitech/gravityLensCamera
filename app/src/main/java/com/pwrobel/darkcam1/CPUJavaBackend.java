@@ -287,6 +287,7 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
         if (!pictureFileDir.exists() && !pictureFileDir.mkdirs()) {
 
             Log.d(log_prefix, "Can't create directory to save image.");
+            this.cleanup_buffers();
             return -1;
 
         }
@@ -316,12 +317,20 @@ public class CPUJavaBackend implements StaticPhotoRenderBackend {
             Log.d(log_prefix, "File" + filename + "not saved: "
                     + error.getMessage());
             this.last_file_saved = "ERROR Saving!!!";
+            this.cleanup_buffers();
             return -1;
             //Toast.makeText(context, "Image could not be saved.",
             //        Toast.LENGTH_LONG).show();
         }
+        this.cleanup_buffers();
         return 1;
     };
+
+    private void cleanup_buffers(){
+        this.preprocessed_bigimage = null;
+        this.RGB_buf = null;
+        this.postprocessed_RGB_buf = null;
+    }
 
     //set info about the object, mass, distance and field of viev in x-direction - horizontal(width)
     public void setBlackHoleInfo(double mass, double distance, double fovXdeg, double fovYdeg){
