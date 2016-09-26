@@ -186,7 +186,11 @@ public class CameraRenderer extends GLSurfaceView implements
         camera_height =0;
 
         if(mCamera != null){
-            mCamera.stopPreview();
+            try{
+                mCamera.stopPreview();
+            }catch (Exception e){
+                Log.e("darkcam", "Error stopping the camera preview 1");
+            }
             mCamera.setPreviewCallback(null);
             mCamera.release();
             mCamera = null;
@@ -225,7 +229,11 @@ public class CameraRenderer extends GLSurfaceView implements
             if(i<0)
                 i=0;
 //i=9;
-            param.setPreviewSize(psize.get(i).width, psize.get(i).height);
+            try{
+                param.setPreviewSize(psize.get(i).width, psize.get(i).height);
+            }catch (Exception e){
+                Log.e("darkcam", "Error setting the camera preview size");
+            }
 
             camera_width = psize.get(i).width;
             camera_height= psize.get(i).height;
@@ -306,13 +314,30 @@ public class CameraRenderer extends GLSurfaceView implements
         //set physical ratio parameters containing the "normalized" black hole mass
         //this.phys_ratio[0] = (float)default_phys_ratio;
         this.image_processor_.setBlackHoleInfo(this.phys_ratio[0], 1.0, thetaV, thetaH);
-        //start camera-----------------------------------------
-        param.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE);
-        if(mCamera != null){
-            mCamera.setParameters(param);
-            mCamera.startPreview();
-        }
+        //start camera-----
+        if(param != null) {
+            List<String> focusModes = param.getSupportedFocusModes();
+            if (focusModes.contains(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE)){
+                try{
+                    param.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE);
+                }catch (Exception e){
+                    Log.e("darkcam", "Error setting the FOCUS_MODE_CONTINUOUS_PICTURE");
+                }
+            }
 
+            if (mCamera != null) {
+                try {
+                    mCamera.setParameters(param);
+                }catch (Exception e){
+                    Log.e("darkcam", "Error setting the camera parameters");
+                }
+                try {
+                    mCamera.startPreview();
+                }catch (Exception e){
+                    Log.e("darkcam", "Error starting the preview");
+                }
+            }
+        }
         //start render---------------------
         requestRender();
     }
