@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -34,8 +35,22 @@ public class PhotoHandler implements Camera.PictureCallback {
     public void onPictureTaken(byte[] data, Camera camera) {
         CamActivity act = (CamActivity) this.context;
         Camera.Parameters parameters = camera.getParameters();
-        parameters.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE);
-        camera.setParameters(parameters);
+        if(parameters != null) {
+            List<String> focusModes = parameters.getSupportedFocusModes();
+            if (focusModes.contains(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE)) {
+                try {
+                    parameters.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE);
+                } catch (Exception e) {
+                    Log.e("darkcam", "Error setting the FOCUS_MODE_CONTINUOUS_PICTURE in onPicTaken");
+                }
+            }
+        }
+
+        try{
+            camera.setParameters(parameters);
+        }catch (Exception e){
+            Log.e("darkcam", "Error setting the parameters in onPicTaken");
+        }
         int format = parameters.getPreviewFormat();
 
         this.image_processor_.setImgBuffer(data, ImageFormat.JPEG);
