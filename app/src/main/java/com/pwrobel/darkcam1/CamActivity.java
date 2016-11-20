@@ -345,6 +345,15 @@ public class CamActivity extends Activity implements MassSelectedListener {
                 this.mMassChooser.dismiss();
     }
 
+    private ImagePreviewer imgpreview;
+    private void showImagePreview(){
+        this.imgpreview = new ImagePreviewer();
+        if(this.imgpreview != null){
+            this.imgpreview.setStyle(DialogFragment.STYLE_NO_TITLE, 0);
+            this.imgpreview.show(this.mfm, "fragment_edit_name3");
+        }
+    }
+
     private void LaunchOpenFolderIntent(String dir){
         File folder = new File(dir);
         boolean success = true;
@@ -360,7 +369,8 @@ public class CamActivity extends Activity implements MassSelectedListener {
             }catch (android.content.ActivityNotFoundException ex){
                 //intent.setDataAndType(Uri.fromFile(folder), "*/*");
                 //startActivity(intent);
-                Toast.makeText(this, this.getTextInCurrentLang("install_file_explorer_app"), Toast.LENGTH_LONG).show();
+                //Toast.makeText(this, this.getTextInCurrentLang("install_file_explorer_app"), Toast.LENGTH_LONG).show();
+                this.showImagePreview();
             }
 
         } else {
