@@ -9,6 +9,7 @@
 
     <string name="en_title_tab0_phenomenon">Description</string>
     <string name="en_title_tab1_phenomenon">Support</string>
+    <string name="en_title_tab2_phenomenon">Privacy policy</string>
     <string name="en_progress_title">Saving image</string>
     <string name="en_progress_msg">Wait while processing</string>
     <string name="en_could_not_save_img1">Image could not be saved</string>
@@ -20,6 +21,7 @@
     <string name="en_menu_openfolder">Open image folder</string>
     <string name="en_menu_preferences">Description</string>
     <string name="en_menu_aboutapp">Support</string>
+    <string name="en_menu_privacypolicy">Privacy policy</string>
     <string name="en_description_phenomenon1">
        This application demonstrates the gravitational effect of an small black hole nearby you.
        It uses a back camera of your mobile phone, to see the environment, and then it deflects the
@@ -61,6 +63,23 @@
         Final, high-resolution image saved on memory card is rendered on CPU in a multi-threaded fashion (depending on the number
         of physical cores on the phone).
     </string>
+    <string name="en_privacy_policy_decription1">\n\n
+        The privacy policy for this app can be found under this Link.\n
+        I also present the text here :\n\n
+        This app does not collect any of your data. It uses image from the camera only to show and store the distorted
+        view and save it onto the phone filesystem/memory card - it only needs the file access permission to do just that and it does not touch any other files.
+        It does not need any other permission than these two. It asks also external web browser application to open external links - but it does not send
+        any additional GET request parameters in the URL that any of those server might store.\n\n
+        Does the app\'s site use cookies ?\n
+        No, the server hosting my page does not use any cookie information.\n\n
+        How about external pages ?\n
+        It links to the wikipedia - to see their privacy policy, please look at https://wikimediafoundation.org/wiki/Privacy_policy#introduction\n\n
+        What about changes to the privacy policy ?\n
+        Any changes to the privacy policy will be reflected on this text and on the app\'s page.
+    </string>
+    <string name="en_privacypolicy_linkify">Link</string>
+    <string name="en_privacypolicy_link">http://wrobel731.ovh.org/blackholecam/privacypolicy_en.html</string>
+    <string name="en_privacypolicy_linkifywiki">https://wikimediafoundation.org/wiki/Privacy_policy#introduction</string>
 
     <string name="en_ovh_page1">http://wrobel731.ovh.org/blackholecam/main_en.html</string>
     <string name="en_ovh_page1_linkify">webpage</string>
@@ -71,6 +90,7 @@
 
     <string name="pl_title_tab0_phenomenon">Opis</string>
     <string name="pl_title_tab1_phenomenon">Wsparcie</string>
+    <string name="pl_title_tab2_phenomenon">Polityka prywatności</string>
     <string name="pl_progress_title">Zapisywanie obrazu</string>
     <string name="pl_progress_msg">Czekaj, przetwarzam</string>
     <string name="pl_could_not_save_img1">Nie udało się zapisać obrazu</string>
@@ -82,6 +102,7 @@
     <string name="pl_menu_openfolder">Otwórz folder obrazków</string>
     <string name="pl_menu_preferences">Opis</string>
     <string name="pl_menu_aboutapp">Wsparcie</string>
+    <string name="pl_menu_privacypolicy">Polityka prywatonści</string>
     <string name="pl_description_phenomenon1">
        Ta aplikacja obrazuje efekt grawitacji czarnej dziury na otoczenie. Używa ona tylnej kamerki telefonu
         do rejestracji obrazu i ugięcia promieni świetlnych zgodnie z masą i odległością czarnej dziury od obserwatora.
@@ -128,7 +149,23 @@
     <string name="pl_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="pl_donation_link1_linkify">wsparcia finansowego</string>
     <string name="pl_install_file_explorer_app">Nie mogę znaleźć odpowiedniej aplikacji do przeglądania plików, spróbuj doinstalować..</string>
-
+    <string name="pl_privacy_policy_decription1">\n\n
+        Polityka prywatności dla tej aplikacji jest dostępna pod tym linkiem.\n
+        Prezentuję jej tekst również tutaj:\n\n
+        Ta aplikacja nie zbiera żadnych twoich danych. Używa ona jedynie obrazu z kamery aby pokazać zmodyfikowany obraz
+        i zapisać go na systemie plików/karcie pamięci - aplikacja potrzebuje uprawnienia dostępu do systemu plików aby wykonać jedynie to - nie rusza ona innych plików.
+        Poza tymi dwoma uprawnieniami nie potrzebuje nic innego. Odpytuje ona również zewnętrzną przeglądarkę internetową aby otworzyć linki -
+        ale nie wysyła w żądaniu GET w tych linkach żadnych dodatkowych parametrów, które serwer mógłby przechowywać.\n\n
+        Czy strona aplikacji używa ciasteczek ?\n
+        Nie, serwer hostujący stronę aplikacji nie używa żadnych informacji z ciasteczek.\n\n
+        A co z zewnętrznymi stronami ?\n
+        Strona ta zawiera linki do wikipedii - aby zobaczyć ich politykę prywatności zajrzyj na https://wikimediafoundation.org/wiki/Privacy_policy#introduction \n\n
+        Co w przypadku zmian w polityce prywatności ?\n
+        Jakiekolwiek zmiany znajdą swoje odzwierciedlenie w tym tekście i na stronie aplikacji.
+    </string>
+    <string name="pl_privacypolicy_linkify">linkiem</string>
+    <string name="pl_privacypolicy_link">http://wrobel731.ovh.org/blackholecam/privacypolicy_pl.html</string>
+    <string name="pl_privacypolicy_linkifywiki">https://wikimediafoundation.org/wiki/Privacy_policy#introduction</string>
 
 
 
@@ -187,9 +224,25 @@
     <string name="zh_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="zh_donation_link1_linkify">捐赠</string>
     <string name="zh_install_file_explorer_app">找不到合适的文件浏览器应用程序打开文件夹，尝试安装它..</string>
-
-
-
+    <string name="zh_privacy_policy_decription1">\n\n
+        The privacy policy for this app can be found under this Link.\n
+        I also present the text here :\n\n
+        This app does not collect any of your data. It uses image from the camera only to show and store the distorted
+        view and save it onto the phone filesystem/memory card - it only needs the file access permission to do just that and it does not touch any other files.
+        It does not need any other permission than these two. It asks also external web browser application to open external links - but it does not send
+        any additional GET request parameters in the URL that any of those server might store.\n\n
+        Does the app\'s site use cookies ?\n
+        No, the server hosting my page does not use any cookie information.\n\n
+        How about external pages ?\n
+        It links to the wikipedia - to see their privacy policy, please look at https://wikimediafoundation.org/wiki/Privacy_policy#introduction\n\n
+        What about changes to the privacy policy ?\n
+        Any changes to the privacy policy will be reflected on this text and on the app\'s page.
+    </string>
+    <string name="zh_privacypolicy_linkify">Link</string>
+    <string name="zh_privacypolicy_link">http://wrobel731.ovh.org/blackholecam/privacypolicy_zh.html</string>
+    <string name="zh_privacypolicy_linkifywiki">https://wikimediafoundation.org/wiki/Privacy_policy#introduction</string>
+    <string name="zh_title_tab2_phenomenon">隐私政策</string>
+    <string name="zh_menu_privacypolicy">隐私政策</string>
 
 
 
@@ -258,7 +311,25 @@
     <string name="ja_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="ja_donation_link1_linkify">寄付する</string>
     <string name="ja_install_file_explorer_app">フォルダを開くには、適切なファイルエクスプローラアプリを見つけることができない、それをインストールしようと..</string>
-
+    <string name="ja_privacy_policy_decription1">\n\n
+        The privacy policy for this app can be found under this Link.\n
+        I also present the text here :\n\n
+        This app does not collect any of your data. It uses image from the camera only to show and store the distorted
+        view and save it onto the phone filesystem/memory card - it only needs the file access permission to do just that and it does not touch any other files.
+        It does not need any other permission than these two. It asks also external web browser application to open external links - but it does not send
+        any additional GET request parameters in the URL that any of those server might store.\n\n
+        Does the app\'s site use cookies ?\n
+        No, the server hosting my page does not use any cookie information.\n\n
+        How about external pages ?\n
+        It links to the wikipedia - to see their privacy policy, please look at https://wikimediafoundation.org/wiki/Privacy_policy#introduction\n\n
+        What about changes to the privacy policy ?\n
+        Any changes to the privacy policy will be reflected on this text and on the app\'s page.
+    </string>
+    <string name="ja_privacypolicy_linkify">Link</string>
+    <string name="ja_privacypolicy_link">http://wrobel731.ovh.org/blackholecam/privacypolicy_ja.html</string>
+    <string name="ja_privacypolicy_linkifywiki">https://wikimediafoundation.org/wiki/Privacy_policy#introduction</string>
+    <string name="ja_title_tab2_phenomenon">個人情報保護方針</string>
+    <string name="ja_menu_privacypolicy">個人情報保護方針</string>
 
 
 
@@ -323,7 +394,25 @@
     <string name="es_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="es_donation_link1_linkify">donar</string>
     <string name="es_install_file_explorer_app">No se puede encontrar la aplicación adecuada de explorador de archivos para abrir la carpeta, tratar de instalarlo..</string>
-
+    <string name="es_privacy_policy_decription1">\n\n
+        The privacy policy for this app can be found under this Link.\n
+        I also present the text here :\n\n
+        This app does not collect any of your data. It uses image from the camera only to show and store the distorted
+        view and save it onto the phone filesystem/memory card - it only needs the file access permission to do just that and it does not touch any other files.
+        It does not need any other permission than these two. It asks also external web browser application to open external links - but it does not send
+        any additional GET request parameters in the URL that any of those server might store.\n\n
+        Does the app\'s site use cookies ?\n
+        No, the server hosting my page does not use any cookie information.\n\n
+        How about external pages ?\n
+        It links to the wikipedia - to see their privacy policy, please look at https://wikimediafoundation.org/wiki/Privacy_policy#introduction\n\n
+        What about changes to the privacy policy ?\n
+        Any changes to the privacy policy will be reflected on this text and on the app\'s page.
+    </string>
+    <string name="es_privacypolicy_linkify">Link</string>
+    <string name="es_privacypolicy_link">http://wrobel731.ovh.org/blackholecam/privacypolicy_es.html</string>
+    <string name="es_privacypolicy_linkifywiki">https://wikimediafoundation.org/wiki/Privacy_policy#introduction</string>
+    <string name="es_title_tab2_phenomenon">Política de privacidad</string>
+    <string name="es_menu_privacypolicy">Política de privacidad</string>
 
 
 
@@ -391,7 +480,25 @@
     <string name="ru_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="ru_donation_link1_linkify">жертвовать</string>
     <string name="ru_install_file_explorer_app">Не удается найти подходящее приложение поиска файлов, чтобы открыть папку, попытайтесь установить его..</string>
-
+    <string name="ru_privacy_policy_decription1">\n\n
+        The privacy policy for this app can be found under this Link.\n
+        I also present the text here :\n\n
+        This app does not collect any of your data. It uses image from the camera only to show and store the distorted
+        view and save it onto the phone filesystem/memory card - it only needs the file access permission to do just that and it does not touch any other files.
+        It does not need any other permission than these two. It asks also external web browser application to open external links - but it does not send
+        any additional GET request parameters in the URL that any of those server might store.\n\n
+        Does the app\'s site use cookies ?\n
+        No, the server hosting my page does not use any cookie information.\n\n
+        How about external pages ?\n
+        It links to the wikipedia - to see their privacy policy, please look at https://wikimediafoundation.org/wiki/Privacy_policy#introduction\n\n
+        What about changes to the privacy policy ?\n
+        Any changes to the privacy policy will be reflected on this text and on the app\'s page.
+    </string>
+    <string name="ru_privacypolicy_linkify">Link</string>
+    <string name="ru_privacypolicy_link">http://wrobel731.ovh.org/blackholecam/privacypolicy_ru.html</string>
+    <string name="ru_privacypolicy_linkifywiki">https://wikimediafoundation.org/wiki/Privacy_policy#introduction</string>
+    <string name="ru_title_tab2_phenomenon">Политика конфиденциальности</string>
+    <string name="ru_menu_privacypolicy">Политика конфиденциальности</string>
 
 
 
@@ -454,7 +561,25 @@
     <string name="de_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="de_donation_link1_linkify">spenden</string>
     <string name="de_install_file_explorer_app">Kann nicht geeignet Datei-Explorer app-Ordner zu öffnen, versuchen Sie es zu installieren..</string>
-
+    <string name="de_privacy_policy_decription1">\n\n
+        The privacy policy for this app can be found under this Link.\n
+        I also present the text here :\n\n
+        This app does not collect any of your data. It uses image from the camera only to show and store the distorted
+        view and save it onto the phone filesystem/memory card - it only needs the file access permission to do just that and it does not touch any other files.
+        It does not need any other permission than these two. It asks also external web browser application to open external links - but it does not send
+        any additional GET request parameters in the URL that any of those server might store.\n\n
+        Does the app\'s site use cookies ?\n
+        No, the server hosting my page does not use any cookie information.\n\n
+        How about external pages ?\n
+        It links to the wikipedia - to see their privacy policy, please look at https://wikimediafoundation.org/wiki/Privacy_policy#introduction\n\n
+        What about changes to the privacy policy ?\n
+        Any changes to the privacy policy will be reflected on this text and on the app\'s page.
+    </string>
+    <string name="de_privacypolicy_linkify">Link</string>
+    <string name="de_privacypolicy_link">http://wrobel731.ovh.org/blackholecam/privacypolicy_de.html</string>
+    <string name="de_privacypolicy_linkifywiki">https://wikimediafoundation.org/wiki/Privacy_policy#introduction</string>
+    <string name="de_title_tab2_phenomenon">Datenschutz-Bestimmungen</string>
+    <string name="de_menu_privacypolicy">Datenschutz-Bestimmungen</string>
 
 
 
@@ -517,7 +642,25 @@
     <string name="fr_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="fr_donation_link1_linkify">faire un don</string>
     <string name="fr_install_file_explorer_app">Vous ne trouvez pas approprié app explorateur de fichiers pour ouvrir un dossier, essayer de l\'installer..</string>
-
+    <string name="fr_privacy_policy_decription1">\n\n
+        The privacy policy for this app can be found under this Link.\n
+        I also present the text here :\n\n
+        This app does not collect any of your data. It uses image from the camera only to show and store the distorted
+        view and save it onto the phone filesystem/memory card - it only needs the file access permission to do just that and it does not touch any other files.
+        It does not need any other permission than these two. It asks also external web browser application to open external links - but it does not send
+        any additional GET request parameters in the URL that any of those server might store.\n\n
+        Does the app\'s site use cookies ?\n
+        No, the server hosting my page does not use any cookie information.\n\n
+        How about external pages ?\n
+        It links to the wikipedia - to see their privacy policy, please look at https://wikimediafoundation.org/wiki/Privacy_policy#introduction\n\n
+        What about changes to the privacy policy ?\n
+        Any changes to the privacy policy will be reflected on this text and on the app\'s page.
+    </string>
+    <string name="fr_privacypolicy_linkify">Link</string>
+    <string name="fr_privacypolicy_link">http://wrobel731.ovh.org/blackholecam/privacypolicy_fr.html</string>
+    <string name="fr_privacypolicy_linkifywiki">https://wikimediafoundation.org/wiki/Privacy_policy#introduction</string>
+    <string name="fr_title_tab2_phenomenon">Politique de confidentialité</string>
+    <string name="fr_menu_privacypolicy">Politique de confidentialité</string>
 
 
 
@@ -577,7 +720,25 @@
     <string name="it_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="it_donation_link1_linkify">donare</string>
     <string name="it_install_file_explorer_app">Impossibile trovare il file explorer adatto app per aprire la cartella, tentare di installarlo..</string>
-
+    <string name="it_privacy_policy_decription1">\n\n
+        The privacy policy for this app can be found under this Link.\n
+        I also present the text here :\n\n
+        This app does not collect any of your data. It uses image from the camera only to show and store the distorted
+        view and save it onto the phone filesystem/memory card - it only needs the file access permission to do just that and it does not touch any other files.
+        It does not need any other permission than these two. It asks also external web browser application to open external links - but it does not send
+        any additional GET request parameters in the URL that any of those server might store.\n\n
+        Does the app\'s site use cookies ?\n
+        No, the server hosting my page does not use any cookie information.\n\n
+        How about external pages ?\n
+        It links to the wikipedia - to see their privacy policy, please look at https://wikimediafoundation.org/wiki/Privacy_policy#introduction\n\n
+        What about changes to the privacy policy ?\n
+        Any changes to the privacy policy will be reflected on this text and on the app\'s page.
+    </string>
+    <string name="it_privacypolicy_linkify">Link</string>
+    <string name="it_privacypolicy_link">http://wrobel731.ovh.org/blackholecam/privacypolicy_it.html</string>
+    <string name="it_privacypolicy_linkifywiki">https://wikimediafoundation.org/wiki/Privacy_policy#introduction</string>
+    <string name="it_title_tab2_phenomenon">Politica sulla riservatezza</string>
+    <string name="it_menu_privacypolicy">Politica sulla riservatezza</string>
 
 
 
@@ -647,7 +808,25 @@
     <string name="ar_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="ar_donation_link1_linkify"> تبرع </string>
     <string name="ar_install_file_explorer_app"> لا يمكن العثور على مناسبة التطبيق ملف اكسبلورر لفتح مجلد، في محاولة لتثبيته .. </string>
-
+    <string name="ar_privacy_policy_decription1">\n\n
+        The privacy policy for this app can be found under this Link.\n
+        I also present the text here :\n\n
+        This app does not collect any of your data. It uses image from the camera only to show and store the distorted
+        view and save it onto the phone filesystem/memory card - it only needs the file access permission to do just that and it does not touch any other files.
+        It does not need any other permission than these two. It asks also external web browser application to open external links - but it does not send
+        any additional GET request parameters in the URL that any of those server might store.\n\n
+        Does the app\'s site use cookies ?\n
+        No, the server hosting my page does not use any cookie information.\n\n
+        How about external pages ?\n
+        It links to the wikipedia - to see their privacy policy, please look at https://wikimediafoundation.org/wiki/Privacy_policy#introduction\n\n
+        What about changes to the privacy policy ?\n
+        Any changes to the privacy policy will be reflected on this text and on the app\'s page.
+    </string>
+    <string name="ar_privacypolicy_linkify">Link</string>
+    <string name="ar_privacypolicy_link">http://wrobel731.ovh.org/blackholecam/privacypolicy_ar.html</string>
+    <string name="ar_privacypolicy_linkifywiki">https://wikimediafoundation.org/wiki/Privacy_policy#introduction</string>
+    <string name="ar_title_tab2_phenomenon">سياسة الخصوصية</string>
+    <string name="ar_menu_privacypolicy">سياسة الخصوصية</string>
 
 
 
@@ -711,7 +890,25 @@
     <string name="pt_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="pt_donation_link1_linkify">doar</string>
     <string name="pt_install_file_explorer_app">Não é possível localizar aplicativo explorador de arquivos apropriado para abrir pasta, tentar instalá-lo..</string>
-
+    <string name="pt_privacy_policy_decription1">\n\n
+        The privacy policy for this app can be found under this Link.\n
+        I also present the text here :\n\n
+        This app does not collect any of your data. It uses image from the camera only to show and store the distorted
+        view and save it onto the phone filesystem/memory card - it only needs the file access permission to do just that and it does not touch any other files.
+        It does not need any other permission than these two. It asks also external web browser application to open external links - but it does not send
+        any additional GET request parameters in the URL that any of those server might store.\n\n
+        Does the app\'s site use cookies ?\n
+        No, the server hosting my page does not use any cookie information.\n\n
+        How about external pages ?\n
+        It links to the wikipedia - to see their privacy policy, please look at https://wikimediafoundation.org/wiki/Privacy_policy#introduction\n\n
+        What about changes to the privacy policy ?\n
+        Any changes to the privacy policy will be reflected on this text and on the app\'s page.
+    </string>
+    <string name="pt_privacypolicy_linkify">Link</string>
+    <string name="pt_privacypolicy_link">http://wrobel731.ovh.org/blackholecam/privacypolicy_pt.html</string>
+    <string name="pt_privacypolicy_linkifywiki">https://wikimediafoundation.org/wiki/Privacy_policy#introduction</string>
+    <string name="pt_title_tab2_phenomenon">Política de Privacidade</string>
+    <string name="pt_menu_privacypolicy">Política de Privacidade</string>
 
 
     <string name="ko_title_tab0_phenomenon">서술</string>
@@ -774,7 +971,25 @@
     <string name="ko_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="ko_donation_link1_linkify">기부</string>
     <string name="ko_install_file_explorer_app">폴더를 열려면 적절한 파일 탐색기 응용 프로그램을 찾을 수 없습니다, 그것을 설치하려고..</string>
-
+    <string name="ko_privacy_policy_decription1">\n\n
+        The privacy policy for this app can be found under this Link.\n
+        I also present the text here :\n\n
+        This app does not collect any of your data. It uses image from the camera only to show and store the distorted
+        view and save it onto the phone filesystem/memory card - it only needs the file access permission to do just that and it does not touch any other files.
+        It does not need any other permission than these two. It asks also external web browser application to open external links - but it does not send
+        any additional GET request parameters in the URL that any of those server might store.\n\n
+        Does the app\'s site use cookies ?\n
+        No, the server hosting my page does not use any cookie information.\n\n
+        How about external pages ?\n
+        It links to the wikipedia - to see their privacy policy, please look at https://wikimediafoundation.org/wiki/Privacy_policy#introduction\n\n
+        What about changes to the privacy policy ?\n
+        Any changes to the privacy policy will be reflected on this text and on the app\'s page.
+    </string>
+    <string name="ko_privacypolicy_linkify">Link</string>
+    <string name="ko_privacypolicy_link">http://wrobel731.ovh.org/blackholecam/privacypolicy_ko.html</string>
+    <string name="ko_privacypolicy_linkifywiki">https://wikimediafoundation.org/wiki/Privacy_policy#introduction</string>
+    <string name="ko_title_tab2_phenomenon">개인 정보 정책</string>
+    <string name="ko_menu_privacypolicy">개인 정보 정책</string>
 
 
 
@@ -837,7 +1052,25 @@
     <string name="cs_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="cs_donation_link1_linkify">darovat</string>
     <string name="cs_install_file_explorer_app">Nemůžete najít vhodné File Explorer aplikaci otevřít složku, pokuste se jej nainstalovat..</string>
-
+    <string name="cs_privacy_policy_decription1">\n\n
+        The privacy policy for this app can be found under this Link.\n
+        I also present the text here :\n\n
+        This app does not collect any of your data. It uses image from the camera only to show and store the distorted
+        view and save it onto the phone filesystem/memory card - it only needs the file access permission to do just that and it does not touch any other files.
+        It does not need any other permission than these two. It asks also external web browser application to open external links - but it does not send
+        any additional GET request parameters in the URL that any of those server might store.\n\n
+        Does the app\'s site use cookies ?\n
+        No, the server hosting my page does not use any cookie information.\n\n
+        How about external pages ?\n
+        It links to the wikipedia - to see their privacy policy, please look at https://wikimediafoundation.org/wiki/Privacy_policy#introduction\n\n
+        What about changes to the privacy policy ?\n
+        Any changes to the privacy policy will be reflected on this text and on the app\'s page.
+    </string>
+    <string name="cs_privacypolicy_linkify">Link</string>
+    <string name="cs_privacypolicy_link">http://wrobel731.ovh.org/blackholecam/privacypolicy_cz.html</string>
+    <string name="cs_privacypolicy_linkifywiki">https://wikimediafoundation.org/wiki/Privacy_policy#introduction</string>
+    <string name="cs_title_tab2_phenomenon">Zásady ochrany osobních údajů</string>
+    <string name="cs_menu_privacypolicy">Zásady ochrany osobních údajů</string>
 
 
 
@@ -903,6 +1136,25 @@
     <string name="hu_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="hu_donation_link1_linkify">adományoz</string>
     <string name="hu_install_file_explorer_app">Nem találnak megfelelő fájlkezelő alkalmazás megnyitásához mappát, próbálja meg telepíteni..</string>
+    <string name="hu_privacy_policy_decription1">\n\n
+        The privacy policy for this app can be found under this Link.\n
+        I also present the text here :\n\n
+        This app does not collect any of your data. It uses image from the camera only to show and store the distorted
+        view and save it onto the phone filesystem/memory card - it only needs the file access permission to do just that and it does not touch any other files.
+        It does not need any other permission than these two. It asks also external web browser application to open external links - but it does not send
+        any additional GET request parameters in the URL that any of those server might store.\n\n
+        Does the app\'s site use cookies ?\n
+        No, the server hosting my page does not use any cookie information.\n\n
+        How about external pages ?\n
+        It links to the wikipedia - to see their privacy policy, please look at https://wikimediafoundation.org/wiki/Privacy_policy#introduction\n\n
+        What about changes to the privacy policy ?\n
+        Any changes to the privacy policy will be reflected on this text and on the app\'s page.
+    </string>
+    <string name="hu_privacypolicy_linkify">Link</string>
+    <string name="hu_privacypolicy_link">http://wrobel731.ovh.org/blackholecam/privacypolicy_hu.html</string>
+    <string name="hu_privacypolicy_linkifywiki">https://wikimediafoundation.org/wiki/Privacy_policy#introduction</string>
+    <string name="hu_title_tab2_phenomenon">Adatvédelmi irányelvek</string>
+    <string name="hu_menu_privacypolicy">Adatvédelmi irányelvek</string>
 
 
     <string name="hr_title_tab0_phenomenon">Opis</string>
@@ -964,7 +1216,25 @@
     <string name="hr_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="hr_donation_link1_linkify">donirati</string>
     <string name="hr_install_file_explorer_app">Ne mogu naći prikladan File Explorer aplikacija za otvaranje mape, pokušajte ga instalirati..</string>
-
+    <string name="hr_privacy_policy_decription1">\n\n
+        The privacy policy for this app can be found under this Link.\n
+        I also present the text here :\n\n
+        This app does not collect any of your data. It uses image from the camera only to show and store the distorted
+        view and save it onto the phone filesystem/memory card - it only needs the file access permission to do just that and it does not touch any other files.
+        It does not need any other permission than these two. It asks also external web browser application to open external links - but it does not send
+        any additional GET request parameters in the URL that any of those server might store.\n\n
+        Does the app\'s site use cookies ?\n
+        No, the server hosting my page does not use any cookie information.\n\n
+        How about external pages ?\n
+        It links to the wikipedia - to see their privacy policy, please look at https://wikimediafoundation.org/wiki/Privacy_policy#introduction\n\n
+        What about changes to the privacy policy ?\n
+        Any changes to the privacy policy will be reflected on this text and on the app\'s page.
+    </string>
+    <string name="hr_privacypolicy_linkify">Link</string>
+    <string name="hr_privacypolicy_link">http://wrobel731.ovh.org/blackholecam/privacypolicy_hr.html</string>
+    <string name="hr_privacypolicy_linkifywiki">https://wikimediafoundation.org/wiki/Privacy_policy#introduction</string>
+    <string name="hr_title_tab2_phenomenon">Izjava o privatnosti</string>
+    <string name="hr_menu_privacypolicy">Izjava o privatnosti</string>
 
 
     <string name="bg_title_tab0_phenomenon">описание</string>
@@ -1027,6 +1297,24 @@
     <string name="bg_donation_link1">https://www.QWEQWL.com/cgi-bin/webscr?cmd=_s-xclick&amp;giarws_vyrrib_id=Z2TVKTC6NHQLE</string>
     <string name="bg_donation_link1_linkify">дарите</string>
     <string name="bg_install_file_explorer_app">Не можете да намерите подходящ приложението File Explorer, за да отворите папка, се опитват да го инсталирате..</string>
-
+    <string name="bg_privacy_policy_decription1">\n\n
+        The privacy policy for this app can be found under this Link.\n
+        I also present the text here :\n\n
+        This app does not collect any of your data. It uses image from the camera only to show and store the distorted
+        view and save it onto the phone filesystem/memory card - it only needs the file access permission to do just that and it does not touch any other files.
+        It does not need any other permission than these two. It asks also external web browser application to open external links - but it does not send
+        any additional GET request parameters in the URL that any of those server might store.\n\n
+        Does the app\'s site use cookies ?\n
+        No, the server hosting my page does not use any cookie information.\n\n
+        How about external pages ?\n
+        It links to the wikipedia - to see their privacy policy, please look at https://wikimediafoundation.org/wiki/Privacy_policy#introduction\n\n
+        What about changes to the privacy policy ?\n
+        Any changes to the privacy policy will be reflected on this text and on the app\'s page.
+    </string>
+    <string name="bg_privacypolicy_linkify">Link</string>
+    <string name="bg_privacypolicy_link">http://wrobel731.ovh.org/blackholecam/privacypolicy_bg.html</string>
+    <string name="bg_privacypolicy_linkifywiki">https://wikimediafoundation.org/wiki/Privacy_policy#introduction</string>
+    <string name="bg_title_tab2_phenomenon">Декларация за поверителност</string>
+    <string name="bg_menu_privacypolicy">Декларация за поверителност</string>
 
 </resources>

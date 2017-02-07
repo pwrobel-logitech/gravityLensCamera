@@ -135,6 +135,13 @@ public class ZoomWindowInfo extends DialogFragment {
         ZoomWindowInfo.internaladdLinks(tdonation, this.getTextInCurrentLang("donation_link1_linkify"),
                 donationlink1);
 
+        TextView tprivpolicy = (TextView)view.findViewById(R.id.text_info_privacypolicy);
+        String prtext = (this.getTextInCurrentLang("privacy_policy_decription1"));
+        tprivpolicy.setText(prtext);
+        ZoomWindowInfo.internaladdLinks(tprivpolicy, this.getTextInCurrentLang("privacypolicy_linkify"),
+                this.getTextInCurrentLang("privacypolicy_link"));
+        ZoomWindowInfo.internaladdLinks(tprivpolicy, this.getTextInCurrentLang("privacypolicy_linkifywiki"),
+                this.getTextInCurrentLang("privacypolicy_linkifywiki"));
         /*
         TextView tdonation2 = (TextView)view.findViewById(R.id.donation_link1);
         String modon2 = (this.getTextInCurrentLang("linkify_pp"));
@@ -164,6 +171,7 @@ public class ZoomWindowInfo extends DialogFragment {
         this.pager = (ViewPager) view.findViewById(R.id.pager1);
         pager.invalidate();
         this.pager.setAdapter(this.tab_adapter1);
+        this.pager.setOffscreenPageLimit(this.tab_adapter1.getCount());
 
         int num_tab = which_tab_num;
         if (num_tab >= this.tab_adapter1.getCount())

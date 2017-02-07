@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
+import android.view.ViewGroup;
 
 /**
  * Created by pwrobel on 13.09.16.
@@ -27,6 +28,9 @@ class CustomPagerAdapter extends PagerAdapter {
             case 1:
                 resId = R.id.page_two;
                 break;
+            case 2:
+                resId = R.id.page_three;
+                break;
         }
         if(collection != null)
             return collection.findViewById(resId);
@@ -36,7 +40,12 @@ class CustomPagerAdapter extends PagerAdapter {
 
     @Override
     public int getCount() {
-        return 2;
+        return 3;
+    }
+
+    @Override
+    public void destroyItem(ViewGroup container, int position, Object object){
+        container.removeView((View)object);
     }
 
     @Override

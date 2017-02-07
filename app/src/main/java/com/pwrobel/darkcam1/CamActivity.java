@@ -405,6 +405,11 @@ public class CamActivity extends Activity implements MassSelectedListener {
                         CamActivity.this.which_tab_about_selected = 0;
                         CamActivity.this.showZoomInfoDialog();
                         return true;
+                    case R.id.menu_privacypolicy:
+                        //Toast.makeText(CamActivity.this, "Privacy is Selected", Toast.LENGTH_SHORT).show();
+                        CamActivity.this.which_tab_about_selected = 2;
+                        CamActivity.this.showZoomInfoDialog();
+                        return true;
                 }
                 return false;
             }
@@ -413,6 +418,7 @@ public class CamActivity extends Activity implements MassSelectedListener {
         MenuItem menu_preferences = this.mySettingsMenu.getMenu().findItem(R.id.menu_preferences);
         MenuItem menu_aboutapp = this.mySettingsMenu.getMenu().findItem(R.id.menu_aboutapp);
         MenuItem menu_openfolder = this.mySettingsMenu.getMenu().findItem(R.id.menu_openfolder);
+        MenuItem menu_privacypolicy = this.mySettingsMenu.getMenu().findItem(R.id.menu_privacypolicy);
 
         if(menu_preferences != null)
             menu_preferences.setTitle(this.getTextInCurrentLang("menu_preferences"));
@@ -420,6 +426,9 @@ public class CamActivity extends Activity implements MassSelectedListener {
             menu_aboutapp.setTitle(this.getTextInCurrentLang("menu_aboutapp"));
         if(menu_openfolder != null)
             menu_openfolder.setTitle(this.getTextInCurrentLang("menu_openfolder"));
+        if(menu_privacypolicy != null)
+            menu_privacypolicy.setTitle(this.getTextInCurrentLang("menu_privacypolicy"));
+
 
         this.mySettingsMenu.show();
     }
